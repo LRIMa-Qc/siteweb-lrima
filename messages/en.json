@@ -1,0 +1,21 @@
+{
+  "$schema": "https://inlang.com/schema/inlang-message-format",
+  "pages": {
+    "publications": {
+      "label": "Publications",
+      "href": "/publications"
+    },
+    "news": {
+      "label": "Nouvelles",
+      "href": "/news"
+    },
+    "members": {
+      "label": "Membres",
+      "href": "/members"
+    },
+    "contact": {
+      "label": "Contact",
+      "href": "/contact"
+    }
+  }
+}
