@@ -1,21 +1,197 @@
 {
   "$schema": "https://inlang.com/schema/inlang-message-format",
-  "pages": {
-    "publications": {
-      "label": "Publications",
-      "href": "/publications"
+  "metadata": {
+    "title": "LRIMa - Laboratoire de recherche en intelligence et modélisation avancée",
+    "description": "Le LRIMa est un laboratoire de recherche avancée spécialisé en intelligence artificielle et modélisation. Explorez nos recherches, publications et notre équipe."
+  },
+  "nav": {
+    "home": "Accueil",
+    "news": "Nouvelles",
+    "publications": "Publications Scientifiques",
+    "members": "Membres",
+    "contact": "Contact"
+  },
+  "home": {
+    "title": "Laboratoire de Recherche Informatique Maisonneuve",
+    "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "hero": {
+      "tagline": "L'espace où la passion étudiante façonne la technologie de demain.",
+      "overline": "Laboratoire de Recherche Informatique Maisonneuve",
+      "description": "Le LRIMa est un espace d'innovation où étudiants et chercheurs collaborent pour repousser les limites de l'informatique.",
+      "cta": {
+        "research": "Nos recherches",
+        "contact": "Nous joindre"
+      }
     },
-    "news": {
-      "label": "Nouvelles",
-      "href": "/news"
+    "stats": {
+      "publications": "Publications de recherche",
+      "researchers": "Chercheurs actifs",
+      "years": "Années d'excellence"
     },
-    "members": {
-      "label": "Membres",
-      "href": "/members"
+    "quote": "L'innovation naît de la curiosité et de la collaboration entre chercheurs passionnés.",
+    "gallery": {
+      "title": "Notre labo en action"
     },
-    "contact": {
-      "label": "Contact",
-      "href": "/contact"
+    "about": {
+      "title": "À propos du LRIMa",
+      "description": "Fondé en 2015 au Collège de Maisonneuve, le LRIMa est un espace de recherche appliquée et d’innovation en informatique. Il réunit chaque année une trentaine d’étudiants passionnés qui travaillent sur des projets technologiques ambitieux, allant de l’intelligence artificielle à l’Internet des objets, en passant par l’agriculture intelligente, la santé numérique et les systèmes connectés."
+    },
+    "latestNews": "Dernières nouvelles",
+    "recentPublications": "Publications récentes",
+    "viewAll": "Voir tout",
+    "cta": {
+      "title": "Prêt à innover avec nous ?",
+      "subtitle": "Rejoignez notre équipe de chercheurs passionnés ou collaborez sur des projets novateurs.",
+      "join": "Rejoindre le labo",
+      "contact": "Contactez-nous"
+    },
+    "audiences": {
+      "students": {
+        "title": "Pour les étudiants",
+        "description": "Développez vos compétences dans un environnement stimulant et collaboratif."
+      },
+      "partners": {
+        "title": "Pour les partenaires",
+        "description": "Collaborez avec des experts pour résoudre des problèmes complexes."
+      },
+      "researchers": {
+        "title": "Pour les chercheurs",
+        "description": "Rejoignez une équipe dynamique et contribuez à l'avancement scientifique."
+      }
     }
+  },
+  "news": {
+    "title": "Nouvelles",
+    "subtitle": "Restez informé de nos dernières actualités et événements",
+    "description": "Découvrez les dernières avancées et événements de notre laboratoire.",
+    "featured": "À la une",
+    "allNews": "Toutes les nouvelles",
+    "readMore": "Lire la suite",
+
+    "noNews": "Aucune nouvelle disponible pour le moment.",
+    "label": "Actualité",
+    "placeholder": {
+      "title": "Article à venir",
+      "excerpt": "Restez à l'écoute pour nos dernières nouvelles."
+    }
+  },
+  "publications": {
+    "title": "Publications Scientifiques",
+    "subtitle": "Découvrez nos contributions à la recherche scientifique",
+    "description": "Nos contributions à la recherche scientifique.",
+    "filters": {
+      "year": "Année",
+      "type": "Type",
+      "author": "Auteur",
+      "keyword": "Mot-clé",
+      "all": "Toutes"
+    },
+    "types": {
+      "journal": "Article de revue",
+      "conference": "Conférence",
+      "book": "Livre",
+      "thesis": "Thèse",
+      "patent": "Brevet",
+      "report": "Rapport",
+      "publication": "Publication"
+    },
+    "noPublications": "Aucune publication trouvée.",
+    "placeholder": {
+      "title": "Publication à venir",
+      "abstract": "Nos chercheurs travaillent sur des projets innovants. Restez à l'affût de nos prochaines publications!"
+    }
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "subtitle": "N'hésitez pas à nous contacter pour toute question ou collaboration",
+    "form": {
+      "title": "Envoyez-nous un message",
+      "name": "Nom complet",
+      "email": "Adresse courriel",
+      "organization": "Organisation (optionnel)",
+      "subject": "Sujet",
+      "message": "Message",
+      "submit": "Envoyer",
+      "sending": "Envoi en cours...",
+      "success": "Votre message a été envoyé avec succès!",
+      "error": "Une erreur s'est produite. Veuillez réessayer."
+    },
+    "map": {
+      "placeholder": "Carte"
+    },
+    "info": {
+      "title": "Informations",
+      "address": "Adresse",
+      "phone": "Téléphone",
+      "email": "Courriel"
+    }
+  },
+  "members": {
+    "title": "Membres",
+    "active": "Membres actifs",
+    "alumni": "Anciens membres",
+    "collaborators": "Collaborateurs",
+    "researchInterests": "Intérêts de recherche",
+    "director": {
+      "intro": "Sous la direction de {name}, le laboratoire LRIMa explore les frontières de l'intelligence artificielle et de la modélisation avancée pour relever les défis technologiques de demain.",
+      "viewProfile": "Voir le profil complet"
+    },
+    "bio": "Biographie"
+  },
+  "common": {
+    "loading": "Chargement...",
+    "error": "Une erreur s'est produite",
+    "retry": "Réessayer",
+    "close": "Fermer",
+    "learnMore": "En savoir plus",
+    "search": "Rechercher"
+  },
+  "grants": {
+    "title": "Subventions & Financement",
+    "subtitle": "Soutenir l'innovation et l'excellence en recherche"
+  },
+  "search": {
+    "placeholder": "Rechercher...",
+    "results": "Résultats",
+    "noResults": "Aucun résultat trouvé.",
+    "startTyping": "Commencez à taper pour rechercher",
+    "closeEsc": "ESC pour fermer"
+  },
+  "publicationDetail": {
+    "journal": "Revue :",
+    "venue": "Lieu :",
+    "pages": "Pages :",
+    "published": "Publié :",
+    "abstract": "Résumé",
+    "keywords": "Mots-clés",
+    "citation": "Citation",
+    "viewDoi": "Voir sur DOI",
+    "viewPublication": "Voir la publication",
+    "downloadPdf": "Télécharger le PDF",
+    "backToPublications": "Retour aux publications",
+    "volume": "Vol.",
+    "issue": "Numéro"
+  },
+  "newsDetail": {
+    "by": "Par",
+    "backToNews": "Retour aux nouvelles"
+  },
+  "membersList": {
+    "noMembers": "Aucun membre trouvé."
+  },
+  "publicationsList": {
+    "noPublications": "Aucune publication trouvée."
+  },
+  "newsList": {
+    "noNews": "Aucune nouvelle trouvée."
+  },
+  "images": {
+    "researchLab": "Laboratoire de recherche",
+    "teamCollaboration": "Collaboration d'équipe",
+    "innovation": "Innovation"
+  },
+  "footer": {
+    "navigation": "Navigation",
+    "rights": "Tous droits réservés."
   }
 }

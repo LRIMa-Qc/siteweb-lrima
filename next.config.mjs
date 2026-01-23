@@ -1,35 +1,24 @@
-import { withPayload } from "@payloadcms/next/withPayload";
-import { paraglideWebpackPlugin } from "@inlang/paraglide-js";
+import { withPayload } from '@payloadcms/next/withPayload'
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-	// Your Next.js config here
-	webpack: (config) => {
-		config.resolve.extensionAlias = {
-			".cjs": [".cts", ".cjs"],
-			".js": [".ts", ".tsx", ".js", ".jsx"],
-			".mjs": [".mts", ".mjs"],
-		};
+  // Enable standalone output for Docker and Vercel deployment
+  output: 'standalone',
+  webpack: (config, { isServer }) => {
+    config.resolve.extensionAlias = {
+      '.cjs': ['.cts', '.cjs'],
+      '.js': ['.ts', '.tsx', '.js', '.jsx'],
+      '.mjs': ['.mts', '.mjs'],
+    }
 
-		config.plugins.push(
-			paraglideWebpackPlugin({
-				outdir: "./src/paraglide",
-				project: "./project.inlang",
-				strategy: ["url", "baseLocale", "cookie"],
-				urlPatterns: [
-					{
-						pattern: "https://:domain(.*)/:path*",
-						localized: [
-							["en", "https://:domain(.*)/en/:path*"],
-							["fr", "https://:domain(.*)/fr/:path*"],
-						],
-					},
-				],
-			}),
-		);
+    // Exclude paraglide output and message files from webpack watching
+    config.watchOptions = {
+      ...config.watchOptions,
+      ignored: ['**/node_modules', '**/src/paraglide/**', '**/messages/**', '**/project.inlang/**'],
+    }
 
-		return config;
-	},
-};
+    return config
+  },
+}
 
-export default withPayload(nextConfig, { devBundleServerPackages: false });
+export default withPayload(nextConfig, { devBundleServerPackages: false })

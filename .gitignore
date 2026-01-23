@@ -42,6 +42,11 @@ next-env.d.ts
 
 /media
 
+# Database dumps and exports
+*.sql
+*.dump
+*.bson
+
 # Playwright
 node_modules/
 /test-results/

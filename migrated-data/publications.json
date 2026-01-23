@@ -1,0 +1,899 @@
+[
+  {
+    "title": "Smart Traffic Light Scheduling Algorithms",
+    "slug": "smart-traffic-light-scheduling-algorithms",
+    "authors": [
+      {
+        "author": "J. Rezgui"
+      },
+      {
+        "author": "Mamadou BARRI"
+      },
+      {
+        "author": "Reiner GAYTA"
+      }
+    ],
+    "abstract": "Publication in IEEE SmartNets.",
+    "year": 2019,
+    "publishedDate": "2019-01-01",
+    "keywords": [
+      {
+        "keyword": "international conference"
+      }
+    ],
+    "venue": "IEEE SmartNets, sharm el sheikh Egypt"
+  },
+  {
+    "title": "Heterogeneous LoRaWAN & LEO Satellites Networks Concepts, Architectures and Future directions",
+    "slug": "heterogeneous-lorawan-leo-satellites-networks-concepts-architectures-and-future-directions",
+    "authors": [
+      {
+        "author": "L.CHAARI"
+      },
+      {
+        "author": "M. Fourati"
+      },
+      {
+        "author": "J. Rezgui"
+      }
+    ],
+    "abstract": "Publication in IEEE GIIS.",
+    "year": 2019,
+    "publishedDate": "2019-01-01",
+    "keywords": [
+      {
+        "keyword": "international conference"
+      }
+    ],
+    "venue": "IEEE GIIS, Paris, France"
+  },
+  {
+    "title": "Vehicles Classification and Brand Recognition Using Convolution Network and Neural Networks",
+    "slug": "vehicles-classification-and-brand-recognition-using-convolution-network-and-neural-networks",
+    "authors": [
+      {
+        "author": "J. Rezgui"
+      },
+      {
+        "author": "Simon DAZÉ"
+      },
+      {
+        "author": "Gaya MEHENNI"
+      }
+    ],
+    "abstract": "Publication in IEEE SmartNets.",
+    "year": 2019,
+    "publishedDate": "2019-01-01",
+    "keywords": [
+      {
+        "keyword": "international conference"
+      }
+    ],
+    "venue": "IEEE SmartNets, sharm el sheikh Egypt"
+  },
+  {
+    "title": "Traffic Sign Recognition Using Neural Networks  Useful for Autonomous Vehicles",
+    "slug": "traffic-sign-recognition-using-neural-networks-useful-for-autonomous-vehicles",
+    "authors": [
+      {
+        "author": "J. Rezgui"
+      },
+      {
+        "author": "Amal HBAIEB"
+      },
+      {
+        "author": "Lamia CHAARI"
+      },
+      {
+        "author": "Julien Maryland"
+      }
+    ],
+    "abstract": "Publication in IEEE SmartNets.",
+    "year": 2019,
+    "publishedDate": "2019-01-01",
+    "keywords": [
+      {
+        "keyword": "international conference"
+      }
+    ],
+    "venue": "IEEE SmartNets, sharm el sheikh Egypt"
+  },
+  {
+    "title": "Finding better learning algorithms for self-driving cars",
+    "slug": "finding-better-learning-algorithms-for-self-driving-cars",
+    "authors": [
+      {
+        "author": "J. Rezgui"
+      },
+      {
+        "author": "L.Oest O’Leary"
+      },
+      {
+        "author": "C. Bisaillon"
+      }
+    ],
+    "abstract": "Publication in IEEE ISNCC.",
+    "year": 2019,
+    "publishedDate": "2019-01-01",
+    "keywords": [
+      {
+        "keyword": "international conference"
+      }
+    ],
+    "venue": "IEEE ISNCC, Istanbul,  Turkey"
+  },
+  {
+    "title": "Pedestrian Detection for Autonomous Driving within Cooperative Communication",
+    "slug": "pedestrian-detection-for-autonomous-driving-within-cooperative-communication",
+    "authors": [
+      {
+        "author": "A.Hbaieb"
+      },
+      {
+        "author": "J.Rezgui"
+      },
+      {
+        "author": "Lamia Fourati Chaari"
+      }
+    ],
+    "abstract": "Publication in IEEE WCNC.",
+    "year": 2019,
+    "publishedDate": "2019-01-01",
+    "keywords": [
+      {
+        "keyword": "international conference"
+      }
+    ],
+    "venue": "IEEE WCNC, Maroc"
+  },
+  {
+    "title": "Training Genetic Neural Networks Algorithms for Autonomous Cars with the LAOP Platform",
+    "slug": "training-genetic-neural-networks-algorithms-for-autonomous-cars-with-the-laop-platform",
+    "authors": [
+      {
+        "author": "J. Rezgui"
+      },
+      {
+        "author": "L.Oest O’ Leary"
+      },
+      {
+        "author": "C.Bisaillon"
+      },
+      {
+        "author": "L.Fourati"
+      }
+    ],
+    "abstract": "Publication in IEEE IWCMC.",
+    "year": 2019,
+    "publishedDate": "2019-01-01",
+    "keywords": [
+      {
+        "keyword": "international conference"
+      }
+    ],
+    "venue": "IEEE IWCMC, Tangia, Maroc"
+  },
+  {
+    "title": "A Hybrid Optimization Algorithm based on K-means   and Multi-Objective Chaotic Ant Swarm Optimization for WSN in Pipeline Monitoring",
+    "slug": "a-hybrid-optimization-algorithm-based-on-k-means-and-multi-objective-chaotic-ant-swarm-optimization-",
+    "authors": [
+      {
+        "author": "Y. Lalle"
+      },
+      {
+        "author": "M"
+      },
+      {
+        "author": "Abdelhafidh"
+      },
+      {
+        "author": "L. Fourati"
+      },
+      {
+        "author": "J.Rezgui"
+      }
+    ],
+    "abstract": "Publication in IEEE IWCMC.",
+    "year": 2019,
+    "publishedDate": "2019-01-01",
+    "keywords": [
+      {
+        "keyword": "international conference"
+      }
+    ],
+    "venue": "IEEE IWCMC, Tangia, Maroc"
+  },
+  {
+    "title": "Detection and Analysis Algorithms of punctual road events from vehicular data in the search for the optimal route",
+    "slug": "detection-and-analysis-algorithms-of-punctual-road-events-from-vehicular-data-in-the-search-for-the-",
+    "authors": [
+      {
+        "author": "J. Rezgui"
+      },
+      {
+        "author": "Pascal Dally-Bélanger"
+      },
+      {
+        "author": "Philippe Rivest"
+      }
+    ],
+    "abstract": "Publication in IEEE IWCMC.",
+    "year": 2018,
+    "publishedDate": "2018-01-01",
+    "keywords": [
+      {
+        "keyword": "international conference"
+      }
+    ],
+    "venue": "IEEE IWCMC, Limassol, Cyprus"
+  },
+  {
+    "title": "Hierarchical Cloud Communication for Supply Management and Power Distribution via Wireless Mesh Network into the Smart Grid",
+    "slug": "hierarchical-cloud-communication-for-supply-management-and-power-distribution-via-wireless-mesh-netw",
+    "authors": [
+      {
+        "author": "J. Rezgui"
+      },
+      {
+        "author": "W.Benhareim"
+      }
+    ],
+    "abstract": "Publication in IEEE ISNCC.",
+    "year": 2018,
+    "publishedDate": "2018-01-01",
+    "keywords": [
+      {
+        "keyword": "international conference"
+      }
+    ],
+    "venue": "IEEE ISNCC, Rome, Italy"
+  },
+  {
+    "title": "An M2M Access Management Scheme for Electrical Vehicles",
+    "slug": "an-m2m-access-management-scheme-for-electrical-vehicles",
+    "authors": [
+      {
+        "author": "J. Rezgui"
+      },
+      {
+        "author": "S. Cherkaoui"
+      }
+    ],
+    "abstract": "Publication in GLOBECOM 2017: 1-6, Singapour.",
+    "year": 2017,
+    "publishedDate": "2017-01-01",
+    "keywords": [
+      {
+        "keyword": "international conference"
+      }
+    ],
+    "venue": "GLOBECOM 2017: 1-6, Singapour, Singapour"
+  },
+  {
+    "title": "Detection of malicious vehicles with demerit and reward level system",
+    "slug": "detection-of-malicious-vehicles-with-demerit-and-reward-level-system",
+    "authors": [
+      {
+        "author": "J. Rezgui"
+      },
+      {
+        "author": "C. Doucet"
+      }
+    ],
+    "abstract": "Publication in ISNCC 2017: 1-6, Marrakesh, Morocco.",
+    "year": 2017,
+    "publishedDate": "2017-01-01",
+    "keywords": [
+      {
+        "keyword": "international conference"
+      }
+    ],
+    "venue": "ISNCC 2017: 1-6, Marrakesh, Morocco, Marrakesh, Morocco"
+  },
+  {
+    "title": "Smart Charge Scheduling for EVs based on Two-Way Communication",
+    "slug": "smart-charge-scheduling-for-evs-based-on-two-way-communication",
+    "authors": [
+      {
+        "author": "J. Rezgui"
+      },
+      {
+        "author": "S. Cherkaoui"
+      }
+    ],
+    "abstract": "Publication in IEEE International Conference on Communications, Paris, France.",
+    "year": 2017,
+    "publishedDate": "2017-01-01",
+    "keywords": [
+      {
+        "keyword": "international conference"
+      }
+    ],
+    "venue": "IEEE International Conference on Communications, Paris, France, Paris, France"
+  },
+  {
+    "title": "Setting up an extended perception in a vehicular network environment: A proof of concept",
+    "slug": "setting-up-an-extended-perception-in-a-vehicular-network-environment-a-proof-of-concept",
+    "authors": [
+      {
+        "author": "N. Chaabouni"
+      },
+      {
+        "author": "A. Hafid"
+      },
+      {
+        "author": "J. Rezgui"
+      },
+      {
+        "author": "S. Cherkaoui"
+      }
+    ],
+    "abstract": "Publication in IEEE WCNC, Doha, Qatar.",
+    "year": 2016,
+    "publishedDate": "2016-01-01",
+    "keywords": [
+      {
+        "keyword": "international conference"
+      }
+    ],
+    "venue": "IEEE WCNC, Doha, Qatar, Doha, Qatar"
+  },
+  {
+    "title": "An Overview of the SCV Simulator for Vehicular Networks",
+    "slug": "an-overview-of-the-scv-simulator-for-vehicular-networks",
+    "authors": [
+      {
+        "author": "J.  Rezgui"
+      },
+      {
+        "author": "C.  Doucet"
+      },
+      {
+        "author": "P. Alexandre"
+      }
+    ],
+    "abstract": "Publication in Computer Networks and Communication Technology (CNCT), Xiamen, China.",
+    "year": 2016,
+    "publishedDate": "2016-01-01",
+    "keywords": [
+      {
+        "keyword": "international conference"
+      }
+    ],
+    "venue": "Computer Networks and Communication Technology (CNCT), Xiamen, China, Xiamen, China"
+  },
+  {
+    "title": "Analytical Transmit Power Adjustment in Cooperative Vehicle Safety Systems",
+    "slug": "analytical-transmit-power-adjustment-in-cooperative-vehicle-safety-systems",
+    "authors": [
+      {
+        "author": "J. Rezgui"
+      },
+      {
+        "author": "S. Cherkaoui"
+      }
+    ],
+    "abstract": "Publication in Proceedings of IEEE Globecom, Californie 3-7 dec..",
+    "year": 2012,
+    "publishedDate": "2012-01-01",
+    "keywords": [
+      {
+        "keyword": "international conference"
+      }
+    ],
+    "venue": "Proceedings of IEEE Globecom, Californie 3-7 dec."
+  },
+  {
+    "title": "A Two-Way Communication Scheme for Vehicles Charging Control in the Smart Grid",
+    "slug": "a-two-way-communication-scheme-for-vehicles-charging-control-in-the-smart-grid",
+    "authors": [
+      {
+        "author": "J. Rezgui"
+      },
+      {
+        "author": "S. Cherkaoui"
+      },
+      {
+        "author": "S. Dhou"
+      }
+    ],
+    "abstract": "Publication in Proceedings of IEEE International Wireless Communications and Mobile Computing Conference.",
+    "year": 2012,
+    "publishedDate": "2012-01-01",
+    "keywords": [
+      {
+        "keyword": "international conference"
+      }
+    ],
+    "venue": "Proceedings of IEEE International Wireless Communications and Mobile Computing Conference, Greece"
+  },
+  {
+    "title": "Overhead-Free Congestion Control and Data Dissemination Scheme for 802.11p VANETs",
+    "slug": "overhead-free-congestion-control-and-data-dissemination-scheme-for-802-11p-vanets",
+    "authors": [
+      {
+        "author": "O. Chakroun"
+      },
+      {
+        "author": "J. Rezgui"
+      },
+      {
+        "author": "S. Cherkaoui"
+      }
+    ],
+    "abstract": "Publication in Proceedings of IEEE International Wireless Communications and Mobile Computing Conference.",
+    "year": 2012,
+    "publishedDate": "2012-01-01",
+    "keywords": [
+      {
+        "keyword": "international conference"
+      }
+    ],
+    "venue": "Proceedings of IEEE International Wireless Communications and Mobile Computing Conference, Greece"
+  },
+  {
+    "title": "Detecting Faulty and Malicious Vehicles Using Rule-based Communications Data Mining",
+    "slug": "detecting-faulty-and-malicious-vehicles-using-rule-based-communications-data-mining",
+    "authors": [
+      {
+        "author": "J. Rezgui"
+      },
+      {
+        "author": "S. Cherkaoui"
+      }
+    ],
+    "abstract": "Publication in Proceedings of 36nd IEEE Conference on Local Computer Networks (LCN 2011), Bonn 4-7 Oct..",
+    "year": 2011,
+    "publishedDate": "2011-01-01",
+    "keywords": [
+      {
+        "keyword": "international conference"
+      }
+    ],
+    "venue": "Proceedings of 36nd IEEE Conference on Local Computer Networks (LCN 2011), Bonn 4-7 Oct."
+  },
+  {
+    "title": "Deterministic Access for DSRC/802.11p Vehicular Safety Communication",
+    "slug": "deterministic-access-for-dsrc-802-11p-vehicular-safety-communication",
+    "authors": [
+      {
+        "author": "J. Rezgui"
+      },
+      {
+        "author": "S. Cherkaoui"
+      },
+      {
+        "author": "O. Chakroun"
+      }
+    ],
+    "abstract": "Publication in IEEE International Wireless Communications and Mobile Computing Conference.",
+    "year": 2011,
+    "publishedDate": "2011-01-01",
+    "keywords": [
+      {
+        "keyword": "international conference"
+      }
+    ],
+    "venue": "IEEE International Wireless Communications and Mobile Computing Conference, Istanbul, Turkey"
+  },
+  {
+    "title": "Interoperability between VDA and interfering non-VDA vehicles for DSRC/802.11p Vehicular Safety Communication",
+    "slug": "interoperability-between-vda-and-interfering-non-vda-vehicles-for-dsrc-802-11p-vehicular-safety-comm",
+    "authors": [
+      {
+        "author": "J. Rezgui"
+      },
+      {
+        "author": "S. Cherkaoui"
+      },
+      {
+        "author": "O. Chakroun"
+      }
+    ],
+    "abstract": "Publication in IEEE Global Communications Conference.",
+    "year": 2011,
+    "publishedDate": "2011-01-01",
+    "keywords": [
+      {
+        "keyword": "international conference"
+      }
+    ],
+    "venue": "IEEE Global Communications Conference, Houston, Texas"
+  },
+  {
+    "title": "Handoff-Aware Channel Assignment for Multi-Radio Wireless Mesh Networks",
+    "slug": "handoff-aware-channel-assignment-for-multi-radio-wireless-mesh-networks",
+    "authors": [
+      {
+        "author": "J. Rezgui"
+      },
+      {
+        "author": "A. Hafid"
+      },
+      {
+        "author": "R. Ben Ali"
+      },
+      {
+        "author": "M. Gendreau"
+      }
+    ],
+    "abstract": "Publication in Proc. of IEEE Int. Conf. Commun, pp. 1-6.",
+    "year": 2010,
+    "publishedDate": "2010-01-01",
+    "keywords": [
+      {
+        "keyword": "international conference"
+      }
+    ],
+    "venue": "Proc. of IEEE Int. Conf. Commun, pp. 1-6, Cap Town, South Africa"
+  },
+  {
+    "title": "Meta-heuristics for Channel (Re-) Assignment Problem for Multi-Radio Wireless Mesh Networks",
+    "slug": "meta-heuristics-for-channel-re-assignment-problem-for-multi-radio-wireless-mesh-networks",
+    "authors": [
+      {
+        "author": "J. Rezgui"
+      },
+      {
+        "author": "A. Hafid"
+      },
+      {
+        "author": "R. Ben Ali"
+      },
+      {
+        "author": "M. Gendreau"
+      }
+    ],
+    "abstract": "Publication in Proc. of INFORMS Telecom.",
+    "year": 2010,
+    "publishedDate": "2010-01-01",
+    "keywords": [
+      {
+        "keyword": "international conference"
+      }
+    ],
+    "venue": "Proc. of INFORMS Telecom, Montréal, Canada"
+  },
+  {
+    "title": "Variable neighborhood search method for channel Assignment Problem in Multi-Radio Wireless Mesh Networks",
+    "slug": "variable-neighborhood-search-method-for-channel-assignment-problem-in-multi-radio-wireless-mesh-netw",
+    "authors": [
+      {
+        "author": "J. Rezgui"
+      },
+      {
+        "author": "A. Hafid"
+      },
+      {
+        "author": "R. Ben Ali"
+      },
+      {
+        "author": "M. Gendreau"
+      }
+    ],
+    "abstract": "Publication in Proc. of IEEE Local, Computer Networks, 8 pages.",
+    "year": 2010,
+    "publishedDate": "2010-01-01",
+    "keywords": [
+      {
+        "keyword": "international conference"
+      }
+    ],
+    "venue": "Proc. of IEEE Local, Computer Networks, 8 pages, Denver"
+  },
+  {
+    "title": "Admission Control and QoS Provisioning in Multi-Service MDA in IEEE 802.11s-based Wireless Mesh Networks",
+    "slug": "admission-control-and-qos-provisioning-in-multi-service-mda-in-ieee-802-11s-based-wireless-mesh-netw",
+    "authors": [
+      {
+        "author": "J. Rezgui"
+      },
+      {
+        "author": "A. Hafid"
+      },
+      {
+        "author": "M. Gendreau"
+      }
+    ],
+    "abstract": "Publication in Proc of ISCT Qshine Conference, 8 pages.",
+    "year": 2010,
+    "publishedDate": "2010-01-01",
+    "keywords": [
+      {
+        "keyword": "international conference"
+      }
+    ],
+    "venue": "Proc of ISCT Qshine Conference, 8 pages, Houston, Texas"
+  },
+  {
+    "title": "QoS provisioning for Wireless Mesh and Optical Burst Switching Convergence",
+    "slug": "qos-provisioning-for-wireless-mesh-and-optical-burst-switching-convergence",
+    "authors": [
+      {
+        "author": "A. Belbekkouche"
+      },
+      {
+        "author": "J. Rezgui"
+      },
+      {
+        "author": "A. Hafid"
+      }
+    ],
+    "abstract": "Publication in Proc. Of IEEE WCNC, pp.1-6.",
+    "year": 2010,
+    "publishedDate": "2010-01-01",
+    "keywords": [
+      {
+        "keyword": "international conference"
+      }
+    ],
+    "venue": "Proc. Of IEEE WCNC, pp.1-6, Australia"
+  },
+  {
+    "title": "An Enhanced Reservation based Medium Access Control with Scheduling and Admission Control for Voice over Wireless Mesh Networks",
+    "slug": "an-enhanced-reservation-based-medium-access-control-with-scheduling-and-admission-control-for-voice-",
+    "authors": [
+      {
+        "author": "R. Ben Ali"
+      },
+      {
+        "author": "A. Hafid"
+      },
+      {
+        "author": "J. Rezgui"
+      }
+    ],
+    "abstract": "Publication in Proc. Of IEEE Global Communications Conference, pp.1-6.",
+    "year": 2010,
+    "publishedDate": "2010-01-01",
+    "keywords": [
+      {
+        "keyword": "international conference"
+      }
+    ],
+    "venue": "Proc. Of IEEE Global Communications Conference, pp.1-6"
+  },
+  {
+    "title": "Congestion-aware Clique- based Handoff in Wireless Mesh Networks",
+    "slug": "congestion-aware-clique-based-handoff-in-wireless-mesh-networks",
+    "authors": [
+      {
+        "author": "J. Rezgui"
+      },
+      {
+        "author": "A. Hafid"
+      },
+      {
+        "author": "M.Gendreau"
+      },
+      {
+        "author": "B.Rong"
+      }
+    ],
+    "abstract": "Publication in Proc of IEEE MSN, pp.388- 395.",
+    "year": 2009,
+    "publishedDate": "2009-01-01",
+    "keywords": [
+      {
+        "keyword": "international conference"
+      }
+    ],
+    "venue": "Proc of IEEE MSN, pp.388- 395, China"
+  },
+  {
+    "title": "Novel Analytical Delay Model and Burst Assembly Scheme for Wireless Mesh and Optical Burst Switching Convergence",
+    "slug": "novel-analytical-delay-model-and-burst-assembly-scheme-for-wireless-mesh-and-optical-burst-switching",
+    "authors": [
+      {
+        "author": "J. Rezgui"
+      },
+      {
+        "author": "A. Belbekkouche"
+      },
+      {
+        "author": "A. Hafid"
+      }
+    ],
+    "abstract": "Publication in Proc of ICST QShine, pp.104-119.",
+    "year": 2009,
+    "publishedDate": "2009-01-01",
+    "keywords": [
+      {
+        "keyword": "international conference"
+      }
+    ],
+    "venue": "Proc of ICST QShine, pp.104-119, Las Palmas, Spain"
+  },
+  {
+    "title": "Improving delay performance of IEEE 802.11p vehicular safety communication",
+    "slug": "improving-delay-performance-of-ieee-802-11p-vehicular-safety-communication",
+    "authors": [
+      {
+        "author": "J. Rezgui"
+      },
+      {
+        "author": "S. Cherkaoui"
+      },
+      {
+        "author": "O. Chakroun"
+      }
+    ],
+    "abstract": "Publication in Int. J. Autonomous and Adaptive Communications Systems (IJAACS) 7(1/2): 91-109.",
+    "year": 2014,
+    "publishedDate": "2014-01-01",
+    "keywords": [
+      {
+        "keyword": "international journal"
+      }
+    ],
+    "journal": "Int. J. Autonomous and Adaptive Communications Systems (IJAACS) 7(1/2): 91-109"
+  },
+  {
+    "title": "About Deterministic and non-Deterministic Vehicular Communications",
+    "slug": "about-deterministic-and-non-deterministic-vehicular-communications",
+    "authors": [
+      {
+        "author": "J. Rezgui"
+      },
+      {
+        "author": "S. Cherkaoui"
+      }
+    ],
+    "abstract": "Publication in DSRC/802.11p. Wireless Communications and Mobile Computing 14(15): 1435-1449.",
+    "year": 2014,
+    "publishedDate": "2014-01-01",
+    "keywords": [
+      {
+        "keyword": "international journal"
+      }
+    ],
+    "journal": "DSRC/802.11p. Wireless Communications and Mobile Computing 14(15): 1435-1449"
+  },
+  {
+    "title": "Cyber-Physical Systems: Computation, Communication, and Control.",
+    "slug": "cyber-physical-systems-computation-communication-and-control",
+    "authors": [
+      {
+        "author": "L. Zhang"
+      },
+      {
+        "author": "Y. P. Fallah"
+      },
+      {
+        "author": "J. Rezgui"
+      }
+    ],
+    "abstract": "Publication in IJDSN.",
+    "year": 2013,
+    "publishedDate": "2013-01-01",
+    "keywords": [
+      {
+        "keyword": "international journal"
+      }
+    ],
+    "journal": "IJDSN"
+  },
+  {
+    "title": "Optimization Model for Handoff-Aware Channel Assignment Problem for Multi-Radio Wireless Mesh Networks",
+    "slug": "optimization-model-for-handoff-aware-channel-assignment-problem-for-multi-radio-wireless-mesh-networ",
+    "authors": [
+      {
+        "author": "J. Rezgui"
+      },
+      {
+        "author": "A. Hafid"
+      },
+      {
+        "author": "R. Ben Ali"
+      },
+      {
+        "author": "M. Gendreau"
+      }
+    ],
+    "abstract": "Publication in Computer Networks 56(6): 1826-1846.",
+    "year": 2012,
+    "publishedDate": "2012-01-01",
+    "keywords": [
+      {
+        "keyword": "international journal"
+      }
+    ],
+    "journal": "Computer Networks 56(6): 1826-1846"
+  },
+  {
+    "title": "On Delay performance and Burst Assembly for Wireless Mesh and Optical Burst Switching Converged Metro Area Network",
+    "slug": "on-delay-performance-and-burst-assembly-for-wireless-mesh-and-optical-burst-switching-converged-metr",
+    "authors": [
+      {
+        "author": "J. Rezgui"
+      },
+      {
+        "author": "A. Belbekkouche"
+      },
+      {
+        "author": "A. Hafid"
+      }
+    ],
+    "abstract": "Publication in MONET 16(1): 122-133.",
+    "year": 2011,
+    "publishedDate": "2011-01-01",
+    "keywords": [
+      {
+        "keyword": "international journal"
+      }
+    ],
+    "journal": "MONET 16(1): 122-133"
+  },
+  {
+    "title": "Distributed Admission Control in Wireless Mesh Networks: Models, Algorithms, and Evaluation",
+    "slug": "distributed-admission-control-in-wireless-mesh-networks-models-algorithms-and-evaluation",
+    "authors": [
+      {
+        "author": "J. Rezgui"
+      },
+      {
+        "author": "A. Hafid"
+      },
+      {
+        "author": "M. Gendreau"
+      }
+    ],
+    "abstract": "Publication in IEEE Transactions on Vehicular Technology, Vol.59, No.3, pp.1459-1473.",
+    "year": 2010,
+    "publishedDate": "2010-01-01",
+    "keywords": [
+      {
+        "keyword": "international journal"
+      }
+    ],
+    "journal": "IEEE Transactions on Vehicular Technology, Vol.59, No.3, pp.1459-1473"
+  },
+  {
+    "title": "Wireless Mesh and Optical Burst Switching Convergence for a Novel Metropolitan Area Network Architecture",
+    "slug": "wireless-mesh-and-optical-burst-switching-convergence-for-a-novel-metropolitan-area-network-architec",
+    "authors": [
+      {
+        "author": "A. Belbekkouche"
+      },
+      {
+        "author": "J. Rezgui"
+      },
+      {
+        "author": "A. Hafid"
+      }
+    ],
+    "abstract": "Publication in Computer Networks, Vol. 55, Issue 1, pp.159-172.",
+    "year": 2011,
+    "publishedDate": "2011-01-01",
+    "keywords": [
+      {
+        "keyword": "international journal"
+      }
+    ],
+    "journal": "Computer Networks, Vol. 55, Issue 1, pp.159-172"
+  },
+  {
+    "title": "An Enhanced Scheduling and Admission Control for Voice over Wireless Mesh Networks",
+    "slug": "an-enhanced-scheduling-and-admission-control-for-voice-over-wireless-mesh-networks",
+    "authors": [
+      {
+        "author": "R. Ben Ali"
+      },
+      {
+        "author": "A. Hafid"
+      },
+      {
+        "author": "J. Rezgui"
+      }
+    ],
+    "abstract": "Publication in IEEE Transactions on Wireless Communications 11(10): 3540-3549.",
+    "year": 2012,
+    "publishedDate": "2012-01-01",
+    "keywords": [
+      {
+        "keyword": "international journal"
+      }
+    ],
+    "journal": "IEEE Transactions on Wireless Communications 11(10): 3540-3549"
+  }
+]

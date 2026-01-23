@@ -1,0 +1,75 @@
+import { ThreeWavesBackground } from './ThreeWavesBackground'
+
+import { Button } from '@/components/ui'
+import * as m from '@/paraglide/messages'
+
+const HERO_TAGLINE = m['home.hero.tagline']()
+const HERO_DESCRIPTION = m['home.hero.description']()
+const HERO_CTA_RESEARCH = m['home.hero.cta.research']()
+const HERO_CTA_CONTACT = m['home.hero.cta.contact']()
+
+import Image from 'next/image'
+
+export function HeroSection() {
+  return (
+    <section
+      className="relative h-screen flex items-center justify-center bg-white overflow-hidden"
+      aria-label="Hero"
+    >
+      {/* Animated morphing background */}
+      <ThreeWavesBackground />
+
+      {/* Centered hero content */}
+      <div className="relative z-10 px-6 lg:px-16 text-center max-w-5xl pointer-events-none flex flex-col items-center">
+        {/* Brand Element */}
+        <div className="mb-8 animate-fade-in-up">
+          <div className="h-12 w-[18rem] relative">
+            <Image
+              src="/logo_lrima.png"
+              alt="LRIMa Logo"
+              fill
+              className="object-contain"
+              priority
+            />
+          </div>
+        </div>
+
+        {/* Tagline */}
+        <h1 className="font-display text-[clamp(2.5rem,6vw,4.5rem)] font-bold tracking-tight leading-[1.1] text-slate-900 mb-8 max-w-4xl">
+          {HERO_TAGLINE}
+        </h1>
+
+        {/* Buttons */}
+        <div className="flex flex-wrap gap-4 justify-center pointer-events-auto mt-4">
+          <Button
+            href="#publications"
+            variant="primary"
+            className="px-8 py-3.5 min-w-[180px] shadow-lg shadow-slate-900/10"
+          >
+            {HERO_CTA_RESEARCH}
+          </Button>
+          <Button href="#contact" variant="secondary" className="px-8 py-3.5 min-w-[180px]">
+            {HERO_CTA_CONTACT}
+          </Button>
+        </div>
+      </div>
+
+      {/* Gradient Fade for smooth transition */}
+      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-white to-transparent z-10 pointer-events-none" />
+
+      {/* Scroll down indicator */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 pointer-events-none select-none animate-bounce">
+        <svg
+          className="w-7 h-7 text-slate-800"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={2.5}
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+      </div>
+    </section>
+  )
+}

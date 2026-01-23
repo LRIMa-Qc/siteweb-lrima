@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Ns-2",
+    "slug": "ns-2",
+    "description": "Ns-2",
+    "url": "http://www.isi.edu/nsnam/ns/"
+  },
+  {
+    "name": "Virage simulateur",
+    "slug": "virage-simulateur",
+    "description": "Virage simulateur",
+    "url": "http://viragesimulation.com/"
+  },
+  {
+    "name": "LRIMa: Simulateur de  communications véhiculaires: SCV (2016)",
+    "slug": "lrima-simulateur-de-communications-vehiculaires-scv-2016",
+    "description": "LRIMa: Simulateur de  communications véhiculaires: SCV (2016)",
+    "url": "https://gitlab.com/polkio7/SCV",
+    "year": 2016
+  },
+  {
+    "name": "LRIMa: Detection and Analysis Algorithms of punctual road events from vehicular data in the search for the optimal route: AMNAM n'est aucunement Maps (2018)",
+    "slug": "lrima-detection-and-analysis-algorithms-of-punctual-road-events-from-vehicular-data-in-the-search-fo",
+    "description": "LRIMa: Detection and Analysis Algorithms of punctual road events from vehicular data in the search for the optimal route: AMNAM n'est aucunement Maps (2018)",
+    "url": "https://gitlab.com/LRIMA/AMNAM",
+    "year": 2018
+  },
+  {
+    "name": "LRIMa: A platform for Sharing Artificial Intelligence Algorithms in Autonomous Driving An overview of Enhanced LAOP : LASP (2019)",
+    "slug": "lrima-a-platform-for-sharing-artificial-intelligence-algorithms-in-autonomous-driving-an-overview-of",
+    "description": "LRIMa: A platform for Sharing Artificial Intelligence Algorithms in Autonomous Driving\r\nAn overview of Enhanced LAOP\r\n: LASP (2019)",
+    "url": "https://lasp.lrima.cmaisonneuve.qc.ca/researches",
+    "year": 2019
+  },
+  {
+    "name": "LRIMa: Training Genetic Neural Networks Algorithms for Autonomous Cars with the LAOP 2.0 Platform  (2019)",
+    "slug": "lrima-training-genetic-neural-networks-algorithms-for-autonomous-cars-with-the-laop-2-0-platform-201",
+    "description": "LRIMa: Training Genetic Neural Networks Algorithms for Autonomous Cars with the LAOP 2.0 Platform\r\n (2019)",
+    "url": "https://github.com/lool01/LAOP_alpha",
+    "year": 2019
+  },
+  {
+    "name": "LRIMa: Traffic Sign Recognition Using Neural Networks  Useful for Autonomous Vehicles: ARIBAN (2019)",
+    "slug": "lrima-traffic-sign-recognition-using-neural-networks-useful-for-autonomous-vehicles-ariban-2019",
+    "description": "LRIMa: Traffic Sign Recognition Using Neural Networks  Useful for Autonomous Vehicles: ARIBAN (2019)",
+    "url": "https://github.com/ResearchProjectTSR/ARIBAN-platform",
+    "year": 2019
+  },
+  {
+    "name": "LRIMa:Intelligent Fruit Maturity Assessment Platform Using Conventional Neural Network : IFMAP (2020)",
+    "slug": "lrima-intelligent-fruit-maturity-assessment-platform-using-conventional-neural-network-ifmap-2020",
+    "description": "LRIMa:Intelligent Fruit Maturity Assessment Platform Using Conventional Neural Network : IFMAP (2020)",
+    "url": "https://gitlab.com/ifmap",
+    "year": 2020
+  }
+]

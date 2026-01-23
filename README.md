@@ -1,67 +1,201 @@
-# Payload Blank Template
+# LRIMa Website
 
-This template comes configured with the bare minimum to get started on anything you need.
+Laboratoire de Recherche Informatique Maisonneuve - Official website built with Next.js 15 and Payload CMS.
 
-## Quick start
+## 🚀 Tech Stack
 
-This template can be deployed directly from our Cloud hosting and it will setup MongoDB and cloud S3 object storage for media.
+- **Framework**: [Next.js 15](https://nextjs.org/) with App Router
+- **CMS**: [Payload CMS 3.x](https://payloadcms.com/)
+- **Database**: MongoDB
+- **Styling**: Tailwind CSS
+- **Internationalization**: Paraglide.js (French/English)
+- **Testing**: Vitest (integration) + Playwright (E2E)
+- **Deployment**: Vercel
 
-## Quick Start - local setup
+## 📋 Prerequisites
 
-To spin up this template locally, follow these steps:
+- Node.js 18.20.2+ or 20.9.0+
+- pnpm 9 or 10
+- MongoDB (local or cloud)
 
-### Clone
+## 🛠️ Local Development
 
-After you click the `Deploy` button above, you'll want to have standalone copy of this repo on your machine. If you've already cloned this repo, skip to [Development](#development).
+### 1. Clone the repository
 
-### Development
+```bash
+git clone https://github.com/LRIMa-Qc/lrima-website.git
+cd lrima-website
+```
 
-1. First [clone the repo](#clone) if you have not done so already
-2. `cd my-project && cp .env.example .env` to copy the example environment variables. You'll need to add the `MONGODB_URI` from your Cloud project to your `.env` if you want to use S3 storage and the MongoDB database that was created for you.
+### 2. Install dependencies
 
-3. `pnpm install && pnpm dev` to install dependencies and start the dev server
-4. open `http://localhost:3000` to open the app in your browser
+```bash
+pnpm install
+```
 
-That's it! Changes made in `./src` will be reflected in your app. Follow the on-screen instructions to login and create your first admin user. Then check out [Production](#production) once you're ready to build and serve your app, and [Deployment](#deployment) when you're ready to go live.
+### 3. Set up environment variables
 
-#### Docker (Optional)
+```bash
+cp .env.example .env
+```
 
-If you prefer to use Docker for local development instead of a local MongoDB instance, the provided docker-compose.yml file can be used.
+Edit `.env` and configure:
 
-To do so, follow these steps:
+- `DATABASE_URI` - MongoDB connection string
+- `PAYLOAD_SECRET` - Generate a secure secret (see below)
+- `NEXT_PUBLIC_SITE_URL` - Your site URL
 
-- Modify the `MONGODB_URI` in your `.env` file to `mongodb://127.0.0.1/<dbname>`
-- Modify the `docker-compose.yml` file's `MONGODB_URI` to match the above `<dbname>`
-- Run `docker-compose up` to start the database, optionally pass `-d` to run in the background.
+**Generate a secure PAYLOAD_SECRET:**
 
-## How it works
+```bash
+node -e "console.log(require('crypto').randomBytes(64).toString('hex'))"
+```
 
-The Payload config is tailored specifically to the needs of most websites. It is pre-configured in the following ways:
+### 4. Start MongoDB (Docker)
 
-### Collections
+```bash
+docker-compose up -d
+```
 
-See the [Collections](https://payloadcms.com/docs/configuration/collections) docs for details on how to extend this functionality.
+### 5. Run development server
 
-- #### Users (Authentication)
+```bash
+pnpm dev
+```
 
-  Users are auth-enabled collections that have access to the admin panel.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-  For additional help, see the official [Auth Example](https://github.com/payloadcms/payload/tree/main/examples/auth) or the [Authentication](https://payloadcms.com/docs/authentication/overview#authentication-overview) docs.
+### 6. Access Payload Admin
 
-- #### Media
+Navigate to [http://localhost:3000/admin](http://localhost:3000/admin) and create your first admin user.
 
-  This is the uploads enabled collection. It features pre-configured sizes, focal point and manual resizing to help you manage your pictures.
+## 📁 Project Structure
 
-### Docker
+```
+src/
+├── app/
+│   ├── (frontend)/     # Public-facing pages
+│   │   └── [locale]/   # Localized routes (fr/en)
+│   └── (payload)/      # Payload admin routes
+├── collections/        # Payload CMS collections
+│   ├── Media.ts
+│   ├── Members.ts
+│   ├── News.ts
+│   ├── Publications.ts
+│   └── Users.ts
+├── components/         # React components
+│   ├── footer/
+│   ├── header/
+│   ├── landing/
+│   └── ui/
+├── lib/               # Utilities and constants
+├── paraglide/         # Generated i18n files
+└── payload.config.ts  # Payload configuration
+```
 
-Alternatively, you can use [Docker](https://www.docker.com) to spin up this template locally. To do so, follow these steps:
+## 🧪 Testing
 
-1. Follow [steps 1 and 2 from above](#development), the docker-compose file will automatically use the `.env` file in your project root
-1. Next run `docker-compose up`
-1. Follow [steps 4 and 5 from above](#development) to login and create your first admin user
+### Run all tests
 
-That's it! The Docker instance will help you get up and running quickly while also standardizing the development environment across your teams.
+```bash
+pnpm test
+```
 
-## Questions
+### Run integration tests only
 
-If you have any issues or questions, reach out to us on [Discord](https://discord.com/invite/payload) or start a [GitHub discussion](https://github.com/payloadcms/payload/discussions).
+```bash
+pnpm test:int
+```
+
+### Run E2E tests only
+
+```bash
+pnpm test:e2e
+```
+
+## 🔧 Scripts
+
+| Command               | Description              |
+| --------------------- | ------------------------ |
+| `pnpm dev`            | Start development server |
+| `pnpm build`          | Build for production     |
+| `pnpm start`          | Start production server  |
+| `pnpm lint`           | Run ESLint               |
+| `pnpm test`           | Run all tests            |
+| `pnpm generate:types` | Generate Payload types   |
+
+## 🌍 Internationalization
+
+The site supports French (default) and English. Language files are located in:
+
+- `messages/fr.json`
+- `messages/en.json`
+
+To add translations:
+
+```bash
+pnpm machine-translate
+```
+
+## 🚀 Deployment to Vercel
+
+### 1. Push to GitHub
+
+Ensure your code is pushed to a GitHub repository.
+
+### 2. Import to Vercel
+
+1. Go to [vercel.com](https://vercel.com) and sign in
+2. Click "Add New Project"
+3. Import your GitHub repository
+
+### 3. Configure Environment Variables
+
+Add the following environment variables in Vercel:
+
+| Variable               | Value                                |
+| ---------------------- | ------------------------------------ |
+| `DATABASE_URI`         | Your MongoDB Atlas connection string |
+| `MONGODB_URI`          | Same as DATABASE_URI                 |
+| `PAYLOAD_SECRET`       | Your secure 64+ character secret     |
+| `NEXT_PUBLIC_SITE_URL` | `https://your-domain.vercel.app`     |
+
+### 4. Deploy
+
+Click "Deploy" and Vercel will automatically build and deploy your site.
+
+### 5. Set up MongoDB Atlas
+
+For production, use [MongoDB Atlas](https://www.mongodb.com/atlas):
+
+1. Create a free cluster
+2. Create a database user
+3. Whitelist Vercel's IP addresses (or allow access from anywhere: `0.0.0.0/0`)
+4. Get your connection string and add it to Vercel
+
+## 📝 Collections
+
+| Collection       | Description                      |
+| ---------------- | -------------------------------- |
+| **Users**        | Admin users with authentication  |
+| **Media**        | Uploaded images and files        |
+| **News**         | News articles and announcements  |
+| **Members**      | Lab team members and researchers |
+| **Publications** | Academic publications and papers |
+
+## 📄 License
+
+MIT License - see [LICENSE](LICENSE) for details.
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📞 Contact
+
+- **Email**: lrima@cmaisonneuve.qc.ca
+- **Address**: Collège de Maisonneuve, 3800 rue Sherbrooke Est, Montréal (Québec) H1X 2A2, Canada

@@ -1,21 +1,197 @@
 {
   "$schema": "https://inlang.com/schema/inlang-message-format",
-  "pages": {
-    "publications": {
-      "label": "Publications",
-      "href": "/publications"
+  "metadata": {
+    "title": "LRIMa - Advanced AI and Modeling Research Laboratory",
+    "description": "LRIMa is an advanced research laboratory specializing in artificial intelligence and modeling. Explore our research, publications, and our team."
+  },
+  "nav": {
+    "home": "Home",
+    "news": "News",
+    "publications": "Scientific Publications",
+    "members": "Members",
+    "contact": "Contact"
+  },
+  "home": {
+    "title": "Applied Imaging and Modeling Research Laboratory",
+    "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "hero": {
+      "tagline": "The space where student passion shapes tomorrow's technology.",
+      "overline": "Laboratoire de Recherche Informatique Maisonneuve",
+      "description": "LRIMa is an innovation space where students and researchers collaborate to push the boundaries of computer science.",
+      "cta": {
+        "research": "Our Research",
+        "contact": "Contact Us"
+      }
     },
-    "news": {
-      "label": "Nouvelles",
-      "href": "/news"
+    "stats": {
+      "publications": "Research publications",
+      "researchers": "Active researchers",
+      "years": "Years of excellence"
     },
-    "members": {
-      "label": "Membres",
-      "href": "/members"
+    "quote": "Innovation is born from curiosity and collaboration between passionate researchers.",
+    "gallery": {
+      "title": "Our Lab in Action"
     },
-    "contact": {
-      "label": "Contact",
-      "href": "/contact"
+    "about": {
+      "title": "About LRIMa",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    "latestNews": "Latest News",
+    "recentPublications": "Recent Publications",
+    "viewAll": "View All",
+    "cta": {
+      "title": "Ready to innovate with us?",
+      "subtitle": "Join our team of passionate researchers or collaborate on groundbreaking projects.",
+      "join": "Join the Lab",
+      "contact": "Contact Us"
+    },
+    "audiences": {
+      "students": {
+        "title": "For Students",
+        "description": "Develop your skills in a stimulating and collaborative environment."
+      },
+      "partners": {
+        "title": "For Partners",
+        "description": "Collaborate with experts to solve complex problems."
+      },
+      "researchers": {
+        "title": "For Researchers",
+        "description": "Join a dynamic team and contribute to scientific advancement."
+      }
     }
+  },
+  "news": {
+    "title": "News",
+    "subtitle": "Stay informed about our latest news and events",
+    "description": "Discover the latest advances and events from our lab.",
+    "featured": "Featured",
+    "allNews": "All News",
+    "readMore": "Read More",
+
+    "noNews": "No news available at the moment.",
+    "label": "News",
+    "placeholder": {
+      "title": "Article coming soon",
+      "excerpt": "Stay tuned for our latest news."
+    }
+  },
+  "publications": {
+    "title": "Scientific Publications",
+    "subtitle": "Discover our contributions to scientific research",
+    "description": "Our contributions to scientific research.",
+    "filters": {
+      "year": "Year",
+      "type": "Type",
+      "author": "Author",
+      "keyword": "Keyword",
+      "all": "All"
+    },
+    "types": {
+      "journal": "Journal Article",
+      "conference": "Conference",
+      "book": "Book",
+      "thesis": "Thesis",
+      "patent": "Patent",
+      "report": "Report",
+      "publication": "Publication"
+    },
+    "noPublications": "No publications found.",
+    "placeholder": {
+      "title": "Publication coming soon",
+      "abstract": "Our researchers are working on innovative projects. Stay tuned for our upcoming publications!"
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Feel free to contact us for any questions or collaboration",
+    "form": {
+      "title": "Send us a message",
+      "name": "Full Name",
+      "email": "Email Address",
+      "organization": "Organization (optional)",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Send",
+      "sending": "Sending...",
+      "success": "Your message has been sent successfully!",
+      "error": "An error occurred. Please try again."
+    },
+    "map": {
+      "placeholder": "Map Placeholder"
+    },
+    "info": {
+      "title": "Information",
+      "address": "Address",
+      "phone": "Phone",
+      "email": "Email"
+    }
+  },
+  "members": {
+    "title": "Members",
+    "active": "Active Members",
+    "alumni": "Alumni",
+    "collaborators": "Collaborators",
+    "researchInterests": "Research Interests",
+    "director": {
+      "intro": "Under the direction of {name}, the LRIMa laboratory explores the frontiers of artificial intelligence and advanced modeling to tackle tomorrow's technological challenges.",
+      "viewProfile": "View full profile"
+    },
+    "bio": "Biography"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "retry": "Retry",
+    "close": "Close",
+    "learnMore": "Learn More",
+    "search": "Search"
+  },
+  "grants": {
+    "title": "Grants & Funding",
+    "subtitle": "Supporting innovation and research excellence"
+  },
+  "search": {
+    "placeholder": "Search...",
+    "results": "Results",
+    "noResults": "No results found.",
+    "startTyping": "Start typing to search",
+    "closeEsc": "ESC to close"
+  },
+  "publicationDetail": {
+    "journal": "Journal:",
+    "venue": "Venue:",
+    "pages": "Pages:",
+    "published": "Published:",
+    "abstract": "Abstract",
+    "keywords": "Keywords",
+    "citation": "Citation",
+    "viewDoi": "View on DOI",
+    "viewPublication": "View Publication",
+    "downloadPdf": "Download PDF",
+    "backToPublications": "Back to Publications",
+    "volume": "Vol.",
+    "issue": "Issue"
+  },
+  "newsDetail": {
+    "by": "By",
+    "backToNews": "Back to News"
+  },
+  "membersList": {
+    "noMembers": "No members found."
+  },
+  "publicationsList": {
+    "noPublications": "No publications found."
+  },
+  "newsList": {
+    "noNews": "No news found."
+  },
+  "images": {
+    "researchLab": "Research Lab",
+    "teamCollaboration": "Team collaboration",
+    "innovation": "Innovation"
+  },
+  "footer": {
+    "navigation": "Navigation",
+    "rights": "All rights reserved."
   }
 }
