@@ -50,7 +50,7 @@ export async function getNews(options?: {
     return docs.map((doc: any) => ({
       id: doc.id,
       title: doc.title,
-      summary: doc.summary,
+      summary: doc.summary || undefined,
       content: doc.content, // Keep as raw Lexical structure
       imageUrl: typeof doc.image === 'object' ? doc.image?.url || undefined : undefined,
       author: doc.author || undefined,
@@ -90,7 +90,7 @@ export async function getNewsBySlug(slug: string, locale?: string): Promise<News
     return {
       id: doc.id,
       title: doc.title,
-      summary: doc.summary,
+      summary: doc.summary || undefined,
       content: doc.content, // Keep as raw Lexical structure
       imageUrl: typeof doc.image === 'object' ? doc.image?.url || undefined : undefined,
       author: doc.author || undefined,

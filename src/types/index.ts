@@ -44,7 +44,7 @@ export interface Publication {
 export interface News {
   id: string
   title: string
-  summary: string
+  summary?: string
   content: any // Lexical rich text structure
   imageUrl?: string
   author?: string
