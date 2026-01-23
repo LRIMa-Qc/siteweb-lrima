@@ -2,23 +2,23 @@
 
 Laboratoire de Recherche Informatique Maisonneuve - Official website built with Next.js 15 and Payload CMS.
 
-## 🚀 Tech Stack
+## Tech Stack
 
-- **Framework**: [Next.js 15](https://nextjs.org/) with App Router
-- **CMS**: [Payload CMS 3.x](https://payloadcms.com/)
+- **Framework**: Next.js 15 with App Router
+- **CMS**: Payload CMS 3.x
 - **Database**: MongoDB
 - **Styling**: Tailwind CSS
 - **Internationalization**: Paraglide.js (French/English)
 - **Testing**: Vitest (integration) + Playwright (E2E)
 - **Deployment**: Vercel
 
-## 📋 Prerequisites
+## Prerequisites
 
 - Node.js 18.20.2+ or 20.9.0+
 - pnpm 9 or 10
 - MongoDB (local or cloud)
 
-## 🛠️ Local Development
+## Local Development
 
 ### 1. Clone the repository
 
@@ -45,7 +45,7 @@ Edit `.env` and configure:
 - `PAYLOAD_SECRET` - Generate a secure secret (see below)
 - `NEXT_PUBLIC_SITE_URL` - Your site URL
 
-**Generate a secure PAYLOAD_SECRET:**
+Generate a secure PAYLOAD_SECRET:
 
 ```bash
 node -e "console.log(require('crypto').randomBytes(64).toString('hex'))"
@@ -63,13 +63,13 @@ docker-compose up -d
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+Open http://localhost:3000 in your browser.
 
 ### 6. Access Payload Admin
 
-Navigate to [http://localhost:3000/admin](http://localhost:3000/admin) and create your first admin user.
+Navigate to http://localhost:3000/admin and create your first admin user.
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 src/
@@ -93,27 +93,27 @@ src/
 └── payload.config.ts  # Payload configuration
 ```
 
-## 🧪 Testing
+## Testing
 
-### Run all tests
+Run all tests:
 
 ```bash
 pnpm test
 ```
 
-### Run integration tests only
+Run integration tests only:
 
 ```bash
 pnpm test:int
 ```
 
-### Run E2E tests only
+Run E2E tests only:
 
 ```bash
 pnpm test:e2e
 ```
 
-## 🔧 Scripts
+## Scripts
 
 | Command               | Description              |
 | --------------------- | ------------------------ |
@@ -124,7 +124,7 @@ pnpm test:e2e
 | `pnpm test`           | Run all tests            |
 | `pnpm generate:types` | Generate Payload types   |
 
-## 🌍 Internationalization
+## Internationalization
 
 The site supports French (default) and English. Language files are located in:
 
@@ -137,7 +137,7 @@ To add translations:
 pnpm machine-translate
 ```
 
-## 🚀 Deployment to Vercel
+## Deployment to Vercel
 
 ### 1. Push to GitHub
 
@@ -145,7 +145,7 @@ Ensure your code is pushed to a GitHub repository.
 
 ### 2. Import to Vercel
 
-1. Go to [vercel.com](https://vercel.com) and sign in
+1. Go to vercel.com and sign in
 2. Click "Add New Project"
 3. Import your GitHub repository
 
@@ -158,7 +158,7 @@ Add the following environment variables in Vercel:
 | `DATABASE_URI`         | Your MongoDB Atlas connection string |
 | `MONGODB_URI`          | Same as DATABASE_URI                 |
 | `PAYLOAD_SECRET`       | Your secure 64+ character secret     |
-| `NEXT_PUBLIC_SITE_URL` | `https://your-domain.vercel.app`     |
+| `NEXT_PUBLIC_SITE_URL` | Your Vercel URL                      |
 
 ### 4. Deploy
 
@@ -166,36 +166,36 @@ Click "Deploy" and Vercel will automatically build and deploy your site.
 
 ### 5. Set up MongoDB Atlas
 
-For production, use [MongoDB Atlas](https://www.mongodb.com/atlas):
+For production, use MongoDB Atlas:
 
 1. Create a free cluster
 2. Create a database user
-3. Whitelist Vercel's IP addresses (or allow access from anywhere: `0.0.0.0/0`)
+3. Whitelist Vercel's IP addresses (or allow access from anywhere: 0.0.0.0/0)
 4. Get your connection string and add it to Vercel
 
-## 📝 Collections
+## Collections
 
-| Collection       | Description                      |
-| ---------------- | -------------------------------- |
-| **Users**        | Admin users with authentication  |
-| **Media**        | Uploaded images and files        |
-| **News**         | News articles and announcements  |
-| **Members**      | Lab team members and researchers |
-| **Publications** | Academic publications and papers |
+| Collection   | Description                      |
+| ------------ | -------------------------------- |
+| Users        | Admin users with authentication  |
+| Media        | Uploaded images and files        |
+| News         | News articles and announcements  |
+| Members      | Lab team members and researchers |
+| Publications | Academic publications and papers |
 
-## 📄 License
+## License
 
-MIT License - see [LICENSE](LICENSE) for details.
+MIT License
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
+2. Create a feature branch
+3. Commit your changes
+4. Push to the branch
 5. Open a Pull Request
 
-## 📞 Contact
+## Contact
 
-- **Email**: lrima@cmaisonneuve.qc.ca
-- **Address**: Collège de Maisonneuve, 3800 rue Sherbrooke Est, Montréal (Québec) H1X 2A2, Canada
+- Email: lrima@cmaisonneuve.qc.ca
+- Address: College de Maisonneuve, 3800 rue Sherbrooke Est, Montreal (Quebec) H1X 2A2, Canada
