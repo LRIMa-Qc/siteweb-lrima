@@ -1,5 +1,6 @@
 import type { CollectionConfig } from 'payload'
 import { formatSlug } from '@/lib/formatSlug'
+import { revalidateCollection } from '@/lib/revalidate'
 
 /**
  * News collection configuration.
@@ -13,6 +14,18 @@ export const News: CollectionConfig = {
   },
   access: {
     read: () => true,
+  },
+  hooks: {
+    afterChange: [
+      ({ doc }) => {
+        revalidateCollection('news', doc.slug, '/nouvelles')
+      },
+    ],
+    afterDelete: [
+      ({ doc }) => {
+        revalidateCollection('news', doc.slug, '/nouvelles')
+      },
+    ],
   },
   fields: [
     {

@@ -1,5 +1,6 @@
 import type { CollectionConfig } from 'payload'
 import { formatSlug } from '@/lib/formatSlug'
+import { revalidateCollection } from '@/lib/revalidate'
 
 export const Publications: CollectionConfig = {
   slug: 'publications',
@@ -9,6 +10,18 @@ export const Publications: CollectionConfig = {
   },
   access: {
     read: () => true,
+  },
+  hooks: {
+    afterChange: [
+      ({ doc }) => {
+        revalidateCollection('publications', doc.slug, '/publications')
+      },
+    ],
+    afterDelete: [
+      ({ doc }) => {
+        revalidateCollection('publications', doc.slug, '/publications')
+      },
+    ],
   },
   fields: [
     {

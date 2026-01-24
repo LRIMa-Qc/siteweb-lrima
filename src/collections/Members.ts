@@ -1,5 +1,6 @@
 import type { CollectionConfig } from 'payload'
 import { formatSlug } from '@/lib/formatSlug'
+import { revalidateCollection } from '@/lib/revalidate'
 
 export const Members: CollectionConfig = {
   slug: 'members',
@@ -9,6 +10,18 @@ export const Members: CollectionConfig = {
   },
   access: {
     read: () => true,
+  },
+  hooks: {
+    afterChange: [
+      ({ doc }) => {
+        revalidateCollection('members', doc.slug, '/members')
+      },
+    ],
+    afterDelete: [
+      ({ doc }) => {
+        revalidateCollection('members', doc.slug, '/members')
+      },
+    ],
   },
   fields: [
     {
