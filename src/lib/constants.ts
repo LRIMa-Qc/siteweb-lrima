@@ -3,21 +3,21 @@
  */
 
 export const SITE_CONFIG = {
-  name: 'LRIMA',
+  name: 'LRIMa',
   description:
-    'Laboratoire de Recherche Informatique Maisonneuve - Advancing Research in Intelligence and Modeling',
-  url: process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000',
-  author: 'LRIMA',
+    'Laboratoire de Recherche Informatique Maisonneuve - Pôle d’excellence en recherche appliquée, IA et IoT.',
+  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://lrima.qc.ca',
+  author: 'LRIMa',
   locale: {
-    default: 'en',
+    default: 'fr',
     supported: ['en', 'fr'],
   },
 } as const
 
 export const SOCIAL_LINKS = {
-  twitter: '#',
-  linkedin: '#',
-  github: '#',
+  linkedin:
+    'https://www.linkedin.com/company/lrima-laboratoire-de-recherche-informatique-maisonneuve/',
+  github: 'https://github.com/LRIMa-Qc',
 } as const
 
 export const CONTACT_INFO = {

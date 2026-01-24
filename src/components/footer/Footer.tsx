@@ -30,14 +30,14 @@ export function Footer() {
               />
             </div>
             <p className="text-slate-500 leading-relaxed text-lg max-w-md">
-              Laboratoire de Recherche Informatique Maisonneuve
+              {m['common.labName']({}, { locale })}
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
             <h4 className="text-sm font-semibold mb-4 text-slate-400 uppercase tracking-wider">
-              {m['footer.navigation']()}
+              {m['footer.navigation']({}, { locale })}
             </h4>
             <ul className="space-y-3">
               <li>
@@ -45,7 +45,7 @@ export function Footer() {
                   href={`/${locale}`}
                   className="text-slate-600 hover:text-slate-900 transition-colors duration-300 text-base"
                 >
-                  {m['nav.home']()}
+                  {m['nav.home']({}, { locale })}
                 </Link>
               </li>
               <li>
@@ -53,7 +53,7 @@ export function Footer() {
                   href={`/${locale}/nouvelles`}
                   className="text-slate-600 hover:text-slate-900 transition-colors duration-300 text-base"
                 >
-                  {m['nav.news']()}
+                  {m['nav.news']({}, { locale })}
                 </Link>
               </li>
               <li>
@@ -61,7 +61,7 @@ export function Footer() {
                   href={`/${locale}/publications`}
                   className="text-slate-600 hover:text-slate-900 transition-colors duration-300 text-base"
                 >
-                  {m['nav.publications']()}
+                  {m['nav.publications']({}, { locale })}
                 </Link>
               </li>
               <li>
@@ -69,7 +69,7 @@ export function Footer() {
                   href={`/${locale}/members`}
                   className="text-slate-600 hover:text-slate-900 transition-colors duration-300 text-base"
                 >
-                  {m['nav.members']()}
+                  {m['nav.members']({}, { locale })}
                 </Link>
               </li>
             </ul>
@@ -78,7 +78,7 @@ export function Footer() {
           {/* Contact Info */}
           <div>
             <h4 className="text-sm font-semibold mb-4 text-slate-400 uppercase tracking-wider">
-              {m['nav.contact']()}
+              {m['nav.contact']({}, { locale })}
             </h4>
             <ul className="space-y-3 text-slate-600 text-base">
               <li className="leading-relaxed">
@@ -109,12 +109,12 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-slate-400 text-sm">
-            © {currentYear} {SITE_CONFIG.name}. {m['footer.rights']()}
+            © {currentYear} {SITE_CONFIG.name}. {m['footer.rights']({}, { locale })}
           </p>
           <div className="flex gap-4">
             <a
               href={SOCIAL_LINKS.linkedin}
-              className="w-10 h-10 bg-neutral-800/50 rounded-lg flex items-center justify-center hover:bg-primary-500 hover:scale-110 transition-all duration-300 text-neutral-400 hover:text-white"
+              className="w-10 h-10 bg-slate-200 rounded-lg flex items-center justify-center hover:bg-[#0A66C2] hover:scale-110 transition-all duration-300 text-slate-600 hover:text-white"
               aria-label="LinkedIn"
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -123,7 +123,7 @@ export function Footer() {
             </a>
             <a
               href={SOCIAL_LINKS.github}
-              className="w-10 h-10 bg-neutral-800/50 rounded-lg flex items-center justify-center hover:bg-primary-500 hover:scale-110 transition-all duration-300 text-neutral-400 hover:text-white"
+              className="w-10 h-10 bg-slate-200 rounded-lg flex items-center justify-center hover:bg-[#333] hover:scale-110 transition-all duration-300 text-slate-600 hover:text-white"
               aria-label="GitHub"
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">

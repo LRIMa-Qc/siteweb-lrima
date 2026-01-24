@@ -14,7 +14,7 @@ export default async function NewsPage({ params }: NewsPageProps) {
   const { locale } = await params
 
   // Fetch data in parallel
-  const [newsList, members] = await Promise.all([getNews(), getMembers({ locale })])
+  const [newsList, members] = await Promise.all([getNews({ locale }), getMembers({ locale })])
 
   // Create member map
   const memberMap = members.reduce(

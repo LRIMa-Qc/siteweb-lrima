@@ -35,14 +35,18 @@ export function AudienceSection({ locale, audiences }: AudienceSectionProps) {
     <section
       className="scroll-highlight-section relative overflow-hidden"
       style={{ '--count': audiences.length } as React.CSSProperties}
-      aria-label={m['home.audiences.students.title']().replace('For ', '').replace('Pour ', '')}
+      aria-label={m['home.audiences.students.title']({}, { locale: locale as any })
+        .replace('For ', '')
+        .replace('Pour ', '')}
     >
       {/* Scroll-driven Header */}
       <header className="scroll-highlight-header scroll-highlight-fluid">
         <section className="scroll-highlight-content">
           <h2 className="scroll-highlight-title font-display">
             <span aria-hidden="true">{isFrench ? 'Pour\u00A0' : 'For\u00A0'}</span>
-            <span className="sr-only">{m['home.audiences.students.title']()}</span>
+            <span className="sr-only">
+              {m['home.audiences.students.title']({}, { locale: locale as any })}
+            </span>
           </h2>
 
           {/* Audience List */}
@@ -75,7 +79,7 @@ function CTABlock({ locale }: CTABlockProps) {
     <main className="relative flex items-center justify-center min-h-screen bg-slate-800 text-white">
       <section className="text-center px-6">
         <p className="scroll-highlight-fluid font-display font-semibold mb-8">
-          {m['home.cta.subtitle']()}
+          {m['home.cta.subtitle']({}, { locale: locale as any })}
         </p>
         <Button
           href={`/${locale}/contact`}
@@ -83,7 +87,7 @@ function CTABlock({ locale }: CTABlockProps) {
           variant="primary"
           className="rounded-full px-8 py-4 bg-white text-slate-800 hover:bg-slate-100"
         >
-          {m['home.cta.contact']()}
+          {m['home.cta.contact']({}, { locale: locale as any })}
         </Button>
       </section>
     </main>

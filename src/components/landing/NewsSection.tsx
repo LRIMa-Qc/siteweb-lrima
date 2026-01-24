@@ -47,8 +47,8 @@ const PLACEHOLDER_COUNT = 2
 
 export function NewsSection({ locale, news, memberMap = {} }: NewsSectionProps) {
   const newsToDisplay = news.length > 0 ? news.slice(0, 2) : null
-  const title = m['home.latestNews']()
-  const viewAllText = m['home.viewAll']()
+  const title = m['home.latestNews']({}, { locale: locale as any })
+  const viewAllText = m['home.viewAll']({}, { locale: locale as any })
 
   return (
     <Section aria-labelledby="news-heading">
@@ -57,7 +57,7 @@ export function NewsSection({ locale, news, memberMap = {} }: NewsSectionProps) 
         <SectionHeader
           id="news-heading"
           title={title}
-          description={m['news.description']()}
+          description={m['news.description']({}, { locale: locale as any })}
           linkHref={`/${locale}/nouvelles`}
           linkText={viewAllText}
           theme="light"

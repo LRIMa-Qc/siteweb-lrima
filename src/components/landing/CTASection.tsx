@@ -54,12 +54,12 @@ export function CTASection({ locale }: CTASectionProps) {
                 id="cta-heading"
                 className="font-display text-[clamp(2.5rem,6vw,5rem)] font-bold text-slate-700 tracking-tight mb-8 leading-none"
               >
-                {m['home.cta.title']()}
+                {m['home.cta.title']({}, { locale: locale as any })}
               </h2>
 
               {/* Description */}
               <p className="text-xl text-slate-400 mb-10 max-w-2xl leading-relaxed">
-                {m['home.cta.subtitle']()}
+                {m['home.cta.subtitle']({}, { locale: locale as any })}
               </p>
 
               {/* Action Buttons */}
@@ -90,7 +90,7 @@ function ActionButtons({ locale }: ActionButtonsProps) {
         variant="primary"
         className="px-12 py-5 text-base"
       >
-        {m['home.cta.contact']()}
+        {m['home.cta.contact']({}, { locale: locale as any })}
       </Button>
 
       {/* Secondary CTA */}
@@ -100,7 +100,7 @@ function ActionButtons({ locale }: ActionButtonsProps) {
         variant="outline"
         className="px-12 py-5 text-base border-slate-200 text-slate-600 hover:bg-slate-50"
       >
-        {m['home.cta.join']()}
+        {m['home.cta.join']({}, { locale: locale as any })}
       </Button>
     </div>
   )

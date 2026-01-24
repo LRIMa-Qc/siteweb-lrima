@@ -54,8 +54,8 @@ export function PublicationsSection({
   memberMap = {},
 }: PublicationsSectionProps) {
   const hasPublications = publications.length > 0
-  const title = m['home.recentPublications']()
-  const viewAllText = m['home.viewAll']()
+  const title = m['home.recentPublications']({}, { locale: locale as any })
+  const viewAllText = m['home.viewAll']({}, { locale: locale as any })
 
   return (
     <Section className="bg-slate-800 text-white" aria-labelledby="publications-heading">
@@ -64,7 +64,7 @@ export function PublicationsSection({
         <SectionHeader
           id="publications-heading"
           title={title}
-          description={m['publications.description']()}
+          description={m['publications.description']({}, { locale: locale as any })}
           linkHref={`/${locale}/publications`}
           linkText={viewAllText}
           theme="dark"
@@ -100,7 +100,9 @@ export function PublicationsSection({
         ) : (
           // Empty State
           <div className="py-20 text-center border-t border-white/10">
-            <p className="text-xl text-white/40">{m['publicationsList.noPublications']()}</p>
+            <p className="text-xl text-white/40">
+              {m['publications.noPublications']({}, { locale: locale as any })}
+            </p>
           </div>
         )}
       </StaggerContainer>

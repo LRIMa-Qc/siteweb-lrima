@@ -10,7 +10,11 @@ interface HorizontalScrollSectionProps {
   description: string
 }
 
-export function HorizontalScrollSection({ title, description }: HorizontalScrollSectionProps) {
+export function HorizontalScrollSection({
+  locale,
+  title,
+  description,
+}: HorizontalScrollSectionProps) {
   const sectionRef = useRef<HTMLDivElement>(null)
   const scrollContainerRef = useRef<HTMLDivElement>(null)
   const [scrollableWidth, setScrollableWidth] = useState(0)
@@ -79,8 +83,8 @@ export function HorizontalScrollSection({ title, description }: HorizontalScroll
           {/* Image 1 */}
           <div className="flex-shrink-0 w-[80vw] lg:w-[40vw] h-[70vh] rounded-3xl overflow-hidden relative">
             <Image
-              src="/hero_image.JPG"
-              alt={m['images.researchLab']()}
+              src="/gallery-1.JPG"
+              alt={m['images.researchLab']({}, { locale: locale as any })}
               fill
               className="object-cover"
             />
@@ -93,19 +97,25 @@ export function HorizontalScrollSection({ title, description }: HorizontalScroll
                 <span className="font-display text-[clamp(3rem,6vw,5rem)] font-bold text-white">
                   50+
                 </span>
-                <p className="text-lg text-white/50 mt-2">{m['home.stats.publications']()}</p>
+                <p className="text-lg text-white/50 mt-2">
+                  {m['home.stats.publications']({}, { locale: locale as any })}
+                </p>
               </div>
               <div>
                 <span className="font-display text-[clamp(3rem,6vw,5rem)] font-bold text-white">
                   25+
                 </span>
-                <p className="text-lg text-white/50 mt-2">{m['home.stats.researchers']()}</p>
+                <p className="text-lg text-white/50 mt-2">
+                  {m['home.stats.researchers']({}, { locale: locale as any })}
+                </p>
               </div>
               <div>
                 <span className="font-display text-[clamp(3rem,6vw,5rem)] font-bold text-white">
                   10+
                 </span>
-                <p className="text-lg text-white/50 mt-2">{m['home.stats.years']()}</p>
+                <p className="text-lg text-white/50 mt-2">
+                  {m['home.stats.years']({}, { locale: locale as any })}
+                </p>
               </div>
             </div>
           </div>
@@ -114,9 +124,10 @@ export function HorizontalScrollSection({ title, description }: HorizontalScroll
           <div className="flex-shrink-0 w-[80vw] lg:w-[45vw] h-[70vh] rounded-3xl overflow-hidden relative">
             <Image
               src="/robot-gif.gif"
-              alt={m['images.teamCollaboration']()}
+              alt={m['images.teamCollaboration']({}, { locale: locale as any })}
               fill
               className="object-cover"
+              unoptimized
             />
           </div>
 
@@ -124,7 +135,7 @@ export function HorizontalScrollSection({ title, description }: HorizontalScroll
           <div className="flex-shrink-0 w-[80vw] lg:w-[40vw] h-[70vh] bg-primary-600 rounded-3xl p-12 flex flex-col justify-center">
             <blockquote className="text-2xl lg:text-3xl text-white font-medium leading-relaxed mb-8">
               &ldquo;
-              {m['home.quote']()}
+              {m['home.quote']({}, { locale: locale as any })}
               &rdquo;
             </blockquote>
             <p className="text-white/70 text-lg">— LRIMa</p>
@@ -133,8 +144,8 @@ export function HorizontalScrollSection({ title, description }: HorizontalScroll
           {/* Image 3 */}
           <div className="flex-shrink-0 w-[80vw] lg:w-[40vw] h-[70vh] rounded-3xl overflow-hidden relative mr-16">
             <Image
-              src="/hero_image.JPG"
-              alt={m['images.innovation']()}
+              src="/gallery-1.JPG"
+              alt={m['images.innovation']({}, { locale: locale as any })}
               fill
               className="object-cover"
             />

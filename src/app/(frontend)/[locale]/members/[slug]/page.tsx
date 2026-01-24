@@ -115,7 +115,7 @@ export default async function MemberDetailPage({ params }: MemberDetailPageProps
                           rel="noopener noreferrer"
                           className="hover:text-primary-600 transition-colors"
                         >
-                          Website
+                          {m['members.social.website']()}
                         </a>
                       </p>
                     )}
@@ -143,7 +143,7 @@ export default async function MemberDetailPage({ params }: MemberDetailPageProps
                           rel="noopener noreferrer"
                           className="hover:text-primary-600 transition-colors"
                         >
-                          LinkedIn
+                          {m['members.social.linkedIn']()}
                         </a>
                       </p>
                     )}
@@ -170,7 +170,7 @@ export default async function MemberDetailPage({ params }: MemberDetailPageProps
                           rel="noopener noreferrer"
                           className="hover:text-primary-600 transition-colors"
                         >
-                          GitHub
+                          {m['members.social.github']()}
                         </a>
                       </p>
                     )}
@@ -197,7 +197,7 @@ export default async function MemberDetailPage({ params }: MemberDetailPageProps
                           rel="noopener noreferrer"
                           className="hover:text-primary-600 transition-colors"
                         >
-                          Google Scholar
+                          {m['members.social.googleScholar']()}
                         </a>
                       </p>
                     )}

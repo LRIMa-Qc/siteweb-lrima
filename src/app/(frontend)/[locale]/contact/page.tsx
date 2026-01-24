@@ -93,11 +93,7 @@ function ContactInfo() {
   return (
     <div className="space-y-6">
       <div className="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm">
-        <h3 className="font-display text-2xl font-bold mb-8 text-slate-900">
-          {m['contact.info.title']()}
-        </h3>
-
-        <div className="space-y-8">
+        <div className="space-y-6">
           {/* Address */}
           <div className="flex gap-4">
             <div className="flex-shrink-0 w-12 h-12 bg-primary-50 rounded-xl flex items-center justify-center text-primary-600">
@@ -118,25 +114,15 @@ function ContactInfo() {
               </svg>
             </div>
             <div>
-              <h4 className="text-sm font-semibold text-slate-900 mb-2">
-                {m['contact.info.address']()}
-              </h4>
               <p className="text-slate-600 leading-relaxed">
-                {CONTACT_INFO.address.line1}
-                <br />
-                {CONTACT_INFO.address.line2}
-                <br />
-                {CONTACT_INFO.address.line3}
-                <br />
-                {CONTACT_INFO.address.line4}
-                <br />
-                {CONTACT_INFO.address.line5}
+                3800 Sherbrooke St E<br />
+                Montreal, Quebec H1X 2A2
               </p>
             </div>
           </div>
 
           {/* Phone */}
-          <div className="flex gap-4">
+          <div className="flex items-center gap-4">
             <div className="flex-shrink-0 w-12 h-12 bg-primary-50 rounded-xl flex items-center justify-center text-primary-600">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -154,9 +140,6 @@ function ContactInfo() {
               </svg>
             </div>
             <div>
-              <h4 className="text-sm font-semibold text-slate-900 mb-2">
-                {m['contact.info.phone']()}
-              </h4>
               <a
                 href={`tel:${CONTACT_INFO.phone.replace(/\D/g, '')}`}
                 className="text-primary-600 hover:text-primary-700 font-medium transition-colors"
@@ -167,7 +150,7 @@ function ContactInfo() {
           </div>
 
           {/* Email */}
-          <div className="flex gap-4">
+          <div className="flex items-center gap-4">
             <div className="flex-shrink-0 w-12 h-12 bg-primary-50 rounded-xl flex items-center justify-center text-primary-600">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -186,9 +169,6 @@ function ContactInfo() {
               </svg>
             </div>
             <div>
-              <h4 className="text-sm font-semibold text-slate-900 mb-2">
-                {m['contact.info.email']()}
-              </h4>
               <a
                 href={`mailto:${CONTACT_INFO.email}`}
                 className="text-primary-600 hover:text-primary-700 font-medium transition-colors"
@@ -200,11 +180,19 @@ function ContactInfo() {
         </div>
       </div>
 
-      {/* Map placeholder */}
+      {/* Google Maps embed */}
       <div className="rounded-3xl overflow-hidden border border-slate-100 shadow-sm">
-        <div className="w-full h-80 bg-slate-100 flex items-center justify-center">
-          <span className="text-slate-400 font-medium">{m['contact.map.placeholder']()}</span>
-        </div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2796.0661547474!2d-73.5538!3d45.5452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91bb0e1c9f3ed%3A0x7d5c6b0a6f8d8d8d!2s3800%20Rue%20Sherbrooke%20E%2C%20Montr%C3%A9al%2C%20QC%20H1X%202A2!5e0!3m2!1sfr!2sca!4v1700000000000!5m2!1sfr!2sca"
+          width="100%"
+          height="320"
+          style={{ border: 0 }}
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          title="LRIMa Location"
+          className="w-full"
+        />
       </div>
     </div>
   )
@@ -230,6 +218,9 @@ export default async function ContactPage() {
 
             {/* Contact Info */}
             <div className="lg:col-span-2">
+              <h2 className="font-display text-3xl font-bold mb-8 text-slate-900">
+                {m['contact.info.title']()}
+              </h2>
               <ContactInfo />
             </div>
           </div>

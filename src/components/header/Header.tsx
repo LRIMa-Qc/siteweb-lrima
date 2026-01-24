@@ -1,9 +1,9 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { usePathname } from 'next/navigation'
 import { HeaderItem } from './HeaderItem'
 import * as m from '@/paraglide/messages'
-import { getLocale } from '@/paraglide/runtime'
 import { Button } from '@/components/ui'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -19,6 +19,7 @@ import { SearchModal } from '@/components/search/SearchModal'
 export function Header() {
   const [scrolled, setScrolled] = useState(false)
   const [isSearchOpen, setIsSearchOpen] = useState(false)
+  const pathname = usePathname()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,8 +29,13 @@ export function Header() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const locale = getLocale()
+  // Get locale from URL path (e.g., /fr/... or /en/...)
+  const locale = pathname.startsWith('/en') ? 'en' : 'fr'
   const otherLocale = locale === 'fr' ? 'en' : 'fr'
+
+  // Build the path for language switch (replace locale prefix)
+  const pathWithoutLocale = pathname.replace(/^\/(fr|en)/, '') || '/'
+  const switchLocalePath = `/${otherLocale}${pathWithoutLocale}`
   return (
     <>
       <header
@@ -53,9 +59,18 @@ export function Header() {
 
             <nav className="hidden lg:block">
               <ul className="flex gap-2 items-center">
-                <HeaderItem label={m['nav.news']()} href="/nouvelles" />
-                <HeaderItem label={m['nav.publications']()} href="/publications" />
-                <HeaderItem label={m['nav.members']()} href="/members" />
+                <HeaderItem
+                  label={m['nav.news']({}, { locale: locale as any })}
+                  href="/nouvelles"
+                />
+                <HeaderItem
+                  label={m['nav.publications']({}, { locale: locale as any })}
+                  href="/publications"
+                />
+                <HeaderItem
+                  label={m['nav.members']({}, { locale: locale as any })}
+                  href="/members"
+                />
               </ul>
             </nav>
 
@@ -64,7 +79,7 @@ export function Header() {
               <button
                 onClick={() => setIsSearchOpen(true)}
                 className="p-3 rounded-xl transition-colors hover:bg-slate-100 text-slate-600 hover:text-slate-900"
-                aria-label={m['common.search']()}
+                aria-label={m['common.search']({}, { locale: locale as any })}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -83,7 +98,7 @@ export function Header() {
               </button>
 
               <Link
-                href={`/${otherLocale}`}
+                href={switchLocalePath}
                 className="flex items-center gap-2 px-4 py-2.5 rounded-xl transition-colors font-medium text-base hover:bg-slate-100 text-slate-600 hover:text-slate-900"
               >
                 <svg
@@ -109,7 +124,7 @@ export function Header() {
                 size="lg"
                 className="hidden md:flex shadow-none hover:shadow-lg text-base px-6"
               >
-                {m['nav.contact']()}
+                {m['nav.contact']({}, { locale: locale as any })}
               </Button>
             </div>
           </div>

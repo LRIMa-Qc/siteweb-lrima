@@ -63,7 +63,7 @@ export const PublicationList: React.FC<PublicationListProps> = ({
 
       {sortedPublications.length === 0 && (
         <div className="text-center py-16 text-slate-500 text-lg">
-          {m['publicationsList.noPublications']()}
+          {m['publications.noPublications']({}, { locale: locale as any })}
         </div>
       )}
     </div>

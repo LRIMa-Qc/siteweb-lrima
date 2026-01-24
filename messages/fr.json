@@ -1,84 +1,83 @@
 {
   "$schema": "https://inlang.com/schema/inlang-message-format",
   "metadata": {
-    "title": "LRIMa - Laboratoire de recherche en intelligence et modélisation avancée",
-    "description": "Le LRIMa est un laboratoire de recherche avancée spécialisé en intelligence artificielle et modélisation. Explorez nos recherches, publications et notre équipe."
+    "title": "LRIMa - Laboratoire de Recherche Informatique Maisonneuve",
+    "description": "Le LRIMa est un espace de recherche appliquée et d'innovation en informatique au Collège de Maisonneuve, spécialisé en IA, IoT, santé numérique et agriculture intelligente."
   },
   "nav": {
     "home": "Accueil",
-    "news": "Nouvelles",
-    "publications": "Publications Scientifiques",
-    "members": "Membres",
+    "news": "Actualités",
+    "publications": "Publications",
+    "members": "Équipe",
     "contact": "Contact"
   },
   "home": {
     "title": "Laboratoire de Recherche Informatique Maisonneuve",
-    "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "subtitle": "Là où les étudiants deviennent chercheurs et innovateurs.",
     "hero": {
-      "tagline": "L'espace où la passion étudiante façonne la technologie de demain.",
-      "overline": "Laboratoire de Recherche Informatique Maisonneuve",
-      "description": "Le LRIMa est un espace d'innovation où étudiants et chercheurs collaborent pour repousser les limites de l'informatique.",
+      "tagline": "L'innovation par la recherche étudiante.",
+      "overline": "Recherche appliquée au Collège de Maisonneuve",
+      "description": "Le LRIMa réunit chaque année une trentaine d'étudiants passionnés qui conçoivent, expérimentent et publient leurs travaux dans des conférences scientifiques nationales et internationales.",
       "cta": {
-        "research": "Nos recherches",
+        "research": "Découvrir nos axes",
         "contact": "Nous joindre"
       }
     },
     "stats": {
-      "publications": "Publications de recherche",
-      "researchers": "Chercheurs actifs",
-      "years": "Années d'excellence"
+      "publications": "Publications scientifiques",
+      "researchers": "Étudiants chercheurs",
+      "years": "Ans d'innovation"
     },
-    "quote": "L'innovation naît de la curiosité et de la collaboration entre chercheurs passionnés.",
+    "quote": "Au LRIMa, les étudiants ne sont pas seulement des apprenants — ils sont de véritables chercheurs et innovateurs.",
     "gallery": {
-      "title": "Notre labo en action"
+      "title": "Le labo en action"
     },
     "about": {
       "title": "À propos du LRIMa",
-      "description": "Fondé en 2015 au Collège de Maisonneuve, le LRIMa est un espace de recherche appliquée et d’innovation en informatique. Il réunit chaque année une trentaine d’étudiants passionnés qui travaillent sur des projets technologiques ambitieux, allant de l’intelligence artificielle à l’Internet des objets, en passant par l’agriculture intelligente, la santé numérique et les systèmes connectés."
+      "description": "Fondé en 2015 au Collège de Maisonneuve, le LRIMa est un espace de recherche appliquée et d'innovation en informatique. Nos étudiants travaillent sur des projets technologiques ambitieux — de l'intelligence artificielle aux systèmes connectés — et publient leurs résultats dans des conférences scientifiques. Plusieurs projets donnent lieu à des prototypes fonctionnels transférés vers les milieux communautaires, industriels et académiques."
     },
-    "latestNews": "Dernières nouvelles",
+    "latestNews": "Dernières actualités",
     "recentPublications": "Publications récentes",
-    "viewAll": "Voir tout",
+    "viewAll": "Tout voir",
     "cta": {
-      "title": "Prêt à innover avec nous ?",
-      "subtitle": "Rejoignez notre équipe de chercheurs passionnés ou collaborez sur des projets novateurs.",
+      "title": "Envie de faire de la recherche ?",
+      "subtitle": "Rejoignez notre équipe et contribuez à des projets technologiques concrets.",
       "join": "Rejoindre le labo",
-      "contact": "Contactez-nous"
+      "contact": "Nous joindre"
     },
     "audiences": {
       "students": {
         "title": "Pour les étudiants",
-        "description": "Développez vos compétences dans un environnement stimulant et collaboratif."
+        "description": "Devenez chercheur, publiez vos travaux et développez des prototypes fonctionnels."
       },
       "partners": {
         "title": "Pour les partenaires",
-        "description": "Collaborez avec des experts pour résoudre des problèmes complexes."
+        "description": "Bénéficiez du transfert technologique et du savoir-faire de nos équipes."
       },
       "researchers": {
         "title": "Pour les chercheurs",
-        "description": "Rejoignez une équipe dynamique et contribuez à l'avancement scientifique."
+        "description": "Participez à des projets de recherche appliquée avec rayonnement international."
       }
     }
   },
   "news": {
-    "title": "Nouvelles",
-    "subtitle": "Restez informé de nos dernières actualités et événements",
-    "description": "Découvrez les dernières avancées et événements de notre laboratoire.",
+    "title": "Actualités",
+    "subtitle": "Suivez nos projets et nos réalisations",
+    "description": "Les dernières nouvelles du laboratoire.",
     "featured": "À la une",
-    "allNews": "Toutes les nouvelles",
-    "readMore": "Lire la suite",
-
-    "noNews": "Aucune nouvelle disponible pour le moment.",
+    "allNews": "Toutes les actualités",
+    "readMore": "En savoir plus",
+    "noNews": "Aucune nouvelle pour le moment.",
     "label": "Actualité",
     "placeholder": {
-      "title": "Article à venir",
-      "excerpt": "Restez à l'écoute pour nos dernières nouvelles."
+      "title": "Prochainement",
+      "excerpt": "Restez à l'affût de nos prochaines annonces."
     }
   },
   "publications": {
-    "title": "Publications Scientifiques",
-    "subtitle": "Découvrez nos contributions à la recherche scientifique",
-    "description": "Nos contributions à la recherche scientifique.",
+    "title": "Publications",
+    "subtitle": "Nos contributions scientifiques",
+    "description": "Découvrez les travaux publiés par nos étudiants chercheurs.",
     "filters": {
       "year": "Année",
       "type": "Type",
@@ -92,106 +91,105 @@
       "book": "Livre",
       "thesis": "Thèse",
       "patent": "Brevet",
-      "report": "Rapport",
+      "report": "Rapport technique",
       "publication": "Publication"
     },
-    "noPublications": "Aucune publication trouvée.",
+    "noPublications": "Aucune publication disponible.",
     "placeholder": {
-      "title": "Publication à venir",
-      "abstract": "Nos chercheurs travaillent sur des projets innovants. Restez à l'affût de nos prochaines publications!"
+      "title": "En cours de rédaction",
+      "abstract": "Nos équipes finalisent actuellement plusieurs papiers de recherche."
     }
   },
   "contact": {
     "title": "Contactez-nous",
-    "subtitle": "N'hésitez pas à nous contacter pour toute question ou collaboration",
+    "subtitle": "Situé au Collège de Maisonneuve à Montréal",
     "form": {
       "title": "Envoyez-nous un message",
       "name": "Nom complet",
-      "email": "Adresse courriel",
-      "organization": "Organisation (optionnel)",
+      "email": "Courriel",
+      "organization": "Organisation / Entreprise",
       "subject": "Sujet",
       "message": "Message",
       "submit": "Envoyer",
       "sending": "Envoi en cours...",
-      "success": "Votre message a été envoyé avec succès!",
-      "error": "Une erreur s'est produite. Veuillez réessayer."
+      "success": "Message envoyé ! Nous vous répondrons sous peu.",
+      "error": "Une erreur est survenue lors de l'envoi."
     },
     "map": {
-      "placeholder": "Carte"
+      "placeholder": "Localisation du LRIMa"
     },
     "info": {
-      "title": "Informations",
-      "address": "Adresse",
-      "phone": "Téléphone",
-      "email": "Courriel"
+      "title": "Coordonnées",
+      "address": "3800 Rue Sherbrooke E, Montréal, QC H1X 2A2",
+      "phone": "(514) 254-7131",
+      "email": "lrima@cmaisonneuve.qc.ca"
     }
   },
   "members": {
-    "title": "Membres",
-    "active": "Membres actifs",
+    "title": "Notre Équipe",
+    "active": "Chercheurs et stagiaires",
     "alumni": "Anciens membres",
     "collaborators": "Collaborateurs",
-    "researchInterests": "Intérêts de recherche",
-    "director": {
-      "intro": "Sous la direction de {name}, le laboratoire LRIMa explore les frontières de l'intelligence artificielle et de la modélisation avancée pour relever les défis technologiques de demain.",
-      "viewProfile": "Voir le profil complet"
+    "social": {
+      "website": "Site web",
+      "linkedIn": "LinkedIn",
+      "github": "GitHub",
+      "googleScholar": "Google Scholar"
     },
-    "bio": "Biographie"
+    "researchInterests": "Champs d'expertise",
+    "director": {
+      "intro": "Sous la direction de {name}, le LRIMa forme chaque année une trentaine d'étudiants chercheurs.",
+      "viewProfile": "Voir le profil"
+    },
+    "bio": "Expertise",
+    "noMembers": "Aucun membre trouvé."
   },
   "common": {
+    "labName": "Laboratoire de Recherche Informatique Maisonneuve",
     "loading": "Chargement...",
-    "error": "Une erreur s'est produite",
+    "error": "Erreur",
     "retry": "Réessayer",
     "close": "Fermer",
-    "learnMore": "En savoir plus",
+    "learnMore": "Détails",
     "search": "Rechercher"
   },
   "grants": {
-    "title": "Subventions & Financement",
-    "subtitle": "Soutenir l'innovation et l'excellence en recherche"
+    "title": "Financement et soutien",
+    "subtitle": "Ils soutiennent nos projets de recherche"
   },
   "search": {
-    "placeholder": "Rechercher...",
+    "placeholder": "Rechercher un projet, un membre...",
     "results": "Résultats",
     "noResults": "Aucun résultat trouvé.",
-    "startTyping": "Commencez à taper pour rechercher",
+    "startTyping": "Tapez pour lancer la recherche",
     "closeEsc": "ESC pour fermer"
   },
   "publicationDetail": {
     "journal": "Revue :",
-    "venue": "Lieu :",
+    "venue": "Événement :",
     "pages": "Pages :",
-    "published": "Publié :",
+    "published": "Date de parution :",
     "abstract": "Résumé",
-    "keywords": "Mots-clés",
-    "citation": "Citation",
-    "viewDoi": "Voir sur DOI",
-    "viewPublication": "Voir la publication",
-    "downloadPdf": "Télécharger le PDF",
-    "backToPublications": "Retour aux publications",
+    "keywords": "Thématiques",
+    "citation": "Citer",
+    "viewDoi": "Lien DOI",
+    "viewPublication": "Consulter",
+    "downloadPdf": "PDF",
+    "backToPublications": "Retour",
     "volume": "Vol.",
-    "issue": "Numéro"
+    "issue": "N°"
   },
   "newsDetail": {
-    "by": "Par",
-    "backToNews": "Retour aux nouvelles"
-  },
-  "membersList": {
-    "noMembers": "Aucun membre trouvé."
-  },
-  "publicationsList": {
-    "noPublications": "Aucune publication trouvée."
-  },
-  "newsList": {
-    "noNews": "Aucune nouvelle trouvée."
-  },
-  "images": {
-    "researchLab": "Laboratoire de recherche",
-    "teamCollaboration": "Collaboration d'équipe",
-    "innovation": "Innovation"
+    "by": "Publié par",
+    "backToNews": "Retour aux actualités"
   },
   "footer": {
     "navigation": "Navigation",
     "rights": "Tous droits réservés."
+  },
+  "images": {
+    "researchLab": "Laboratoire de recherche",
+    "teamCollaboration": "Étudiants au travail",
+    "innovation": "Projets en cours"
   }
 }

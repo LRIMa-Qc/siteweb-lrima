@@ -40,8 +40,8 @@ export default async function HomePage({ params }: HomePageProps) {
 
   // Fetch data in parallel for better performance
   const [news, publications, members] = await Promise.all([
-    getNews({ limit: NEWS_LIMIT, featured: true }),
-    getPublications({ limit: PUBLICATIONS_LIMIT }),
+    getNews({ limit: NEWS_LIMIT, featured: true, locale }),
+    getPublications({ limit: PUBLICATIONS_LIMIT, locale }),
     getMembers({ locale }),
   ])
 

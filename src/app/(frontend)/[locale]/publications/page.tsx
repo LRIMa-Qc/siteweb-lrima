@@ -14,7 +14,10 @@ export default async function PublicationsPage({ params }: PublicationsPageProps
   const { locale } = await params
 
   // Fetch data in parallel
-  const [publications, members] = await Promise.all([getPublications(), getMembers({ locale })])
+  const [publications, members] = await Promise.all([
+    getPublications({ locale }),
+    getMembers({ locale }),
+  ])
 
   // Create member map
   const memberMap = members.reduce(

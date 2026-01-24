@@ -37,14 +37,14 @@ export const PublicationCard: React.FC<PublicationCardProps> = ({
 
   // Construct formatted type/venue string
   const pubType = publication.journal
-    ? m['publications.types.journal']()
+    ? m['publications.types.journal']({}, { locale: locale as any })
     : publication.venue
-      ? m['publications.types.conference']()
-      : m['publications.types.publication']()
+      ? m['publications.types.conference']({}, { locale: locale as any })
+      : m['publications.types.publication']({}, { locale: locale as any })
 
   return (
     <article
-      className={`group cursor-pointer border-t ${borderColor} py-12 lg:py-16 first:border-t-0 hover:bg-slate-50/50 transition-colors`}
+      className={`group cursor-pointer border-t ${borderColor} py-12 lg:py-16 first:border-t-0 transition-colors`}
     >
       <Link href={href}>
         <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-8">

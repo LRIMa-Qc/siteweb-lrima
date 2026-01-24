@@ -1,84 +1,83 @@
 {
   "$schema": "https://inlang.com/schema/inlang-message-format",
   "metadata": {
-    "title": "LRIMa - Advanced AI and Modeling Research Laboratory",
-    "description": "LRIMa is an advanced research laboratory specializing in artificial intelligence and modeling. Explore our research, publications, and our team."
+    "title": "LRIMa - Maisonneuve Computer Science Research Laboratory",
+    "description": "LRIMa is an applied research and innovation space in computer science at Collège de Maisonneuve, specializing in AI, IoT, digital health, and smart agriculture."
   },
   "nav": {
     "home": "Home",
     "news": "News",
-    "publications": "Scientific Publications",
-    "members": "Members",
+    "publications": "Publications",
+    "members": "Team",
     "contact": "Contact"
   },
   "home": {
-    "title": "Applied Imaging and Modeling Research Laboratory",
-    "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "title": "Maisonneuve Computer Science Research Laboratory",
+    "subtitle": "Where students become researchers and innovators.",
     "hero": {
-      "tagline": "The space where student passion shapes tomorrow's technology.",
-      "overline": "Laboratoire de Recherche Informatique Maisonneuve",
-      "description": "LRIMa is an innovation space where students and researchers collaborate to push the boundaries of computer science.",
+      "tagline": "Innovation through student research.",
+      "overline": "Applied Research at Collège de Maisonneuve",
+      "description": "Each year, LRIMa brings together around thirty passionate students who design, experiment, and publish their work at national and international scientific conferences.",
       "cta": {
-        "research": "Our Research",
+        "research": "Explore Our Research",
         "contact": "Contact Us"
       }
     },
     "stats": {
-      "publications": "Research publications",
-      "researchers": "Active researchers",
-      "years": "Years of excellence"
+      "publications": "Scientific Publications",
+      "researchers": "Student Researchers",
+      "years": "Years of Innovation"
     },
-    "quote": "Innovation is born from curiosity and collaboration between passionate researchers.",
+    "quote": "At LRIMa, students are not just learners — they are true researchers and innovators.",
     "gallery": {
-      "title": "Our Lab in Action"
+      "title": "The Lab in Action"
     },
     "about": {
       "title": "About LRIMa",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      "description": "Founded in 2015 at Collège de Maisonneuve, LRIMa is an applied research and innovation space in computer science. Our students work on ambitious technology projects — from artificial intelligence to connected systems — and publish their results at scientific conferences. Many projects lead to functional prototypes transferred to community, industry, and academic sectors."
     },
     "latestNews": "Latest News",
     "recentPublications": "Recent Publications",
     "viewAll": "View All",
     "cta": {
-      "title": "Ready to innovate with us?",
-      "subtitle": "Join our team of passionate researchers or collaborate on groundbreaking projects.",
+      "title": "Interested in Research?",
+      "subtitle": "Join our team and contribute to real technology projects.",
       "join": "Join the Lab",
       "contact": "Contact Us"
     },
     "audiences": {
       "students": {
         "title": "For Students",
-        "description": "Develop your skills in a stimulating and collaborative environment."
+        "description": "Become a researcher, publish your work, and develop functional prototypes."
       },
       "partners": {
         "title": "For Partners",
-        "description": "Collaborate with experts to solve complex problems."
+        "description": "Benefit from technology transfer and the expertise of our teams."
       },
       "researchers": {
         "title": "For Researchers",
-        "description": "Join a dynamic team and contribute to scientific advancement."
+        "description": "Participate in applied research projects with international reach."
       }
     }
   },
   "news": {
     "title": "News",
-    "subtitle": "Stay informed about our latest news and events",
-    "description": "Discover the latest advances and events from our lab.",
+    "subtitle": "Follow our projects and achievements",
+    "description": "The latest updates from the laboratory.",
     "featured": "Featured",
     "allNews": "All News",
     "readMore": "Read More",
-
     "noNews": "No news available at the moment.",
-    "label": "News",
+    "label": "Update",
     "placeholder": {
-      "title": "Article coming soon",
-      "excerpt": "Stay tuned for our latest news."
+      "title": "Coming Soon",
+      "excerpt": "Stay tuned for our upcoming announcements."
     }
   },
   "publications": {
-    "title": "Scientific Publications",
-    "subtitle": "Discover our contributions to scientific research",
-    "description": "Our contributions to scientific research.",
+    "title": "Publications",
+    "subtitle": "Our scientific contributions",
+    "description": "Discover the work published by our student researchers.",
     "filters": {
       "year": "Year",
       "type": "Type",
@@ -92,66 +91,74 @@
       "book": "Book",
       "thesis": "Thesis",
       "patent": "Patent",
-      "report": "Report",
+      "report": "Technical Report",
       "publication": "Publication"
     },
     "noPublications": "No publications found.",
     "placeholder": {
-      "title": "Publication coming soon",
-      "abstract": "Our researchers are working on innovative projects. Stay tuned for our upcoming publications!"
+      "title": "In Progress",
+      "abstract": "Our teams are currently finalizing several research papers."
     }
   },
   "contact": {
     "title": "Contact Us",
-    "subtitle": "Feel free to contact us for any questions or collaboration",
+    "subtitle": "Located at Collège de Maisonneuve in Montreal",
     "form": {
-      "title": "Send us a message",
+      "title": "Send us a Message",
       "name": "Full Name",
-      "email": "Email Address",
-      "organization": "Organization (optional)",
+      "email": "Email",
+      "organization": "Organization / Company",
       "subject": "Subject",
       "message": "Message",
       "submit": "Send",
       "sending": "Sending...",
-      "success": "Your message has been sent successfully!",
-      "error": "An error occurred. Please try again."
+      "success": "Message sent! We will get back to you shortly.",
+      "error": "An error occurred while sending your message."
     },
     "map": {
-      "placeholder": "Map Placeholder"
+      "placeholder": "LRIMa Location"
     },
     "info": {
-      "title": "Information",
-      "address": "Address",
-      "phone": "Phone",
-      "email": "Email"
+      "title": "Contact Details",
+      "address": "3800 Rue Sherbrooke E, Montreal, QC H1X 2A2",
+      "phone": "(514) 254-7131",
+      "email": "lrima@cmaisonneuve.qc.ca"
     }
   },
   "members": {
-    "title": "Members",
-    "active": "Active Members",
+    "title": "Our Team",
+    "active": "Researchers & Interns",
     "alumni": "Alumni",
     "collaborators": "Collaborators",
-    "researchInterests": "Research Interests",
-    "director": {
-      "intro": "Under the direction of {name}, the LRIMa laboratory explores the frontiers of artificial intelligence and advanced modeling to tackle tomorrow's technological challenges.",
-      "viewProfile": "View full profile"
+    "social": {
+      "website": "Website",
+      "linkedIn": "LinkedIn",
+      "github": "GitHub",
+      "googleScholar": "Google Scholar"
     },
-    "bio": "Biography"
+    "researchInterests": "Research Expertise",
+    "director": {
+      "intro": "Under the direction of {name}, LRIMa trains around thirty student researchers each year.",
+      "viewProfile": "View profile"
+    },
+    "bio": "Expertise",
+    "noMembers": "No members found."
   },
   "common": {
+    "labName": "Maisonneuve Computer Science Research Laboratory",
     "loading": "Loading...",
-    "error": "An error occurred",
+    "error": "Error",
     "retry": "Retry",
     "close": "Close",
-    "learnMore": "Learn More",
+    "learnMore": "Details",
     "search": "Search"
   },
   "grants": {
-    "title": "Grants & Funding",
-    "subtitle": "Supporting innovation and research excellence"
+    "title": "Funding & Support",
+    "subtitle": "They support our research projects"
   },
   "search": {
-    "placeholder": "Search...",
+    "placeholder": "Search for a project, a member...",
     "results": "Results",
     "noResults": "No results found.",
     "startTyping": "Start typing to search",
@@ -159,39 +166,30 @@
   },
   "publicationDetail": {
     "journal": "Journal:",
-    "venue": "Venue:",
+    "venue": "Event:",
     "pages": "Pages:",
-    "published": "Published:",
+    "published": "Published on:",
     "abstract": "Abstract",
-    "keywords": "Keywords",
-    "citation": "Citation",
-    "viewDoi": "View on DOI",
-    "viewPublication": "View Publication",
-    "downloadPdf": "Download PDF",
-    "backToPublications": "Back to Publications",
+    "keywords": "Topics",
+    "citation": "Cite",
+    "viewDoi": "DOI Link",
+    "viewPublication": "View",
+    "downloadPdf": "PDF",
+    "backToPublications": "Back",
     "volume": "Vol.",
-    "issue": "Issue"
+    "issue": "No."
   },
   "newsDetail": {
-    "by": "By",
+    "by": "Published by",
     "backToNews": "Back to News"
-  },
-  "membersList": {
-    "noMembers": "No members found."
-  },
-  "publicationsList": {
-    "noPublications": "No publications found."
-  },
-  "newsList": {
-    "noNews": "No news found."
-  },
-  "images": {
-    "researchLab": "Research Lab",
-    "teamCollaboration": "Team collaboration",
-    "innovation": "Innovation"
   },
   "footer": {
     "navigation": "Navigation",
     "rights": "All rights reserved."
+  },
+  "images": {
+    "researchLab": "Research laboratory",
+    "teamCollaboration": "Students at work",
+    "innovation": "Ongoing projects"
   }
 }

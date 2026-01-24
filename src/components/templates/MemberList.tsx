@@ -43,13 +43,16 @@ export const MemberList: React.FC<MemberListProps> = ({
 
   return (
     <div>
-      {renderMemberGroup(m['members.active'](), activeMembers)}
-      {renderMemberGroup(m['members.collaborators'](), collaboratorMembers)}
-      {renderMemberGroup(m['members.alumni'](), alumniMembers)}
+      {renderMemberGroup(m['members.active']({}, { locale: locale as any }), activeMembers)}
+      {renderMemberGroup(
+        m['members.collaborators']({}, { locale: locale as any }),
+        collaboratorMembers,
+      )}
+      {renderMemberGroup(m['members.alumni']({}, { locale: locale as any }), alumniMembers)}
 
       {members.length === 0 && (
         <div className="text-center py-16 text-slate-500 text-lg">
-          {m['membersList.noMembers']()}
+          {m['members.noMembers']({}, { locale: locale as any })}
         </div>
       )}
     </div>

@@ -31,7 +31,11 @@ export const NewsCard: React.FC<NewsCardProps> = ({
   }
 
   // Common label
-  const label = news.category || (variant === 'featured' ? m['news.label']() : m['news.label']())
+  const label =
+    news.category ||
+    (variant === 'featured'
+      ? m['news.label']({}, { locale: locale as any })
+      : m['news.label']({}, { locale: locale as any }))
 
   // Featured Variant
   if (variant === 'featured') {

@@ -30,7 +30,7 @@ export const NewsList: React.FC<NewsListProps> = ({
       {featuredNews.length > 0 && (
         <div className="mb-16">
           <h2 className="font-display text-3xl font-bold mb-8 text-slate-900">
-            {m['news.featured']()}
+            {m['news.featured']({}, { locale: locale as any })}
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {featuredNews.slice(0, 2).map((news) => (
@@ -51,7 +51,7 @@ export const NewsList: React.FC<NewsListProps> = ({
         <div>
           {showFeatured && featuredNews.length > 0 && (
             <h2 className="font-display text-3xl font-bold mb-8 text-slate-900">
-              {m['news.allNews']()}
+              {m['news.allNews']({}, { locale: locale as any })}
             </h2>
           )}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -63,7 +63,9 @@ export const NewsList: React.FC<NewsListProps> = ({
       )}
 
       {sortedNews.length === 0 && (
-        <div className="text-center py-16 text-slate-500 text-lg">{m['newsList.noNews']()}</div>
+        <div className="text-center py-16 text-slate-500 text-lg">
+          {m['news.noNews']({}, { locale: locale as any })}
+        </div>
       )}
     </div>
   )
