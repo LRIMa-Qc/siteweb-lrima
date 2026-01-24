@@ -62,14 +62,17 @@ export function Header() {
                 <HeaderItem
                   label={m['nav.news']({}, { locale: locale as any })}
                   href="/nouvelles"
+                  locale={locale}
                 />
                 <HeaderItem
                   label={m['nav.publications']({}, { locale: locale as any })}
                   href="/publications"
+                  locale={locale}
                 />
                 <HeaderItem
                   label={m['nav.members']({}, { locale: locale as any })}
                   href="/members"
+                  locale={locale}
                 />
               </ul>
             </nav>
