@@ -6,7 +6,7 @@ export const SITE_CONFIG = {
   name: 'LRIMa',
   description:
     'Laboratoire de Recherche Informatique Maisonneuve - Pôle d’excellence en recherche appliquée, IA et IoT.',
-  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://lrima.qc.ca',
+  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://lrima.ca',
   author: 'LRIMa',
   locale: {
     default: 'fr',
