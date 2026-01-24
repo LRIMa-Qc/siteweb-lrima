@@ -95,7 +95,7 @@ export function HorizontalScrollSection({
             <div className="space-y-12">
               <div>
                 <span className="font-display text-[clamp(3rem,6vw,5rem)] font-bold text-white">
-                  50+
+                  30+
                 </span>
                 <p className="text-lg text-white/50 mt-2">
                   {m['home.stats.publications']({}, { locale: locale as any })}
@@ -138,7 +138,9 @@ export function HorizontalScrollSection({
               {m['home.quote']({}, { locale: locale as any })}
               &rdquo;
             </blockquote>
-            <p className="text-white/70 text-lg">— LRIMa</p>
+            <p className="text-white/70 text-lg">
+              — {m['home.quoteSource']({}, { locale: locale as any })}
+            </p>
           </div>
 
           {/* Image 3 */}

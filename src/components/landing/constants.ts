@@ -32,14 +32,14 @@ export const GALLERY_IMAGES = [
  * Each item has French and English translations.
  */
 export const TARGET_AUDIENCES = [
-  { fr: 'Étudiants en informatique', en: 'Computer science students' },
-  { fr: 'Chercheurs passionnés', en: 'Passionate researchers' },
-  { fr: 'Partenaires industriels', en: 'Industrial partners' },
-  { fr: 'Professeurs', en: 'Professors' },
-  { fr: 'Startups technologiques', en: 'Tech startups' },
-  { fr: 'Organismes subventionnaires', en: 'Funding agencies' },
-  { fr: 'Collaborateurs académiques', en: 'Academic collaborators' },
-  { fr: 'Futurs chercheurs', en: 'Future researchers' },
+  { fr: 'Les esprits curieux', en: 'Curious minds' },
+  { fr: 'Les entrepreneurs visionnaires', en: 'Visionary entrepreneurs' },
+  { fr: 'Les futurs ingénieurs', en: 'Future engineers' },
+  { fr: 'Les partenaires audacieux', en: 'Bold partners' },
+  { fr: 'La recherche de pointe', en: 'Cutting-edge research' },
+  { fr: 'L’excellence académique', en: 'Academic excellence' },
+  { fr: 'Les créateurs de solutions', en: 'Solution creators' },
+  { fr: 'Les passionnés de techno', en: 'Tech enthusiasts' },
 ] as const
 
 /**

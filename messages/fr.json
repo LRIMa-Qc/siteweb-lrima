@@ -28,13 +28,14 @@
       "researchers": "Étudiants chercheurs",
       "years": "Ans d'innovation"
     },
-    "quote": "Au LRIMa, les étudiants ne sont pas seulement des apprenants — ils sont de véritables chercheurs et innovateurs.",
+    "quote": "Le labo nous offre une opportunité rare au collégial : celle de passer du statut d'étudiant à celui de chercheur sur des problématiques réelles.",
+    "quoteSource": "Ilian Djorf, Étudiant chercheur",
     "gallery": {
       "title": "Le labo en action"
     },
     "about": {
       "title": "À propos du LRIMa",
-      "description": "Fondé en 2015 au Collège de Maisonneuve, le LRIMa est un espace de recherche appliquée et d'innovation en informatique. Nos étudiants travaillent sur des projets technologiques ambitieux — de l'intelligence artificielle aux systèmes connectés — et publient leurs résultats dans des conférences scientifiques. Plusieurs projets donnent lieu à des prototypes fonctionnels transférés vers les milieux communautaires, industriels et académiques."
+      "description": "Fondé en 2015 au Collège de Maisonneuve, le LRIMa est un espace de recherche appliquée et d'innovation en informatique. Nos étudiants travaillent sur des projets technologiques ambitieux, de l'intelligence artificielle aux systèmes connectés, et publient leurs résultats dans des conférences scientifiques. Plusieurs projets donnent lieu à des prototypes fonctionnels transférés vers les milieux communautaires, industriels et académiques."
     },
     "latestNews": "Dernières actualités",
     "recentPublications": "Publications récentes",

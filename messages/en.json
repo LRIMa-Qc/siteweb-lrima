@@ -28,13 +28,14 @@
       "researchers": "Student Researchers",
       "years": "Years of Innovation"
     },
-    "quote": "At LRIMa, students are not just learners — they are true researchers and innovators.",
+    "quote": "The lab offers a rare opportunity at the college level: the chance to transition from student to researcher on real-world issues.",
+    "quoteSource": "Ilian Djorf, Student Researcher",
     "gallery": {
       "title": "The Lab in Action"
     },
     "about": {
       "title": "About LRIMa",
-      "description": "Founded in 2015 at Collège de Maisonneuve, LRIMa is an applied research and innovation space in computer science. Our students work on ambitious technology projects — from artificial intelligence to connected systems — and publish their results at scientific conferences. Many projects lead to functional prototypes transferred to community, industry, and academic sectors."
+      "description": "Founded in 2015 at Collège de Maisonneuve, LRIMa is an applied research and innovation space in computer science. Our students work on ambitious technology projects, from artificial intelligence to connected systems, and publish their results at scientific conferences. Many projects lead to functional prototypes transferred to community, industry, and academic sectors."
     },
     "latestNews": "Latest News",
     "recentPublications": "Recent Publications",
