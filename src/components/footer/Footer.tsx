@@ -66,7 +66,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href={`/${locale}/members`}
+                  href={`/${locale}/membres`}
                   className="text-slate-600 hover:text-slate-900 transition-colors duration-300 text-base"
                 >
                   {m['nav.members']({}, { locale })}

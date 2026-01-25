@@ -118,6 +118,14 @@ export const Publications: CollectionConfig = {
       ],
     },
     {
+      name: 'citation',
+      type: 'textarea',
+      required: false,
+      admin: {
+        description: 'BibTeX or formatted citation for this publication',
+      },
+    },
+    {
       name: 'publishedDate',
       type: 'date',
       required: true,

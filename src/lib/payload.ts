@@ -29,7 +29,7 @@ async function getPayloadClient() {
  * @param options - Optional parameters for filtering and pagination
  * @param options.limit - Maximum number of news items to fetch (default: 100)
  * @param options.featured - Filter by featured status
- * @param options.locale - Locale for content (default: 'en')
+ * @param options.locale - Locale for content (default: 'fr')
  * @returns Promise resolving to an array of News items
  */
 export async function getNews(options?: {
@@ -114,7 +114,7 @@ export async function getNewsBySlug(slug: string, locale?: string): Promise<News
  *
  * @param options - Optional parameters for filtering
  * @param options.status - Filter by member status (active, alumni, or collaborator)
- * @param options.locale - Locale for content (default: 'en')
+ * @param options.locale - Locale for content (default: 'fr')
  * @returns Promise resolving to an array of Member items
  */
 export async function getMembers(options?: {
@@ -140,9 +140,10 @@ export async function getMembers(options?: {
       bio: doc.bio,
       imageUrl: typeof doc.image === 'object' ? doc.image?.url : undefined,
       researchInterests: doc.researchInterests?.map((ri: any) => ri.interest) || [],
-      publications: [],
+      publications: [], // TODO: Link to actual publications when relationship is implemented
       website: doc.website,
       linkedIn: doc.linkedIn,
+      github: doc.github,
       googleScholar: doc.googleScholar,
       status: doc.status,
       joinYear: doc.joinYear || undefined,
@@ -184,9 +185,10 @@ export async function getMemberBySlug(slug: string, locale?: string): Promise<Me
       bio: doc.bio,
       imageUrl: typeof doc.image === 'object' ? doc.image?.url || undefined : undefined,
       researchInterests: doc.researchInterests?.map((ri: any) => ri.interest) || [],
-      publications: [],
+      publications: [], // TODO: Link to actual publications when relationship is implemented
       website: doc.website || undefined,
       linkedIn: doc.linkedIn || undefined,
+      github: doc.github || undefined,
       googleScholar: doc.googleScholar || undefined,
       status: doc.status,
       joinYear: doc.joinYear || undefined,
@@ -243,7 +245,7 @@ export async function getPublications(options?: {
       url: doc.url,
       pdfUrl: doc.pdfUrl,
       keywords: doc.keywords?.map((k: any) => k.keyword) || [],
-      citation: doc.citation,
+      citation: doc.citation || undefined,
       publishedDate: new Date(doc.publishedDate),
       slug: doc.slug,
     }))

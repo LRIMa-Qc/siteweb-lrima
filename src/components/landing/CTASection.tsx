@@ -95,7 +95,7 @@ function ActionButtons({ locale }: ActionButtonsProps) {
 
       {/* Secondary CTA */}
       <Button
-        href={`/${locale}/members`}
+        href={`/${locale}/membres`}
         size="lg"
         variant="outline"
         className="px-12 py-5 text-base border-slate-200 text-slate-600 hover:bg-slate-50"

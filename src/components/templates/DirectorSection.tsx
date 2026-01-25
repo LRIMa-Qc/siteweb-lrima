@@ -30,7 +30,7 @@ export const DirectorSection: React.FC<DirectorSectionProps> = ({ director, loca
           </div>
 
           <Link
-            href={`/${locale}/members/${director.slug}`}
+            href={`/${locale}/membres/${director.slug}`}
             className="group flex items-center gap-4"
           >
             <span className="text-xl font-bold text-slate-900 group-hover:text-primary-600 transition-colors">

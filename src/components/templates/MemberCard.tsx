@@ -8,7 +8,7 @@ interface MemberCardProps {
 }
 
 export const MemberCard: React.FC<MemberCardProps> = ({ member, locale = 'fr' }) => {
-  const href = `/${locale}/members/${member.slug}`
+  const href = `/${locale}/membres/${member.slug}`
 
   return (
     <Link href={href} className="block h-full group">

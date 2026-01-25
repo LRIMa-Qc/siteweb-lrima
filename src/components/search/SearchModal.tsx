@@ -201,7 +201,7 @@ export function SearchModal({ isOpen, onClose, locale }: SearchModalProps) {
                     {results.members.map((member) => (
                       <li key={member.id}>
                         <Link
-                          href={`/${locale}/members/${member.slug}`}
+                          href={`/${locale}/membres/${member.slug}`}
                           onClick={onClose}
                           className="flex items-center gap-3 p-3 rounded-xl hover:bg-slate-50 transition-colors group"
                         >

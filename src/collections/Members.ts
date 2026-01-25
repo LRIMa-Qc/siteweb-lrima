@@ -14,12 +14,12 @@ export const Members: CollectionConfig = {
   hooks: {
     afterChange: [
       ({ doc }) => {
-        revalidateCollection('members', doc.slug, '/members')
+        revalidateCollection('members', doc.slug, '/membres')
       },
     ],
     afterDelete: [
       ({ doc }) => {
-        revalidateCollection('members', doc.slug, '/members')
+        revalidateCollection('members', doc.slug, '/membres')
       },
     ],
   },
@@ -88,6 +88,11 @@ export const Members: CollectionConfig = {
     },
     {
       name: 'linkedIn',
+      type: 'text',
+      required: false,
+    },
+    {
+      name: 'github',
       type: 'text',
       required: false,
     },

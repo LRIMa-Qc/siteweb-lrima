@@ -238,6 +238,7 @@ export interface Member {
     | null;
   website?: string | null;
   linkedIn?: string | null;
+  github?: string | null;
   googleScholar?: string | null;
   status: 'active' | 'alumni' | 'collaborator';
   joinYear?: number | null;
@@ -272,6 +273,10 @@ export interface Publication {
         id?: string | null;
       }[]
     | null;
+  /**
+   * BibTeX or formatted citation for this publication
+   */
+  citation?: string | null;
   publishedDate: string;
   updatedAt: string;
   createdAt: string;
@@ -445,6 +450,7 @@ export interface MembersSelect<T extends boolean = true> {
       };
   website?: T;
   linkedIn?: T;
+  github?: T;
   googleScholar?: T;
   status?: T;
   joinYear?: T;
@@ -480,6 +486,7 @@ export interface PublicationsSelect<T extends boolean = true> {
         keyword?: T;
         id?: T;
       };
+  citation?: T;
   publishedDate?: T;
   updatedAt?: T;
   createdAt?: T;
