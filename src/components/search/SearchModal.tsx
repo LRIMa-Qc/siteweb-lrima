@@ -235,9 +235,7 @@ export function SearchModal({ isOpen, onClose, locale }: SearchModalProps) {
                             <div className="text-slate-900 font-medium group-hover:text-blue-600 transition-colors">
                               {member.name}
                             </div>
-                            <div className="text-slate-500 text-sm line-clamp-1">
-                              {member.title}
-                            </div>
+                            {member.role}
                           </div>
                         </Link>
                       </li>

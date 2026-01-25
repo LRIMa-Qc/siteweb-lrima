@@ -39,7 +39,7 @@ export default async function MemberDetailPage({ params }: MemberDetailPageProps
                   <h1 className="font-display text-4xl md:text-5xl font-bold mb-3 text-slate-900">
                     {member.name}
                   </h1>
-                  <p className="text-xl mb-2 text-slate-700 font-medium">{member.title}</p>
+
                   <p className="text-lg text-slate-600 mb-6">{member.role}</p>
                   <div className="space-y-3 mb-6">
                     {member.email && (

@@ -6,7 +6,7 @@ export const Members: CollectionConfig = {
   slug: 'members',
   admin: {
     useAsTitle: 'name',
-    defaultColumns: ['name', 'role', 'status', 'joinDate'],
+    defaultColumns: ['name', 'role', 'status', 'joinYear'],
   },
   access: {
     read: () => true,
@@ -41,12 +41,7 @@ export const Members: CollectionConfig = {
         beforeValidate: [formatSlug('name')],
       },
     },
-    {
-      name: 'title',
-      type: 'text',
-      required: true,
-      localized: true,
-    },
+
     {
       name: 'role',
       type: 'text',
@@ -66,7 +61,7 @@ export const Members: CollectionConfig = {
     {
       name: 'bio',
       type: 'richText',
-      required: true,
+      required: false,
       localized: true,
     },
     {
@@ -116,9 +111,11 @@ export const Members: CollectionConfig = {
       },
     },
     {
-      name: 'joinDate',
-      type: 'date',
-      required: true,
+      name: 'joinYear',
+      type: 'number',
+      required: false,
+      min: 1900,
+      max: 2100,
       admin: {
         position: 'sidebar',
       },

@@ -142,7 +142,8 @@
       "intro": "Sous la direction de {name}, le LRIMa forme chaque année une trentaine d'étudiants chercheurs.",
       "viewProfile": "Voir le profil"
     },
-    "bio": "Expertise",
+    "bio": "Biographie",
+    "memberSince": "Membre depuis {year}",
     "noMembers": "Aucun membre trouvé."
   },
   "common": {

@@ -24,7 +24,7 @@ export const MemberCard: React.FC<MemberCardProps> = ({ member, locale = 'fr' })
           <h3 className="font-display font-bold text-xl mb-2 text-slate-900 group-hover:text-primary-600 transition-colors">
             {member.name}
           </h3>
-          <p className="text-sm text-slate-600 mb-1 font-medium">{member.title}</p>
+
           <p className="text-sm text-slate-500">{member.role}</p>
         </div>
       </div>

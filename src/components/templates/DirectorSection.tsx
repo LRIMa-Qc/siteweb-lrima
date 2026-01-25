@@ -48,7 +48,7 @@ export const DirectorSection: React.FC<DirectorSectionProps> = ({ director, loca
             src={imageUrl}
             alt={director.name}
             fill
-            className="object-cover grayscale hover:grayscale-0 transition-all duration-700"
+            className="object-cover transition-all duration-700"
             sizes="(max-width: 1024px) 100vw, 50vw"
             priority
           />

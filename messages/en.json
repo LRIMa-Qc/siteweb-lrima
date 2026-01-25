@@ -142,7 +142,8 @@
       "intro": "Under the direction of {name}, LRIMa trains around thirty student researchers each year.",
       "viewProfile": "View profile"
     },
-    "bio": "Expertise",
+    "bio": "Biography",
+    "memberSince": "Member since {year}",
     "noMembers": "No members found."
   },
   "common": {

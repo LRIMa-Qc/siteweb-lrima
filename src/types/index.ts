@@ -3,7 +3,7 @@
 export interface Member {
   id: string
   name: string
-  title: string
+
   role: string
   email?: string
   phone?: string
@@ -17,7 +17,7 @@ export interface Member {
   github?: string
   googleScholar?: string
   status: 'active' | 'alumni' | 'collaborator'
-  joinDate: Date
+  joinYear?: number
   slug: string
 }
 

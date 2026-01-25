@@ -126,14 +126,14 @@ export async function getMembers(options?: {
     const { docs } = await payload.find({
       collection: 'members',
       where: options?.status ? { status: { equals: options.status } } : {},
-      sort: '-joinDate',
+      sort: '-joinYear',
       locale: (options?.locale || 'fr') as 'en' | 'fr',
     })
 
     return docs.map((doc: any) => ({
       id: doc.id,
       name: doc.name,
-      title: doc.title,
+
       role: doc.role,
       email: doc.email,
       phone: doc.phone,
@@ -145,7 +145,7 @@ export async function getMembers(options?: {
       linkedIn: doc.linkedIn,
       googleScholar: doc.googleScholar,
       status: doc.status,
-      joinDate: new Date(doc.joinDate),
+      joinYear: doc.joinYear || undefined,
       slug: doc.slug,
     }))
   } catch (error) {
@@ -177,7 +177,7 @@ export async function getMemberBySlug(slug: string, locale?: string): Promise<Me
     return {
       id: doc.id,
       name: doc.name,
-      title: doc.title,
+
       role: doc.role,
       email: doc.email || undefined,
       phone: doc.phone || undefined,
@@ -189,7 +189,7 @@ export async function getMemberBySlug(slug: string, locale?: string): Promise<Me
       linkedIn: doc.linkedIn || undefined,
       googleScholar: doc.googleScholar || undefined,
       status: doc.status,
-      joinDate: new Date(doc.joinDate),
+      joinYear: doc.joinYear || undefined,
       slug: doc.slug,
     }
   } catch (error) {

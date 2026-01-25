@@ -210,11 +210,10 @@ export interface Member {
   id: string;
   name: string;
   slug: string;
-  title: string;
   role: string;
   email?: string | null;
   phone?: string | null;
-  bio: {
+  bio?: {
     root: {
       type: string;
       children: {
@@ -228,7 +227,7 @@ export interface Member {
       version: number;
     };
     [k: string]: unknown;
-  };
+  } | null;
   image?: (string | null) | Media;
   researchInterests?:
     | {
@@ -240,7 +239,7 @@ export interface Member {
   linkedIn?: string | null;
   googleScholar?: string | null;
   status: 'active' | 'alumni' | 'collaborator';
-  joinDate: string;
+  joinYear?: number | null;
   updatedAt: string;
   createdAt: string;
 }
@@ -432,7 +431,6 @@ export interface NewsSelect<T extends boolean = true> {
 export interface MembersSelect<T extends boolean = true> {
   name?: T;
   slug?: T;
-  title?: T;
   role?: T;
   email?: T;
   phone?: T;
@@ -448,7 +446,7 @@ export interface MembersSelect<T extends boolean = true> {
   linkedIn?: T;
   googleScholar?: T;
   status?: T;
-  joinDate?: T;
+  joinYear?: T;
   updatedAt?: T;
   createdAt?: T;
 }
