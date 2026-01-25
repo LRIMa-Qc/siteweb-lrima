@@ -1,4 +1,5 @@
 // storage-adapter-import-placeholder
+import { vercelBlobStorage } from '@payloadcms/storage-vercel-blob'
 import { mongooseAdapter } from '@payloadcms/db-mongodb'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
 import path from 'path'
@@ -42,6 +43,14 @@ export default buildConfig({
   }),
   sharp,
   plugins: [
-    // storage-adapter-placeholder
+    vercelBlobStorage({
+      enabled: true, // Optional, defaults to true
+      // Specify which collections should use Vercel Blob
+      collections: {
+        media: true,
+      },
+      // Token provided by Vercel once Blob is added to the project
+      token: process.env.BLOB_READ_WRITE_TOKEN,
+    }),
   ],
 })
