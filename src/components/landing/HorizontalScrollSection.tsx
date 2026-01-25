@@ -83,7 +83,7 @@ export function HorizontalScrollSection({
           {/* Image 1 */}
           <div className="flex-shrink-0 w-[80vw] lg:w-[40vw] h-[70vh] rounded-3xl overflow-hidden relative">
             <Image
-              src="/gallery-1.JPG"
+              src="/hori-image-2.jpg"
               alt={m['images.researchLab']({}, { locale: locale as any })}
               fill
               className="object-cover"
@@ -123,7 +123,7 @@ export function HorizontalScrollSection({
           {/* Image 2 */}
           <div className="flex-shrink-0 w-[80vw] lg:w-[45vw] h-[70vh] rounded-3xl overflow-hidden relative">
             <Image
-              src="/robot-gif.gif"
+              src="/hori-image-1.jpg"
               alt={m['images.teamCollaboration']({}, { locale: locale as any })}
               fill
               className="object-cover"
@@ -146,7 +146,7 @@ export function HorizontalScrollSection({
           {/* Image 3 */}
           <div className="flex-shrink-0 w-[80vw] lg:w-[40vw] h-[70vh] rounded-3xl overflow-hidden relative mr-16">
             <Image
-              src="/gallery-1.JPG"
+              src="/hori-image-3.jpg"
               alt={m['images.innovation']({}, { locale: locale as any })}
               fill
               className="object-cover"

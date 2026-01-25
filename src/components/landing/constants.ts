@@ -13,14 +13,14 @@
  * Images for the photo gallery section showcasing lab activities.
  */
 export const GALLERY_IMAGES = [
-  { src: '/gallery-1.JPG', alt: 'LRIMa Laboratory' },
-  { src: '/gallery-1.JPG', alt: 'Robotics research' },
-  { src: '/gallery-1.JPG', alt: 'LRIMa Logo' },
-  { src: '/gallery-1.JPG', alt: 'Research activity' },
-  { src: '/gallery-1.JPG', alt: 'Tech development' },
-  { src: '/gallery-1.JPG', alt: 'Innovation focus' },
-  { src: '/gallery-1.JPG', alt: 'Team collaboration' },
-  { src: '/gallery-1.JPG', alt: 'Advanced modeling' },
+  { src: '/gallery-1.JPG', alt: 'Laboratory activities' },
+  { src: '/gallery-2.png', alt: 'Laboratory activities' },
+  { src: '/gallery-3.jpg', alt: 'Laboratory activities' },
+  { src: '/gallery-4.jpg', alt: 'Laboratory activities' },
+  { src: '/gallery-5.jpg', alt: 'Laboratory activities' },
+  { src: '/gallery-6.jpg', alt: 'Laboratory activities' },
+  { src: '/gallery-7.jpg', alt: 'Laboratory activities' },
+  { src: '/gallery-8.JPG', alt: 'Laboratory activities' },
 ] as const
 
 // ============================================================================
