@@ -10,7 +10,7 @@ interface MembersPageProps {
   }>
 }
 
-import { DirectorSection } from '@/components/templates/DirectorSection'
+import { DirectorSection } from '@/components/templates'
 
 export default async function MembersPage({ params }: MembersPageProps) {
   const { locale } = await params
