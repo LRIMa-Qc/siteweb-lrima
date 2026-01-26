@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { Member } from '@/types'
-import { Button, Section, ArrowIcon } from '@/components/ui'
+import { Section, ArrowIcon } from '@/components/ui'
 import * as m from '@/paraglide/messages'
 
 interface DirectorSectionProps {

@@ -9,7 +9,6 @@
  * - Scroll animation on entry
  */
 
-import Link from 'next/link'
 import Image from 'next/image'
 import { Button } from '@/components/ui'
 import { ScrollAnimation } from '@/components/ui'
