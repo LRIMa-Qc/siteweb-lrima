@@ -4,8 +4,6 @@ import { Button } from '@/components/ui'
 import * as m from '@/paraglide/messages'
 import { getLocale } from '@/paraglide/runtime'
 
-import Image from 'next/image'
-
 export function HeroSection() {
   const locale = getLocale()
 
@@ -18,22 +16,16 @@ export function HeroSection() {
       <ThreeWavesBackground />
 
       {/* Centered hero content */}
-      <div className="relative z-10 px-6 lg:px-16 text-center max-w-5xl pointer-events-none flex flex-col items-center">
-        {/* Brand Element */}
-        <div className="mb-8 animate-fade-in-up">
-          <div className="h-12 w-[18rem] relative">
-            <Image
-              src="/logo_lrima.png"
-              alt="LRIMa Logo"
-              fill
-              className="object-contain"
-              priority
-            />
-          </div>
+      <div className="relative mb-[15vh] z-10 px-6 lg:px-16 text-center max-w-5xl pointer-events-none flex flex-col items-center">
+        {/* Laboratory Name */}
+        <div className="mb-0 animate-fade-in-up">
+          <h2 className="font-display text-[clamp(0.5rem,4vw,1.5rem)] font-semibold tracking-tight text-blue-600">
+            Laboratoire de recherche en informatique de Maisonneuve
+          </h2>
         </div>
 
         {/* Tagline */}
-        <h1 className="font-display text-[clamp(2.5rem,6vw,4.5rem)] font-bold tracking-tight leading-[1.1] text-slate-900 mb-8 max-w-4xl">
+        <h1 className="font-display text-[clamp(4rem,6vw,6rem)] font-bold tracking-tight leading-[1.1] text-slate-900 mb-8 max-w-4xl">
           {m['home.hero.tagline']({}, { locale: locale as any })}
         </h1>
 
