@@ -1,5 +1,5 @@
 import * as m from '@/paraglide/messages'
-import { getNews, getPublications, getMembers } from '@/lib/payload'
+import { getNews, getPublications, getMembers, createMemberMap } from '@/lib/payload'
 import {
   HeroSection,
   HorizontalScrollSection,
@@ -45,14 +45,8 @@ export default async function HomePage({ params }: HomePageProps) {
     getMembers({ locale }),
   ])
 
-  // Create member map for linking
-  const memberMap = members.reduce(
-    (acc, member) => {
-      acc[member.name] = member.slug
-      return acc
-    },
-    {} as Record<string, string>,
-  )
+  // Create member map for linking authors to profiles
+  const memberMap = createMemberMap(members)
 
   // Get localized audience data
   const audiences = getLocalizedAudiences(locale)

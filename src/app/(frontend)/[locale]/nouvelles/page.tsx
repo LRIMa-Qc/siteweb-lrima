@@ -2,7 +2,7 @@ import * as m from '@/paraglide/messages'
 import { Container, PageHeader } from '@/components/ui'
 import { NewsList } from '@/components/templates'
 
-import { getNews, getMembers } from '@/lib/payload'
+import { getNews, getMembers, createMemberMap } from '@/lib/payload'
 
 interface NewsPageProps {
   params: Promise<{
@@ -16,14 +16,8 @@ export default async function NewsPage({ params }: NewsPageProps) {
   // Fetch data in parallel
   const [newsList, members] = await Promise.all([getNews({ locale }), getMembers({ locale })])
 
-  // Create member map
-  const memberMap = members.reduce(
-    (acc, member) => {
-      acc[member.name] = member.slug
-      return acc
-    },
-    {} as Record<string, string>,
-  )
+  // Create member map for linking authors to profiles
+  const memberMap = createMemberMap(members)
 
   return (
     <div className="news-page bg-white min-h-screen">

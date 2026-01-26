@@ -301,3 +301,22 @@ export async function getPublicationBySlug(
     return null
   }
 }
+
+// ==================== UTILITIES ====================
+
+/**
+ * Creates a lookup map from member names to their slugs.
+ * Useful for linking author names in publications/news to member profiles.
+ *
+ * @param members - Array of Member objects
+ * @returns Record mapping member names to their slugs
+ */
+export function createMemberMap(members: Member[]): Record<string, string> {
+  return members.reduce(
+    (acc, member) => {
+      acc[member.name] = member.slug
+      return acc
+    },
+    {} as Record<string, string>,
+  )
+}
