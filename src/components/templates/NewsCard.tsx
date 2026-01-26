@@ -24,11 +24,7 @@ export const NewsCard: React.FC<NewsCardProps> = ({
   const imageUrl = news.imageUrl || '/placeholder.jpg'
 
   // Common label
-  const label =
-    news.category ||
-    (variant === 'featured'
-      ? m['news.label']({}, { locale: locale as any })
-      : m['news.label']({}, { locale: locale as any }))
+  const label = news.category || m['news.label']({}, { locale: locale as any })
 
   // Featured Variant
   if (variant === 'featured') {
