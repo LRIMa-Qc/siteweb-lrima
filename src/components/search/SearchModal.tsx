@@ -4,7 +4,8 @@ import React, { useEffect, useState, useRef, useMemo } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import * as m from '@/paraglide/messages'
-import { News, Member, Publication } from '@/types'
+import { SearchIcon, CloseIcon, LoaderIcon, UserIcon } from '@/components/ui'
+import { Member, News, Publication } from '@/types'
 
 interface SearchData {
   news: News[]
@@ -120,16 +121,7 @@ export function SearchModal({ isOpen, onClose, locale }: SearchModalProps) {
       >
         {/* Header / Search Input */}
         <div className="flex items-center px-4 py-4 border-b border-slate-100 bg-white z-10 sticky top-0">
-          <svg
-            className="w-5 h-5 text-slate-400 ml-2 flex-shrink-0"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth={2.5}
-            viewBox="0 0 24 24"
-          >
-            <circle cx="11" cy="11" r="8" />
-            <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-4.35-4.35" />
-          </svg>
+          <SearchIcon className="w-5 h-5 text-slate-400 ml-2 flex-shrink-0" strokeWidth={2.5} />
           <input
             ref={inputRef}
             type="text"
@@ -145,15 +137,7 @@ export function SearchModal({ isOpen, onClose, locale }: SearchModalProps) {
             className="p-2 text-slate-400 hover:text-slate-600 rounded-full hover:bg-slate-50 transition-colors flex-shrink-0"
           >
             <span className="sr-only">{m['common.close']()}</span>
-            <svg
-              className="w-5 h-5"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth={2}
-              viewBox="0 0 24 24"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-            </svg>
+            <CloseIcon className="w-5 h-5" />
           </button>
         </div>
 
@@ -161,21 +145,7 @@ export function SearchModal({ isOpen, onClose, locale }: SearchModalProps) {
         <div className="flex-1 overflow-y-auto overflow-x-hidden p-2 scrollbar-thin">
           {loading && !data && (
             <div className="flex items-center justify-center py-20 text-slate-400">
-              <svg className="w-6 h-6 animate-spin mr-2" fill="none" viewBox="0 0 24 24">
-                <circle
-                  className="opacity-25"
-                  cx="12"
-                  cy="12"
-                  r="10"
-                  stroke="currentColor"
-                  strokeWidth="4"
-                ></circle>
-                <path
-                  className="opacity-75"
-                  fill="currentColor"
-                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                ></path>
-              </svg>
+              <LoaderIcon className="w-6 h-6 animate-spin mr-2" />
               {m['common.loading']()}
             </div>
           )}
@@ -216,19 +186,7 @@ export function SearchModal({ isOpen, onClose, locale }: SearchModalProps) {
                             </div>
                           ) : (
                             <div className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 flex-shrink-0">
-                              <svg
-                                className="w-5 h-5"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                              >
-                                <path
-                                  strokeLinecap="round"
-                                  strokeLinejoin="round"
-                                  strokeWidth={2}
-                                  d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                                />
-                              </svg>
+                              <UserIcon className="w-5 h-5" />
                             </div>
                           )}
                           <div>
