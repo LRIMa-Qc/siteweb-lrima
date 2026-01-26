@@ -9,13 +9,12 @@
  * - Scroll animations via ScrollAnimation component
  */
 
-import Link from 'next/link'
 import {
   ScrollAnimation,
   StaggerContainer,
   SectionHeader,
-  ArrowIcon,
   Section,
+  MobileViewAllLink,
 } from '@/components/ui'
 import * as m from '@/paraglide/messages'
 import { News } from '@/types'
@@ -85,23 +84,5 @@ export function NewsSection({ locale, news, memberMap = {} }: NewsSectionProps) 
       {/* Mobile View All Link */}
       <MobileViewAllLink href={`/${locale}/nouvelles`} text={viewAllText} />
     </Section>
-  )
-}
-
-// ============================================================================
-// Sub-components
-// ============================================================================
-
-interface MobileViewAllLinkProps {
-  href: string
-  text: string
-}
-
-function MobileViewAllLink({ href, text }: MobileViewAllLinkProps) {
-  return (
-    <Link href={href} className="group flex lg:hidden items-center justify-center gap-3 mt-12">
-      <span className="text-lg font-medium text-slate-700">{text}</span>
-      <ArrowIcon className="w-5 h-5 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform" />
-    </Link>
   )
 }
