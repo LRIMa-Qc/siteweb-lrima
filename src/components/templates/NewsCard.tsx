@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { News } from '@/types'
 import * as m from '@/paraglide/messages'
 import { MemberLink } from '@/components/ui'
+import { formatDate } from '@/lib/formatDate'
 
 interface NewsCardProps {
   news: News
@@ -21,14 +22,6 @@ export const NewsCard: React.FC<NewsCardProps> = ({
 
   // Use imageUrl directly or fallback
   const imageUrl = news.imageUrl || '/placeholder.jpg'
-
-  const formatDate = (date: Date) => {
-    return new Date(date).toLocaleDateString(locale === 'fr' ? 'fr-CA' : 'en-US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
-    })
-  }
 
   // Common label
   const label =
@@ -61,7 +54,9 @@ export const NewsCard: React.FC<NewsCardProps> = ({
               {news.title}
             </h3>
             <div className="text-sm text-slate-500 mb-4 flex items-center gap-1">
-              <span className="font-medium text-slate-400">{formatDate(news.publishedDate)}</span>
+              <span className="font-medium text-slate-400">
+                {formatDate(news.publishedDate, locale)}
+              </span>
               {news.author && (
                 <>
                   <span className="text-slate-300">•</span>
@@ -109,7 +104,7 @@ export const NewsCard: React.FC<NewsCardProps> = ({
               {news.title}
             </h3>
             <div className="text-sm text-slate-400 mb-4 font-medium">
-              {formatDate(news.publishedDate)}
+              {formatDate(news.publishedDate, locale)}
             </div>
             <p className="text-slate-600 leading-relaxed line-clamp-3 mb-4 flex-1">
               {news.summary}

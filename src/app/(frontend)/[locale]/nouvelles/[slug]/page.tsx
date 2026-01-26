@@ -5,6 +5,7 @@ import { getNewsBySlug } from '@/lib/payload'
 import Link from 'next/link'
 import Image from 'next/image'
 import { RichText } from '@payloadcms/richtext-lexical/react'
+import { formatDate } from '@/lib/formatDate'
 
 interface NewsDetailPageProps {
   params: Promise<{ slug: string; locale: string }>
@@ -15,13 +16,6 @@ export default async function NewsDetailPage({ params }: NewsDetailPageProps) {
   const news = await getNewsBySlug(slug, locale)
 
   if (!news) notFound()
-
-  const formatDate = (date: Date) =>
-    new Date(date).toLocaleDateString(locale === 'fr' ? 'fr-CA' : 'en-US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
-    })
 
   return (
     <div className="bg-white min-h-screen">
@@ -48,7 +42,7 @@ export default async function NewsDetailPage({ params }: NewsDetailPageProps) {
               )}
               {news.author && <span>•</span>}
               <time dateTime={news.publishedDate.toISOString()} className="font-medium">
-                {formatDate(news.publishedDate)}
+                {formatDate(news.publishedDate, locale)}
               </time>
             </div>
           </div>
