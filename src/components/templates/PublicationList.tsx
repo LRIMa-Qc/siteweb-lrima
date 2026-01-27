@@ -45,7 +45,7 @@ export const PublicationList: React.FC<PublicationListProps> = ({
       {years.map((year) => (
         <div key={year} className="mb-12">
           <div className="flex items-center gap-4 mb-8">
-            <h2 className="text-3xl font-display font-bold text-slate-900">{year}</h2>
+            <h2 className="!m-0  text-3xl font-display font-bold text-slate-900">{year}</h2>
             <div className="flex-1 h-px bg-slate-200"></div>
           </div>
           <div className="space-y-6">
