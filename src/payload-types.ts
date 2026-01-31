@@ -212,8 +212,6 @@ export interface Member {
   name: string;
   slug: string;
   role: string;
-  email?: string | null;
-  phone?: string | null;
   bio?: {
     root: {
       type: string;
@@ -438,8 +436,6 @@ export interface MembersSelect<T extends boolean = true> {
   name?: T;
   slug?: T;
   role?: T;
-  email?: T;
-  phone?: T;
   bio?: T;
   image?: T;
   researchInterests?:

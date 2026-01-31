@@ -48,16 +48,16 @@ export const Members: CollectionConfig = {
       required: true,
       localized: true,
     },
-    {
-      name: 'email',
-      type: 'email',
-      required: false,
-    },
-    {
-      name: 'phone',
-      type: 'text',
-      required: false,
-    },
+//    {
+//      name: 'email',
+//      type: 'email',
+//      required: false,
+//    },
+//    {
+//      name: 'phone',
+//      type: 'text',
+//      required: false,
+//    },
     {
       name: 'bio',
       type: 'richText',
