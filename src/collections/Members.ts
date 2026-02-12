@@ -107,7 +107,6 @@ export const Members: CollectionConfig = {
       defaultValue: false,
       admin: {
         position: 'sidebar',
-        description: 'Mark this member as the director/directrice',
       },
     },
     {

@@ -125,6 +125,7 @@ export async function getMembers(options?: {
     const payload = await getPayloadClient()
     const { docs } = await payload.find({
       collection: 'members',
+      limit: 0,
       where: options?.status ? { status: { equals: options.status } } : {},
       sort: '-joinYear',
       locale: (options?.locale || 'fr') as 'en' | 'fr',
