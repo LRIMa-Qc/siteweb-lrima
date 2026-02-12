@@ -102,6 +102,15 @@ export const Members: CollectionConfig = {
       required: false,
     },
     {
+      name: 'isDirector',
+      type: 'checkbox',
+      defaultValue: false,
+      admin: {
+        position: 'sidebar',
+        description: 'Mark this member as the director/directrice',
+      },
+    },
+    {
       name: 'status',
       type: 'select',
       required: true,
