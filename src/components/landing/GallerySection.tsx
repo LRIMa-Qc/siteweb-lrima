@@ -26,7 +26,9 @@ interface GallerySectionProps {
   /** Current locale for i18n */
   locale: string
   /** Array of gallery images */
-  images: readonly GalleryImage[]
+  images: readonly GalleryImage[] | GalleryImage[]
+  /** Optional gallery title override from CMS */
+  title?: string
 }
 
 // ============================================================================
@@ -47,7 +49,7 @@ const ROW2_HEIGHT = 220
 // Component
 // ============================================================================
 
-export function GallerySection({ images }: GallerySectionProps) {
+export function GallerySection({ images, title }: GallerySectionProps) {
   // Double the images for seamless infinite scroll
   const doubledImages = [...images, ...images]
   const reversedDoubledImages = [...images].reverse().concat([...images].reverse())
@@ -65,7 +67,7 @@ export function GallerySection({ images }: GallerySectionProps) {
               id="gallery-heading"
               className="font-display text-[clamp(3rem,8vw,7rem)] font-bold text-slate-700 tracking-tight leading-none"
             >
-              {m['home.gallery.title']()}
+              {title || m['home.gallery.title']()}
             </h2>
           </ScrollAnimation>
         </div>

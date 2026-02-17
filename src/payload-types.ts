@@ -93,8 +93,14 @@ export interface Config {
     defaultIDType: string;
   };
   fallbackLocale: ('false' | 'none' | 'null') | false | null | ('en' | 'fr') | ('en' | 'fr')[];
-  globals: {};
-  globalsSelect: {};
+  globals: {
+    homepage: Homepage;
+    'site-settings': SiteSetting;
+  };
+  globalsSelect: {
+    homepage: HomepageSelect<false> | HomepageSelect<true>;
+    'site-settings': SiteSettingsSelect<false> | SiteSettingsSelect<true>;
+  };
   locale: 'en' | 'fr';
   user: User & {
     collection: 'users';
@@ -240,6 +246,7 @@ export interface Member {
   linkedIn?: string | null;
   github?: string | null;
   googleScholar?: string | null;
+  isDirector?: boolean | null;
   status: 'active' | 'alumni' | 'collaborator';
   joinYear?: number | null;
   updatedAt: string;
@@ -452,6 +459,7 @@ export interface MembersSelect<T extends boolean = true> {
   linkedIn?: T;
   github?: T;
   googleScholar?: T;
+  isDirector?: T;
   status?: T;
   joinYear?: T;
   updatedAt?: T;
@@ -530,6 +538,207 @@ export interface PayloadMigrationsSelect<T extends boolean = true> {
   batch?: T;
   updatedAt?: T;
   createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "homepage".
+ */
+export interface Homepage {
+  id: string;
+  hero?: {
+    labName?: string | null;
+    tagline?: string | null;
+    ctaResearchLabel?: string | null;
+    ctaContactLabel?: string | null;
+  };
+  about?: {
+    title?: string | null;
+    description?: string | null;
+  };
+  horizontalImages?: {
+    image1?: (string | null) | Media;
+    image2?: (string | null) | Media;
+    image3?: (string | null) | Media;
+  };
+  stats?: {
+    items?:
+      | {
+          number: string;
+          label: string;
+          id?: string | null;
+        }[]
+      | null;
+  };
+  quote?: {
+    text?: string | null;
+    source?: string | null;
+  };
+  audiences?:
+    | {
+        text: string;
+        id?: string | null;
+      }[]
+    | null;
+  gallery?: {
+    title?: string | null;
+    images?:
+      | {
+          image: string | Media;
+          id?: string | null;
+        }[]
+      | null;
+  };
+  cta?: {
+    title?: string | null;
+    subtitle?: string | null;
+    contactLabel?: string | null;
+    joinLabel?: string | null;
+    robotImage?: (string | null) | Media;
+  };
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "site-settings".
+ */
+export interface SiteSetting {
+  id: string;
+  logos?: {
+    headerLogo?: (string | null) | Media;
+    footerLogo?: (string | null) | Media;
+  };
+  metadata?: {
+    siteName?: string | null;
+    siteDescription?: string | null;
+  };
+  contact?: {
+    email?: string | null;
+    phone?: string | null;
+    addressLine1?: string | null;
+    addressLine2?: string | null;
+    addressLine3?: string | null;
+    /**
+     * Paste the full iframe src URL from Google Maps embed.
+     */
+    mapEmbedUrl?: string | null;
+  };
+  social?: {
+    linkedin?: string | null;
+    github?: string | null;
+  };
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "homepage_select".
+ */
+export interface HomepageSelect<T extends boolean = true> {
+  hero?:
+    | T
+    | {
+        labName?: T;
+        tagline?: T;
+        ctaResearchLabel?: T;
+        ctaContactLabel?: T;
+      };
+  about?:
+    | T
+    | {
+        title?: T;
+        description?: T;
+      };
+  horizontalImages?:
+    | T
+    | {
+        image1?: T;
+        image2?: T;
+        image3?: T;
+      };
+  stats?:
+    | T
+    | {
+        items?:
+          | T
+          | {
+              number?: T;
+              label?: T;
+              id?: T;
+            };
+      };
+  quote?:
+    | T
+    | {
+        text?: T;
+        source?: T;
+      };
+  audiences?:
+    | T
+    | {
+        text?: T;
+        id?: T;
+      };
+  gallery?:
+    | T
+    | {
+        title?: T;
+        images?:
+          | T
+          | {
+              image?: T;
+              id?: T;
+            };
+      };
+  cta?:
+    | T
+    | {
+        title?: T;
+        subtitle?: T;
+        contactLabel?: T;
+        joinLabel?: T;
+        robotImage?: T;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "site-settings_select".
+ */
+export interface SiteSettingsSelect<T extends boolean = true> {
+  logos?:
+    | T
+    | {
+        headerLogo?: T;
+        footerLogo?: T;
+      };
+  metadata?:
+    | T
+    | {
+        siteName?: T;
+        siteDescription?: T;
+      };
+  contact?:
+    | T
+    | {
+        email?: T;
+        phone?: T;
+        addressLine1?: T;
+        addressLine2?: T;
+        addressLine3?: T;
+        mapEmbedUrl?: T;
+      };
+  social?:
+    | T
+    | {
+        linkedin?: T;
+        github?: T;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema

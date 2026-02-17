@@ -8,12 +8,31 @@ interface HorizontalScrollSectionProps {
   locale: string
   title: string
   description: string
+  /** CMS-provided images for the horizontal scroll cards */
+  horizontalImages?: {
+    image1: string
+    image1Alt: string
+    image2: string
+    image2Alt: string
+    image3: string
+    image3Alt: string
+  }
+  /** CMS-provided stat items */
+  stats?: Array<{ number: string; label: string }>
+  /** CMS-provided quote text */
+  quoteText?: string
+  /** CMS-provided quote source */
+  quoteSource?: string
 }
 
 export function HorizontalScrollSection({
   locale,
   title,
   description,
+  horizontalImages,
+  stats,
+  quoteText,
+  quoteSource,
 }: HorizontalScrollSectionProps) {
   const sectionRef = useRef<HTMLDivElement>(null)
   const scrollContainerRef = useRef<HTMLDivElement>(null)
@@ -62,6 +81,31 @@ export function HorizontalScrollSection({
     }
   }, [scrollableWidth])
 
+  // Resolve images with fallbacks
+  const img1 = horizontalImages?.image1 || '/hori-image-2.jpg'
+  const img1Alt =
+    horizontalImages?.image1Alt || m['images.researchLab']({}, { locale: locale as any })
+  const img2 = horizontalImages?.image2 || '/hori-image-1.jpg'
+  const img2Alt =
+    horizontalImages?.image2Alt || m['images.teamCollaboration']({}, { locale: locale as any })
+  const img3 = horizontalImages?.image3 || '/hori-image-3.jpg'
+  const img3Alt =
+    horizontalImages?.image3Alt || m['images.innovation']({}, { locale: locale as any })
+
+  // Resolve stats with fallbacks
+  const resolvedStats =
+    stats && stats.length > 0
+      ? stats
+      : [
+          { number: '30+', label: m['home.stats.publications']({}, { locale: locale as any }) },
+          { number: '25+', label: m['home.stats.researchers']({}, { locale: locale as any }) },
+          { number: '10+', label: m['home.stats.years']({}, { locale: locale as any }) },
+        ]
+
+  // Resolve quote with fallbacks
+  const resolvedQuote = quoteText || m['home.quote']({}, { locale: locale as any })
+  const resolvedSource = quoteSource || m['home.quoteSource']({}, { locale: locale as any })
+
   return (
     <section ref={sectionRef} className="relative" style={{ height: `${300}vh` }}>
       <div className="sticky top-0 h-screen overflow-hidden flex items-center bg-white">
@@ -82,75 +126,41 @@ export function HorizontalScrollSection({
 
           {/* Image 1 */}
           <div className="flex-shrink-0 w-[80vw] lg:w-[40vw] h-[70vh] rounded-3xl overflow-hidden relative">
-            <Image
-              src="/hori-image-2.jpg"
-              alt={m['images.researchLab']({}, { locale: locale as any })}
-              fill
-              className="object-cover"
-            />
+            <Image src={img1} alt={img1Alt} fill className="object-cover" />
           </div>
 
           {/* Stats card */}
           <div className="flex-shrink-0 w-[80vw] lg:w-[35vw] h-[70vh] bg-slate-800 rounded-3xl p-12 flex flex-col justify-center">
             <div className="space-y-12">
-              <div>
-                <span className="font-display text-[clamp(3rem,6vw,5rem)] font-bold text-white">
-                  30+
-                </span>
-                <p className="text-lg text-white/50 mt-2">
-                  {m['home.stats.publications']({}, { locale: locale as any })}
-                </p>
-              </div>
-              <div>
-                <span className="font-display text-[clamp(3rem,6vw,5rem)] font-bold text-white">
-                  25+
-                </span>
-                <p className="text-lg text-white/50 mt-2">
-                  {m['home.stats.researchers']({}, { locale: locale as any })}
-                </p>
-              </div>
-              <div>
-                <span className="font-display text-[clamp(3rem,6vw,5rem)] font-bold text-white">
-                  10+
-                </span>
-                <p className="text-lg text-white/50 mt-2">
-                  {m['home.stats.years']({}, { locale: locale as any })}
-                </p>
-              </div>
+              {resolvedStats.map((stat, index) => (
+                <div key={index}>
+                  <span className="font-display text-[clamp(3rem,6vw,5rem)] font-bold text-white">
+                    {stat.number}
+                  </span>
+                  <p className="text-lg text-white/50 mt-2">{stat.label}</p>
+                </div>
+              ))}
             </div>
           </div>
 
           {/* Image 2 */}
           <div className="flex-shrink-0 w-[80vw] lg:w-[45vw] h-[70vh] rounded-3xl overflow-hidden relative">
-            <Image
-              src="/hori-image-1.jpg"
-              alt={m['images.teamCollaboration']({}, { locale: locale as any })}
-              fill
-              className="object-cover"
-              unoptimized
-            />
+            <Image src={img2} alt={img2Alt} fill className="object-cover" unoptimized />
           </div>
 
           {/* Quote card */}
           <div className="flex-shrink-0 w-[80vw] lg:w-[40vw] h-[70vh] bg-primary-600 rounded-3xl p-12 flex flex-col justify-center">
             <blockquote className="text-2xl lg:text-3xl text-white font-medium leading-relaxed mb-8">
               &ldquo;
-              {m['home.quote']({}, { locale: locale as any })}
+              {resolvedQuote}
               &rdquo;
             </blockquote>
-            <p className="text-white/70 text-lg">
-              — {m['home.quoteSource']({}, { locale: locale as any })}
-            </p>
+            <p className="text-white/70 text-lg">— {resolvedSource}</p>
           </div>
 
           {/* Image 3 */}
           <div className="flex-shrink-0 w-[80vw] lg:w-[40vw] h-[70vh] rounded-3xl overflow-hidden relative mr-16">
-            <Image
-              src="/hori-image-3.jpg"
-              alt={m['images.innovation']({}, { locale: locale as any })}
-              fill
-              className="object-cover"
-            />
+            <Image src={img3} alt={img3Alt} fill className="object-cover" />
           </div>
         </div>
       </div>
