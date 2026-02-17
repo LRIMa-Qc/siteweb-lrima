@@ -17,7 +17,7 @@ export const Homepage: GlobalConfig = {
   },
   admin: {
     livePreview: {
-      url: 'http://localhost:3000/fr/preview',
+      url: `${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/fr/preview`,
     },
   },
   fields: [
