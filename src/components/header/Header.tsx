@@ -17,7 +17,7 @@ import { SearchIcon, GlobeIcon } from '@/components/ui'
  *
  * @returns The rendered header component with sticky positioning
  */
-export function Header() {
+export function Header({ headerLogoUrl }: { headerLogoUrl?: string }) {
   const [scrolled, setScrolled] = useState(false)
   const [isSearchOpen, setIsSearchOpen] = useState(false)
   const pathname = usePathname()
@@ -49,7 +49,7 @@ export function Header() {
             <div className="flex items-center gap-4">
               <Link className="hover:opacity-80 transition-opacity" href={`/${locale}`}>
                 <Image
-                  src="/logo_lrima_header.png"
+                  src={headerLogoUrl || '/logo_lrima_header.png'}
                   alt="LRIMA Logo"
                   width={160}
                   height={48}

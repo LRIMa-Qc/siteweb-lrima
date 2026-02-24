@@ -125,6 +125,7 @@ export async function getMembers(options?: {
     const payload = await getPayloadClient()
     const { docs } = await payload.find({
       collection: 'members',
+      limit: 0,
       where: options?.status ? { status: { equals: options.status } } : {},
       sort: '-joinYear',
       locale: (options?.locale || 'fr') as 'en' | 'fr',
@@ -135,6 +136,7 @@ export async function getMembers(options?: {
       name: doc.name,
 
       role: doc.role,
+      isDirector: doc.isDirector || false,
       email: doc.email,
       phone: doc.phone,
       bio: doc.bio,
@@ -174,12 +176,13 @@ export async function getMemberBySlug(slug: string, locale?: string): Promise<Me
 
     if (!docs || docs.length === 0) return null
 
-    const doc = docs[0]
+    const doc: any = docs[0]
     return {
       id: doc.id,
       name: doc.name,
 
       role: doc.role,
+      isDirector: doc.isDirector || false,
       email: doc.email || undefined,
       phone: doc.phone || undefined,
       bio: doc.bio,

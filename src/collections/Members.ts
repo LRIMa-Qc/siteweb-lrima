@@ -102,6 +102,14 @@ export const Members: CollectionConfig = {
       required: false,
     },
     {
+      name: 'isDirector',
+      type: 'checkbox',
+      defaultValue: false,
+      admin: {
+        position: 'sidebar',
+      },
+    },
+    {
       name: 'status',
       type: 'select',
       required: true,

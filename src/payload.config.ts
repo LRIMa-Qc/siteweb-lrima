@@ -12,6 +12,7 @@ import { Media } from './collections/Media'
 import { News } from './collections/News'
 import { Members } from './collections/Members'
 import { Publications } from './collections/Publications'
+import { Homepage, SiteSettings } from './globals'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -28,6 +29,7 @@ export default buildConfig({
     },
   },
   collections: [Users, Media, News, Members, Publications],
+  globals: [Homepage, SiteSettings],
   localization: {
     locales: ['en', 'fr'],
     defaultLocale: 'fr',

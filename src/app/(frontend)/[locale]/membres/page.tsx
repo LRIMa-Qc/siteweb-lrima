@@ -16,13 +16,8 @@ export default async function MembersPage({ params }: MembersPageProps) {
   const { locale } = await params
   const members = await getMembers({ locale })
 
-  // Find the director (simple heuristic based on role)
-  const director = members.find(
-    (m) =>
-      m.role.toLowerCase().includes('directrice') ||
-      m.role.toLowerCase().includes('director') ||
-      m.role.toLowerCase().includes('direction'),
-  )
+  // Find the director by the isDirector flag
+  const director = members.find((m) => m.isDirector)
 
   // Filter out the director from the main list if found
   const displayedMembers = director ? members.filter((m) => m.id !== director.id) : members

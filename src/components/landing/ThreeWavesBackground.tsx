@@ -94,7 +94,9 @@ export function ThreeWavesBackground() {
         mouseX += (targetMouseX - mouseX) * 0.05
         mouseY += (targetMouseY - mouseY) * 0.05
         const maxWave = waveAmplitude * 2 + mouseStrength * 40 * 2
-        const yOffset = -height / 2 + maxWave
+        // On mobile, push the wave further down
+        const mobileFactor = Math.max(1, 1.8 - (width / 1200) * 0.8)
+        const yOffset = (-height / 2 + maxWave) * mobileFactor
         let i = 0
         for (let ix = 0; ix < amountX; ix++) {
           for (let iy = 0; iy < amountY; iy++) {

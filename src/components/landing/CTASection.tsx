@@ -21,13 +21,30 @@ import * as m from '@/paraglide/messages'
 interface CTASectionProps {
   /** Current locale for i18n */
   locale: string
+  /** Override title from CMS */
+  title?: string
+  /** Override subtitle from CMS */
+  subtitle?: string
+  /** Override contact button label from CMS */
+  contactLabel?: string
+  /** Override join button label from CMS */
+  joinLabel?: string
+  /** Override robot image URL from CMS */
+  robotImageUrl?: string
 }
 
 // ============================================================================
 // Component
 // ============================================================================
 
-export function CTASection({ locale }: CTASectionProps) {
+export function CTASection({
+  locale,
+  title,
+  subtitle,
+  contactLabel,
+  joinLabel,
+  robotImageUrl,
+}: CTASectionProps) {
   return (
     <section className="relative py-32 lg:py-48" aria-labelledby="cta-heading">
       <div className="w-full px-6 lg:px-16">
@@ -37,7 +54,7 @@ export function CTASection({ locale }: CTASectionProps) {
             <div className="flex-shrink-0">
               <div className="relative w-48 h-48 lg:w-72 lg:h-72">
                 <Image
-                  src="/robot-gif.gif"
+                  src={robotImageUrl || '/robot-gif.gif'}
                   alt="Robot animation"
                   fill
                   className="object-contain"
@@ -53,16 +70,16 @@ export function CTASection({ locale }: CTASectionProps) {
                 id="cta-heading"
                 className="font-display text-[clamp(2.5rem,6vw,5rem)] font-bold text-slate-700 tracking-tight mb-8 leading-none"
               >
-                {m['home.cta.title']({}, { locale: locale as any })}
+                {title || m['home.cta.title']({}, { locale: locale as any })}
               </h2>
 
               {/* Description */}
               <p className="text-xl text-slate-400 mb-10 max-w-2xl leading-relaxed">
-                {m['home.cta.subtitle']({}, { locale: locale as any })}
+                {subtitle || m['home.cta.subtitle']({}, { locale: locale as any })}
               </p>
 
               {/* Action Buttons */}
-              <ActionButtons locale={locale} />
+              <ActionButtons locale={locale} contactLabel={contactLabel} joinLabel={joinLabel} />
             </div>
           </div>
         </ScrollAnimation>
@@ -77,9 +94,11 @@ export function CTASection({ locale }: CTASectionProps) {
 
 interface ActionButtonsProps {
   locale: string
+  contactLabel?: string
+  joinLabel?: string
 }
 
-function ActionButtons({ locale }: ActionButtonsProps) {
+function ActionButtons({ locale, contactLabel, joinLabel }: ActionButtonsProps) {
   return (
     <div className="flex gap-5 justify-center lg:justify-start flex-wrap">
       {/* Primary CTA */}
@@ -89,7 +108,7 @@ function ActionButtons({ locale }: ActionButtonsProps) {
         variant="primary"
         className="px-12 py-5 text-base"
       >
-        {m['home.cta.contact']({}, { locale: locale as any })}
+        {contactLabel || m['home.cta.contact']({}, { locale: locale as any })}
       </Button>
 
       {/* Secondary CTA */}
@@ -99,7 +118,7 @@ function ActionButtons({ locale }: ActionButtonsProps) {
         variant="outline"
         className="px-12 py-5 text-base border-slate-200 text-slate-600 hover:bg-slate-50"
       >
-        {m['home.cta.join']({}, { locale: locale as any })}
+        {joinLabel || m['home.cta.join']({}, { locale: locale as any })}
       </Button>
     </div>
   )
