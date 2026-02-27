@@ -21,7 +21,7 @@ export const SOCIAL_LINKS = {
 } as const
 
 export const CONTACT_INFO = {
-  email: 'lrima@cmaisonneuve.qc.ca',
+  email: 'contact@lrima.ca',
   phone: '+1 (514) 254-7131',
   address: {
     line1: 'Collège de Maisonneuve',
