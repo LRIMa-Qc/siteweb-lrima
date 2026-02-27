@@ -176,6 +176,48 @@ For production, use MongoDB Atlas:
 3. Whitelist Vercel's IP addresses (or allow access from anywhere: 0.0.0.0/0)
 4. Get your connection string and add it to Vercel
 
+## Environments & Branching Strategy
+
+The project uses a two-branch deployment strategy with shared resources:
+
+| Branch | URL | Purpose |
+| ------ | --- | ------- |
+| `main` | [lrima.ca](https://lrima.ca) / [www.lrima.ca](https://www.lrima.ca) | Production |
+| `dev`  | [dev.lrima.ca](https://dev.lrima.ca) | Development / Preview |
+
+### Shared Resources
+
+Both environments share the same:
+- **MongoDB database** - Content changes appear on both sites
+- **Vercel Blob storage** - Uploaded media is shared
+- **Environment variables** - Same API keys for both
+
+This simplifies content management since edits in Payload admin affect both environments.
+
+### Git Workflow
+
+```bash
+# Daily development
+git checkout dev
+# make changes...
+git push origin dev
+# → auto-deploys to dev.lrima.ca
+
+# Deploy to production
+git checkout main
+git merge dev
+git push origin main
+# → auto-deploys to lrima.ca
+```
+
+### Environment-Specific Variables
+
+If needed, you can set different values per environment in Vercel:
+
+| Variable | Production | Preview |
+| -------- | ---------- | ------- |
+| `NEXT_PUBLIC_SITE_URL` | `https://lrima.ca` | `https://dev.lrima.ca` |
+
 ## Collections
 
 | Collection   | Description                      |
@@ -224,3 +266,9 @@ Media uploads are stored in Vercel Blob. To configure:
 
 1. In Vercel Dashboard → Storage → Create Database → Blob
 2. Copy the `BLOB_READ_WRITE_TOKEN` to your environment variables
+
+## Contact
+
+- **Email**: lrima@cmaisonneuve.qc.ca
+- **Website**: [lrima.ca](https://lrima.ca)
+- **Address**: Collège de Maisonneuve, 3800 rue Sherbrooke Est, Montréal (Québec) H1X 2A2, Canada
