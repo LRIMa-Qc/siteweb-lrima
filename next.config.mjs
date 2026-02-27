@@ -4,6 +4,15 @@ import { withPayload } from '@payloadcms/next/withPayload'
 const nextConfig = {
   // Enable standalone output for Docker and Vercel deployment
   output: 'standalone',
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**.public.blob.vercel-storage.com',
+        port: '',
+      },
+    ],
+  },
   webpack: (config, { isServer }) => {
     config.resolve.extensionAlias = {
       '.cjs': ['.cts', '.cjs'],
