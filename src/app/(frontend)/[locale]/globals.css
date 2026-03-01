@@ -52,7 +52,6 @@
 }
 
 @layer components {
-
   /* Modern input styles - Light theme */
   input[type='text'],
   input[type='email'],
@@ -82,7 +81,6 @@
 }
 
 @layer utilities {
-
   /* Glass effect utilities */
   .glass {
     @apply bg-white/70 backdrop-blur-lg border border-white/20 shadow-sm;
@@ -233,10 +231,12 @@
 
   .scroll-highlight-item {
     --dimmed: color-mix(in oklch, #0f172a, #0000 75%);
-    background: linear-gradient(180deg,
-        var(--dimmed) 0 calc(var(--start) - 0.5lh),
-        var(--accent) calc(var(--start) - 0.55lh) calc(var(--start) + 0.55lh),
-        var(--dimmed) calc(var(--start) + 0.5lh));
+    background: linear-gradient(
+      180deg,
+      var(--dimmed) 0 calc(var(--start) - 0.5lh),
+      var(--accent) calc(var(--start) - 0.55lh) calc(var(--start) + 0.55lh),
+      var(--dimmed) calc(var(--start) + 0.5lh)
+    );
     background-attachment: fixed;
     color: #0000;
     background-clip: text;
@@ -255,11 +255,19 @@
 
     --fluid-min: calc(var(--font-size-min) * pow(var(--font-ratio-min), var(--font-level)));
     --fluid-max: calc(var(--font-size-max) * pow(var(--font-ratio-max), var(--font-level)));
-    --fluid-preferred: calc((var(--fluid-max) - var(--fluid-min)) / (var(--font-width-max) - var(--font-width-min)));
+    --fluid-preferred: calc(
+      (var(--fluid-max) - var(--fluid-min)) / (var(--font-width-max) - var(--font-width-min))
+    );
 
-    font-size: clamp(calc((var(--fluid-min) / 16) * 1rem),
-        calc(((var(--fluid-min) / 16) * 1rem) - (((var(--fluid-preferred) * var(--font-width-min)) / 16) * 1rem) + (var(--fluid-preferred) * 100vi)),
-        calc((var(--fluid-max) / 16) * 1rem));
+    font-size: clamp(
+      calc((var(--fluid-min) / 16) * 1rem),
+      calc(
+        ((var(--fluid-min) / 16) * 1rem) -
+          (((var(--fluid-preferred) * var(--font-width-min)) / 16) * 1rem) +
+          (var(--fluid-preferred) * 100vi)
+      ),
+      calc((var(--fluid-max) / 16) * 1rem)
+    );
   }
 
   /* ==================== Horizontal scroll on vertical scroll ==================== */

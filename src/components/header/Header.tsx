@@ -9,7 +9,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 import { SearchModal } from '@/components/search/SearchModal'
-import { SearchIcon, GlobeIcon } from '@/components/ui'
+import { SearchIcon, GlobeIcon, BurgerIcon, CloseIcon } from '@/components/ui'
 
 /**
  * Header component that displays the navigation bar with logo, navigation links,
@@ -20,6 +20,7 @@ import { SearchIcon, GlobeIcon } from '@/components/ui'
 export function Header({ headerLogoUrl }: { headerLogoUrl?: string }) {
   const [scrolled, setScrolled] = useState(false)
   const [isSearchOpen, setIsSearchOpen] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const pathname = usePathname()
 
   useEffect(() => {
@@ -37,6 +38,13 @@ export function Header({ headerLogoUrl }: { headerLogoUrl?: string }) {
   // Build the path for language switch (replace locale prefix)
   const pathWithoutLocale = pathname.replace(/^\/(fr|en)/, '') || '/'
   const switchLocalePath = `/${otherLocale}${pathWithoutLocale}`
+
+  const navItems = [
+    { label: m['nav.news']({}, { locale: locale as any }), href: '/nouvelles' },
+    { label: m['nav.publications']({}, { locale: locale as any }), href: '/publications' },
+    { label: m['nav.members']({}, { locale: locale as any }), href: '/membres' },
+    { label: m['nav.inHouse']({}, { locale: locale as any }), href: '/InHouse' },
+  ]
   return (
     <>
       <header
@@ -60,26 +68,9 @@ export function Header({ headerLogoUrl }: { headerLogoUrl?: string }) {
 
             <nav className="hidden lg:block">
               <ul className="flex gap-2 items-center">
-                <HeaderItem
-                  label={m['nav.news']({}, { locale: locale as any })}
-                  href="/nouvelles"
-                  locale={locale}
-                />
-                <HeaderItem
-                  label={m['nav.publications']({}, { locale: locale as any })}
-                  href="/publications"
-                  locale={locale}
-                />
-                <HeaderItem
-                  label={m['nav.members']({}, { locale: locale as any })}
-                  href="/membres"
-                  locale={locale}
-                />
-                <HeaderItem
-                  label={m['nav.inHouse']({}, { locale: locale as any})}
-                  href="/InHouse"
-                  locale={locale}
-                />
+                {navItems.map((item) => (
+                  <HeaderItem key={item.href} label={item.label} href={item.href} locale={locale} />
+                ))}
               </ul>
             </nav>
 
@@ -108,9 +99,52 @@ export function Header({ headerLogoUrl }: { headerLogoUrl?: string }) {
               >
                 {m['nav.contact']({}, { locale: locale as any })}
               </Button>
+
+              {/* Mobile Menu Button */}
+              <button
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className="lg:hidden p-2 text-slate-600 hover:text-slate-900 focus:outline-none"
+                aria-label="Toggle mobile menu"
+              >
+                {isMobileMenuOpen ? (
+                  <CloseIcon className="w-6 h-6" />
+                ) : (
+                  <BurgerIcon className="w-6 h-6" />
+                )}
+              </button>
             </div>
           </div>
         </div>
+
+        {/* Mobile Menu Dropdown */}
+        {isMobileMenuOpen && (
+          <div className="lg:hidden bg-white border-t border-slate-100 shadow-lg px-6 py-4 absolute top-full left-0 right-0">
+            <nav>
+              <ul className="flex flex-col gap-4 mb-4">
+                {navItems.map((item) => (
+                  <li key={item.href}>
+                    <Link
+                      href={`/${locale}${item.href}`}
+                      className="block text-lg font-medium text-slate-700 hover:text-primary-600 transition-colors"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+            <Button
+              href={`/${locale}/contact`}
+              variant="primary"
+              size="lg"
+              className="w-full justify-center shadow-none hover:shadow-lg text-base"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              {m['nav.contact']({}, { locale: locale as any })}
+            </Button>
+          </div>
+        )}
       </header>
 
       <SearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} locale={locale} />
