@@ -245,6 +245,7 @@ export interface Member {
   github?: string | null;
   googleScholar?: string | null;
   isDirector?: boolean | null;
+  isHouseResearcher?: boolean | null;
   status: 'active' | 'alumni' | 'collaborator';
   joinYear?: number | null;
   updatedAt: string;
@@ -456,6 +457,7 @@ export interface MembersSelect<T extends boolean = true> {
   github?: T;
   googleScholar?: T;
   isDirector?: T;
+  isHouseResearcher?: T;
   status?: T;
   joinYear?: T;
   updatedAt?: T;

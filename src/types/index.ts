@@ -5,6 +5,7 @@ export interface Member {
   name: string
   role: string
   isDirector?: boolean
+  isHouseResearcher?: boolean
   email?: string
   phone?: string
   bio: any // Lexical rich text structure
