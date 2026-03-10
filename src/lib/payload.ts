@@ -137,6 +137,7 @@ export async function getMembers(options?: {
 
       role: doc.role,
       isDirector: doc.isDirector || false,
+      isHouseResearcher: doc.isHouseResearcher || false,
       email: doc.email,
       phone: doc.phone,
       bio: doc.bio,
@@ -183,6 +184,7 @@ export async function getMemberBySlug(slug: string, locale?: string): Promise<Me
 
       role: doc.role,
       isDirector: doc.isDirector || false,
+      isHouseResearcher: doc.isHouseResearcher || false,
       email: doc.email || undefined,
       phone: doc.phone || undefined,
       bio: doc.bio,

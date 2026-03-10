@@ -218,8 +218,6 @@ export interface Member {
   name: string;
   slug: string;
   role: string;
-  email?: string | null;
-  phone?: string | null;
   bio?: {
     root: {
       type: string;
@@ -247,6 +245,7 @@ export interface Member {
   github?: string | null;
   googleScholar?: string | null;
   isDirector?: boolean | null;
+  isHouseResearcher?: boolean | null;
   status: 'active' | 'alumni' | 'collaborator';
   joinYear?: number | null;
   updatedAt: string;
@@ -445,8 +444,6 @@ export interface MembersSelect<T extends boolean = true> {
   name?: T;
   slug?: T;
   role?: T;
-  email?: T;
-  phone?: T;
   bio?: T;
   image?: T;
   researchInterests?:
@@ -460,6 +457,7 @@ export interface MembersSelect<T extends boolean = true> {
   github?: T;
   googleScholar?: T;
   isDirector?: T;
+  isHouseResearcher?: T;
   status?: T;
   joinYear?: T;
   updatedAt?: T;

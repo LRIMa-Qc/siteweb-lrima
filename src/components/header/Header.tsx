@@ -75,6 +75,11 @@ export function Header({ headerLogoUrl }: { headerLogoUrl?: string }) {
                   href="/membres"
                   locale={locale}
                 />
+                <HeaderItem
+                  label={m['nav.inHouse']({}, { locale: locale as any})}
+                  href="/InHouse"
+                  locale={locale}
+                />
               </ul>
             </nav>
 

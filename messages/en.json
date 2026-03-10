@@ -9,7 +9,8 @@
     "news": "News",
     "publications": "Publications",
     "members": "Team",
-    "contact": "Contact"
+    "contact": "Contact",
+    "inHouse": "In-House Researchers" 
   },
   "home": {
     "title": "Maisonneuve Computer Science Research Laboratory",
@@ -145,6 +146,9 @@
     "bio": "Biography",
     "memberSince": "Member since {year}",
     "noMembers": "No members found."
+  },
+  "inHouse": {
+    "title": "Our In-House Researchers"
   },
   "common": {
     "labName": "Maisonneuve Computer Science Research Laboratory",

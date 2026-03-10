@@ -21,7 +21,7 @@ export default async function MembersPage({ params }: MembersPageProps) {
 
   // Filter out the director from the main list if found
   const displayedMembers = director ? members.filter((m) => m.id !== director.id) : members
-
+  
   return (
     <div className="members-page bg-white min-h-screen">
       {/* Header Section */}
