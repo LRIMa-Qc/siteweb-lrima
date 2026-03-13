@@ -67,9 +67,32 @@ export function Header({ headerLogoUrl }: { headerLogoUrl?: string }) {
 
             <nav className="hidden lg:block">
               <ul className="flex gap-2 items-center">
+<<<<<<< HEAD
                 {navItems.map((item) => (
                   <HeaderItem key={item.href} label={item.label} href={item.href} locale={locale} />
                 ))}
+=======
+                <HeaderItem
+                  label={m['nav.news']({}, { locale: locale as any })}
+                  href="/nouvelles"
+                  locale={locale}
+                />
+                <HeaderItem
+                  label={m['nav.publications']({}, { locale: locale as any })}
+                  href="/publications"
+                  locale={locale}
+                />
+                <HeaderItem
+                  label={m['nav.members']({}, { locale: locale as any })}
+                  href="/membres"
+                  locale={locale}
+                />
+                <HeaderItem
+                  label={m['nav.inHouse']({}, { locale: locale as any})}
+                  href="/InHouse"
+                  locale={locale}
+                />
+>>>>>>> dev
               </ul>
             </nav>
 
