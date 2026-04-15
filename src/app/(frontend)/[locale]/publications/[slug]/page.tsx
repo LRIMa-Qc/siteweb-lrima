@@ -24,10 +24,6 @@ export default async function PublicationDetailPage({ params }: PublicationDetai
   return (
     <div className="bg-white min-h-screen">
       <section className="relative overflow-hidden pt-32 pb-20 md:pt-48 md:pb-32">
-        {/* Subtle Background Pattern */}
-        <div className="absolute inset-0 bg-dot-pattern opacity-[0.4]"></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-white"></div>
-
         <Container>
           <div className="relative z-10 max-w-4xl mx-auto">
             <div className="flex items-center gap-3 mb-6">
@@ -76,7 +72,7 @@ export default async function PublicationDetailPage({ params }: PublicationDetai
 
             {publication.abstract && (
               <div className="glass-card p-8 rounded-3xl bg-white">
-                <h2 className="font-display text-2xl font-bold mb-4 text-slate-900">
+                <h2 className="font-display text-2xl font-bold mb-4 text-slate-900 !mt-2">
                   {m['publicationDetail.abstract']()}
                 </h2>
                 <div className="prose prose-slate max-w-none">
