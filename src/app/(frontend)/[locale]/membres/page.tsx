@@ -31,7 +31,7 @@ export default async function MembersPage({ params }: MembersPageProps) {
       {director && <DirectorSection director={director} locale={locale} />}
 
       {/* Members List Section */}
-      <section className="py-24 bg-slate-50">
+      <section className="py-16 md:py-20 bg-slate-50">
         <Container>
           <MemberList members={displayedMembers} variant="grid" locale={locale} />
         </Container>

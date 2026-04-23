@@ -45,8 +45,8 @@ export function Footer({
 
   return (
     <footer className="bg-slate-50 border-t border-slate-200 mt-auto">
-      <div className="max-w-7xl mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+      <div className="max-w-7xl mx-auto px-5 lg:px-6 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10 mb-10">
           {/* Brand Section */}
           <div className="lg:col-span-2">
             <div className="mb-4">
@@ -136,7 +136,7 @@ export function Footer({
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-6">
+        <div className="pt-6 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-slate-400 text-sm">
             © {currentYear} {name}. {m['footer.rights']({}, { locale })}
           </p>

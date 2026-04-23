@@ -46,10 +46,10 @@ export function CTASection({
   robotImageUrl,
 }: CTASectionProps) {
   return (
-    <section className="relative py-32 lg:py-48" aria-labelledby="cta-heading">
-      <div className="w-full px-6 lg:px-16">
+    <section className="relative py-24 lg:py-32" aria-labelledby="cta-heading">
+      <div className="w-full px-5 lg:px-12">
         <ScrollAnimation animation="fade-up" className="max-w-7xl mx-auto">
-          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+          <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
             {/* Robot GIF - Side on desktop */}
             <div className="flex-shrink-0">
               <div className="relative w-48 h-48 lg:w-72 lg:h-72">
@@ -68,13 +68,13 @@ export function CTASection({
               {/* Headline */}
               <h2
                 id="cta-heading"
-                className="font-display text-[clamp(2.5rem,6vw,5rem)] font-bold text-slate-700 tracking-tight mb-8 leading-none"
+                className="font-display text-[clamp(2.5rem,6vw,5rem)] font-bold text-slate-700 tracking-tight mb-6 leading-none"
               >
                 {title || m['home.cta.title']({}, { locale: locale as any })}
               </h2>
 
               {/* Description */}
-              <p className="text-xl text-slate-400 mb-10 max-w-2xl leading-relaxed">
+              <p className="text-xl text-slate-400 mb-8 max-w-2xl leading-relaxed">
                 {subtitle || m['home.cta.subtitle']({}, { locale: locale as any })}
               </p>
 
@@ -100,13 +100,13 @@ interface ActionButtonsProps {
 
 function ActionButtons({ locale, contactLabel, joinLabel }: ActionButtonsProps) {
   return (
-    <div className="flex gap-5 justify-center lg:justify-start flex-wrap">
+    <div className="flex gap-4 justify-center lg:justify-start flex-wrap">
       {/* Primary CTA */}
       <Button
         href={`/${locale}/contact`}
         size="lg"
         variant="primary"
-        className="px-12 py-5 text-base"
+        className="px-10 py-4.5 text-base"
       >
         {contactLabel || m['home.cta.contact']({}, { locale: locale as any })}
       </Button>
@@ -116,7 +116,7 @@ function ActionButtons({ locale, contactLabel, joinLabel }: ActionButtonsProps) 
         href={`/${locale}/membres`}
         size="lg"
         variant="outline"
-        className="px-12 py-5 text-base border-slate-200 text-slate-600 hover:bg-slate-50"
+        className="px-10 py-4.5 text-base border-slate-200 text-slate-600 hover:bg-slate-50"
       >
         {joinLabel || m['home.cta.join']({}, { locale: locale as any })}
       </Button>

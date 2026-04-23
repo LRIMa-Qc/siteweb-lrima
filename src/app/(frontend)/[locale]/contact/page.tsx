@@ -79,9 +79,9 @@ export default async function ContactPage() {
       <PageHeader title={m['contact.title']()} subtitle={m['contact.subtitle']()} />
 
       {/* Contact Form and Info Section */}
-      <section className="py-24 bg-slate-50">
+      <section className="py-16 md:py-20 bg-slate-50">
         <Container>
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-10">
             {/* Contact Form */}
             <div className="lg:col-span-3">
               <h2 className="font-display text-3xl font-bold mb-8 text-slate-900">

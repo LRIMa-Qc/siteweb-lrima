@@ -25,7 +25,7 @@ export default async function MemberDetailPage({ params }: MemberDetailPageProps
 
   return (
     <div className="bg-white min-h-screen">
-      <section className="relative overflow-hidden pt-32 pb-20 md:pt-48 md:pb-32">
+      <section className="relative overflow-hidden pt-24 pb-14 md:pt-36 md:pb-20">
         <Container>
           <div className="relative z-10 max-w-4xl mx-auto">
             <div className="glass-card p-8 md:p-12 rounded-3xl bg-white">
@@ -129,7 +129,7 @@ export default async function MemberDetailPage({ params }: MemberDetailPageProps
       </section>
 
       {member.bio && (
-        <section className="py-16 bg-slate-50">
+        <section className="py-12 md:py-14 bg-slate-50">
           <Container>
             <div className="max-w-4xl mx-auto">
               <h2 className="font-display text-3xl font-bold mb-8 text-slate-900">
@@ -144,7 +144,7 @@ export default async function MemberDetailPage({ params }: MemberDetailPageProps
       )}
 
       {member.researchInterests && member.researchInterests.length > 0 && (
-        <section className="py-16 bg-white">
+        <section className="py-12 md:py-14 bg-white">
           <Container>
             <div className="max-w-4xl mx-auto">
               <h2 className="font-display text-3xl font-bold mb-8 text-slate-900">

@@ -27,7 +27,7 @@ export const Container: React.FC<ContainerProps> = ({
       className={cn(
         'mx-auto',
         maxWidthStyles[maxWidth],
-        padding && 'px-4 sm:px-6 lg:px-8',
+        padding && 'px-4 sm:px-5 lg:px-6',
         className,
       )}
     >

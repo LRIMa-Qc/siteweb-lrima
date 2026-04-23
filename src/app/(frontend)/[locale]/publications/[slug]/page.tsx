@@ -23,7 +23,7 @@ export default async function PublicationDetailPage({ params }: PublicationDetai
 
   return (
     <div className="bg-white min-h-screen">
-      <section className="relative overflow-hidden pt-32 pb-20 md:pt-48 md:pb-32">
+      <section className="relative overflow-hidden pt-24 pb-14 md:pt-36 md:pb-20">
         <Container>
           <div className="relative z-10 max-w-4xl mx-auto">
             <div className="flex items-center gap-3 mb-6">
@@ -39,7 +39,7 @@ export default async function PublicationDetailPage({ params }: PublicationDetai
         </Container>
       </section>
 
-      <section className="py-16 bg-slate-50">
+      <section className="py-12 md:py-14 bg-slate-50">
         <Container>
           <div className="max-w-4xl mx-auto space-y-8">
             <div className="glass-card p-8 rounded-3xl bg-white border-l-4 border-l-primary-500">
