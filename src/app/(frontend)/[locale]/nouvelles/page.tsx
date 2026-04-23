@@ -25,7 +25,7 @@ export default async function NewsPage({ params }: NewsPageProps) {
       <PageHeader title={m['news.title']()} subtitle={m['news.subtitle']()} />
 
       {/* News List Section */}
-      <section className="py-24 bg-slate-50">
+      <section className="py-16 md:py-20 bg-slate-50">
         <Container>
           <NewsList newsList={newsList} showFeatured={true} locale={locale} memberMap={memberMap} />
         </Container>

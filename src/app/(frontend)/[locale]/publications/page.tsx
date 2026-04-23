@@ -34,7 +34,7 @@ export default async function PublicationsPage({ params }: PublicationsPageProps
       <PageHeader title={m['publications.title']()} subtitle={m['publications.subtitle']()} />
 
       {/* Publications List Section */}
-      <section className="py-24 bg-slate-50">
+      <section className="py-16 md:py-20 bg-slate-50">
         <Container>
           <PublicationList publications={publications} locale={locale} memberMap={memberMap} />
         </Container>

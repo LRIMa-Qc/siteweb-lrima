@@ -56,11 +56,11 @@ export function GallerySection({ images, title }: GallerySectionProps) {
 
   return (
     <section
-      className="relative py-32 lg:py-48 bg-slate-50 overflow-hidden"
+      className="relative py-24 lg:py-32 bg-slate-50 overflow-hidden"
       aria-labelledby="gallery-heading"
     >
       {/* Section Header */}
-      <div className="w-full px-6 lg:px-16 mb-16">
+      <div className="w-full px-5 lg:px-12 mb-12">
         <div className="max-w-7xl mx-auto">
           <ScrollAnimation animation="fade-up">
             <h2
@@ -81,7 +81,7 @@ export function GallerySection({ images, title }: GallerySectionProps) {
           baseWidth={ROW1_BASE_WIDTH}
           widthVariation={ROW1_WIDTH_VARIATION}
           height={ROW1_HEIGHT}
-          className="mb-6"
+          className="mb-4"
         />
       </ScrollAnimation>
 

@@ -21,7 +21,7 @@ export default async function NewsDetailPage({ params }: NewsDetailPageProps) {
 
   return (
     <div className="bg-white min-h-screen">
-      <section className="relative overflow-hidden pt-32 pb-20 md:pt-48 md:pb-32">
+      <section className="relative overflow-hidden pt-24 pb-14 md:pt-36 md:pb-20">
         <Container>
           <div className="relative z-10 max-w-4xl mx-auto">
             {news.category && (
@@ -48,7 +48,7 @@ export default async function NewsDetailPage({ params }: NewsDetailPageProps) {
       </section>
 
       {news.imageUrl && (
-        <section className="pb-16">
+        <section className="pb-12 md:pb-14">
           <Container>
             <div className="max-w-5xl mx-auto">
               <div className="relative aspect-video rounded-3xl overflow-hidden shadow-xl shadow-slate-200">
@@ -59,7 +59,7 @@ export default async function NewsDetailPage({ params }: NewsDetailPageProps) {
         </section>
       )}
 
-      <section className="py-16 bg-slate-50">
+      <section className="py-12 md:py-14 bg-slate-50">
         <Container>
           <div className="max-w-4xl mx-auto">
             {news.summary && (

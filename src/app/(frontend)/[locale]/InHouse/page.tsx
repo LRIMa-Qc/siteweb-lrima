@@ -23,7 +23,7 @@ export default async function MembersPage({ params }: InHousePageProps) {
             <PageHeader title={m['inHouse.title']()} />
 
             {/* In House Members List Section */}
-            <section className="py-24 bg-slate-50">
+            <section className="py-16 md:py-20 bg-slate-50">
                 <Container>
                     <InHouseList members={houseResearchers} variant="grid" locale={locale} />
                 </Container>

@@ -15,10 +15,10 @@ export const Section: React.FC<SectionProps> = ({
   containerMaxWidth = 'xl',
 }) => {
   const spacingStyles = {
-    sm: 'py-12 md:py-16',
-    md: 'py-16 md:py-24',
-    lg: 'py-24 md:py-32',
-    xl: 'py-32 md:py-40',
+    sm: 'py-8 md:py-12',
+    md: 'py-12 md:py-16',
+    lg: 'py-16 md:py-24',
+    xl: 'py-24 md:py-32',
   }
 
   return (
