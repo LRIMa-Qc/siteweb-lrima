@@ -26,7 +26,7 @@ services:
     volumes:
       - data:/data/db
     logging:
-      driver: none
+      driver: local
 
   # Uncomment the following to use postgres
   # postgres:

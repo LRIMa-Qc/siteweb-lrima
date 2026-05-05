@@ -65,6 +65,13 @@ export const News: CollectionConfig = {
       required: false,
     },
     {
+      name: 'articleGalleryImages',
+      type: 'upload',
+      relationTo: 'media',
+      hasMany: true,
+      required: false,
+    },
+    {
       name: 'author',
       type: 'text',
       required: false,
