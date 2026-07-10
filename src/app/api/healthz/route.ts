@@ -38,7 +38,11 @@ export async function GET() {
     {} as Record<string, string>,
   )
 
-  const uptimeSeconds = process.uptime()
+  const globalAny = globalThis as any
+  if (!globalAny.__APP_START_TIME__) {
+    globalAny.__APP_START_TIME__ = Date.now()
+  }
+  const uptimeSeconds = (Date.now() - globalAny.__APP_START_TIME__) / 1000
   const formattedUptime = formatUptime(uptimeSeconds)
 
   const responsePayload = {
