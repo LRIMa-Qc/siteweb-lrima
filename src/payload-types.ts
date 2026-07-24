@@ -196,6 +196,7 @@ export interface News {
     [k: string]: unknown;
   };
   image?: (string | null) | Media;
+  articleGalleryImages?: (string | Media)[] | null;
   author?: string | null;
   category?: string | null;
   tags?:
@@ -423,6 +424,7 @@ export interface NewsSelect<T extends boolean = true> {
   summary?: T;
   content?: T;
   image?: T;
+  articleGalleryImages?: T;
   author?: T;
   category?: T;
   tags?:

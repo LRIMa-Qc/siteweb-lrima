@@ -53,6 +53,10 @@ export async function getNews(options?: {
       summary: doc.summary || undefined,
       content: doc.content, // Keep as raw Lexical structure
       imageUrl: typeof doc.image === 'object' ? doc.image?.url || undefined : undefined,
+      articleGalleryImages:
+        doc.articleGalleryImages
+          ?.map((img: any) => (typeof img === 'object' ? img?.url : undefined))
+          .filter(Boolean) || [],
       author: doc.author || undefined,
       category: doc.category || undefined,
       tags: doc.tags?.map((t: any) => t.tag) || [],
@@ -93,6 +97,9 @@ export async function getNewsBySlug(slug: string, locale?: string): Promise<News
       summary: doc.summary || undefined,
       content: doc.content, // Keep as raw Lexical structure
       imageUrl: typeof doc.image === 'object' ? doc.image?.url || undefined : undefined,
+      articleGalleryImages: doc.articleGalleryImages 
+          ?.map((img: any) => (typeof img === 'object' ? img?.url : undefined))
+          .filter(Boolean) || [],
       author: doc.author || undefined,
       category: doc.category || undefined,
       tags: doc.tags?.map((t: any) => t.tag) || [],

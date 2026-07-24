@@ -6,6 +6,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { RichText } from '@payloadcms/richtext-lexical/react'
 import { formatDate } from '@/lib/formatDate'
+import { ArticleGalleryLightbox } from '@/components/templates/ArticleGalleryLightbox'
 
 interface NewsDetailPageProps {
   params: Promise<{ slug: string; locale: string }>
@@ -16,6 +17,7 @@ export default async function NewsDetailPage({ params }: NewsDetailPageProps) {
   const news = await getNewsBySlug(slug, locale)
 
   if (!news) notFound()
+  const newsWithGallery = news as typeof news & { articleGalleryImages?: string[] }
 
   return (
     <div className="bg-white min-h-screen">
@@ -69,19 +71,27 @@ export default async function NewsDetailPage({ params }: NewsDetailPageProps) {
               <div className="prose prose-lg prose-slate max-w-none">
                 {news.content && <RichText data={news.content} />}
               </div>
+            
+            <div className="mt-12">
+              {newsWithGallery.articleGalleryImages && newsWithGallery.articleGalleryImages.length > 0 && (
+                <ArticleGalleryLightbox images={newsWithGallery.articleGalleryImages} title={news.title} />
+              )}
+            </div>
+            
             </div>
             {news.tags && news.tags.length > 0 && (
               <div className="mt-12 pt-8 border-t border-slate-200 flex flex-wrap gap-3">
                 {news.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="px-4 py-2 bg-white text-slate-700 text-sm font-medium rounded-full border border-slate-200"
+                    className="px-32 py-2 bg-white text-slate-700 text-sm font-medium rounded-full border border-slate-200"
                   >
                     #{tag}
                   </span>
                 ))}
               </div>
             )}
+
             <div className="mt-12">
               <Link href={`/${locale}/nouvelles`}>
                 <Button variant="ghost" size="lg" className="text-slate-500 hover:text-slate-900">
