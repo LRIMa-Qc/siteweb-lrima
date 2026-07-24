@@ -291,6 +291,6 @@ Then click the **shopping cart** icon and complete the payment.
 
 ## Contact
 
-- **Email**: lrima@cmaisonneuve.qc.ca
+- **Email**: contact@lrima.ca
 - **Website**: [lrima.ca](https://lrima.ca)
 - **Address**: Collège de Maisonneuve, 3800 rue Sherbrooke Est, Montréal (Québec) H1X 2A2, Canada
