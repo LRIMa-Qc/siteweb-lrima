@@ -256,16 +256,38 @@ The contact form uses [Resend](https://resend.com) to send emails. To configure:
    RESEND_FROM_EMAIL=LRIMa <contact@yourdomain.com>
    ```
 
-### Image Optimization
-
-Images from Vercel Blob storage are automatically optimized via Next.js Image Optimization. The `next.config.mjs` includes remote patterns for `*.public.blob.vercel-storage.com`.
-
 ### Vercel Blob Storage
 
 Media uploads are stored in Vercel Blob. To configure:
 
 1. In Vercel Dashboard → Storage → Create Database → Blob
 2. Copy the `BLOB_READ_WRITE_TOKEN` to your environment variables
+
+## Renewing the `lrima.ca` Domain
+
+The `lrima.ca` domain is registered through **Name.com**.
+
+### Step 1 — Sign in
+
+Log in to **https://www.name.com/** using the Google account:
+
+**[lrima.research@gmail.com](mailto:lrima.research@gmail.com)**
+
+### Step 2 — Open your domains
+
+Click your **profile icon** in the top-right corner, then select **My Domains**.
+
+<img width="458" height="579" alt="Open My Domains from the profile menu." src="https://github.com/user-attachments/assets/28ed67ea-0935-4f84-9794-b8f696b06ff3" />
+
+### Step 3 — Renew the domain
+
+Locate **`lrima.ca`** and click **Renew**.
+
+<img width="1537" height="805" alt="Click Renew, then proceed to checkout." src="https://github.com/user-attachments/assets/b081d09e-dd7d-437e-9856-645e7d285113" />
+
+Then click the **shopping cart** icon and complete the payment.
+
+**Important:** The `lrima.ca` domain expires on **December 10, 2028**. **Automatic renewal is disabled**, so the domain **must be renewed manually before the expiration date** to avoid service interruptions.
 
 ## Contact
 
