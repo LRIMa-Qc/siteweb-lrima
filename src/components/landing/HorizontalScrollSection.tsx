@@ -130,14 +130,16 @@ export function HorizontalScrollSection({
           </div>
 
           {/* Stats card */}
-          <div className="flex-shrink-0 w-[80vw] lg:w-[35vw] h-[70vh] bg-slate-800 rounded-3xl p-12 flex flex-col justify-center">
-            <div className="space-y-12">
+          <div className="flex-shrink-0 w-[80vw] lg:w-[35vw] h-[70vh] bg-slate-800 rounded-3xl p-6 sm:p-10 lg:p-12 flex flex-col justify-center">
+            <div className="space-y-6 sm:space-y-10 lg:space-y-12">
               {resolvedStats.map((stat, index) => (
                 <div key={index}>
-                  <span className="font-display text-[clamp(3rem,6vw,5rem)] font-bold text-white">
+                  <span className="font-display text-[clamp(1.85rem,9vw,4.5rem)] lg:text-[clamp(3rem,6vw,5rem)] font-bold text-white leading-none">
                     {stat.number}
                   </span>
-                  <p className="text-lg text-white/50 mt-2">{stat.label}</p>
+                  <p className="mt-2 text-[0.72rem] sm:text-base lg:text-lg text-white/50 leading-snug">
+                    {stat.label}
+                  </p>
                 </div>
               ))}
             </div>

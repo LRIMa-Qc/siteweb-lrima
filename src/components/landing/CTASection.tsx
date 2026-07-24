@@ -106,7 +106,7 @@ function ActionButtons({ locale, contactLabel, joinLabel }: ActionButtonsProps) 
         href={`/${locale}/contact`}
         size="lg"
         variant="primary"
-        className="px-10 py-4.5 text-base"
+        className="px-10 py-4 text-base"
       >
         {contactLabel || m['home.cta.contact']({}, { locale: locale as any })}
       </Button>
@@ -116,7 +116,7 @@ function ActionButtons({ locale, contactLabel, joinLabel }: ActionButtonsProps) 
         href={`/${locale}/membres`}
         size="lg"
         variant="outline"
-        className="px-10 py-4.5 text-base border-slate-200 text-slate-600 hover:bg-slate-50"
+        className="px-10 py-4 text-base border-slate-200 text-slate-600 hover:bg-slate-50"
       >
         {joinLabel || m['home.cta.join']({}, { locale: locale as any })}
       </Button>
