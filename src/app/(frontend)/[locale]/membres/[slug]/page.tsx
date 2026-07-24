@@ -21,6 +21,9 @@ export default async function MemberDetailPage({ params }: MemberDetailPageProps
   const { slug, locale } = await params
   const member = await getMemberBySlug(slug, locale)
 
+  const normalizeExternalUrl = (url: string) =>
+  /^https?:\/\//i.test(url) ? url : `https://${url}`
+
   if (!member) notFound()
 
   return (
@@ -72,7 +75,7 @@ export default async function MemberDetailPage({ params }: MemberDetailPageProps
                       <p className="flex items-center gap-2 text-slate-600">
                         <GlobeIcon className="w-5 h-5 text-primary-600" />
                         <a
-                          href={member.website}
+                          href={normalizeExternalUrl(member.website)}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="hover:text-primary-600 transition-colors"
