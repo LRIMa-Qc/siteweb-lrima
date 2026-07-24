@@ -153,12 +153,15 @@ Ensure your code is pushed to a GitHub repository.
 
 Add the following environment variables in Vercel:
 
-| Variable               | Value                                |
-| ---------------------- | ------------------------------------ |
-| `DATABASE_URI`         | Your MongoDB Atlas connection string |
-| `MONGODB_URI`          | Same as DATABASE_URI                 |
-| `PAYLOAD_SECRET`       | Your secure 64+ character secret     |
-| `NEXT_PUBLIC_SITE_URL` | Your Vercel URL                      |
+| Variable               | Value                                | Required |
+| ---------------------- | ------------------------------------ | -------- |
+| `DATABASE_URI`         | Your MongoDB Atlas connection string | Yes      |
+| `MONGODB_URI`          | Same as DATABASE_URI                 | Yes      |
+| `PAYLOAD_SECRET`       | Your secure 64+ character secret     | Yes      |
+| `NEXT_PUBLIC_SITE_URL` | Your Vercel URL                      | Yes      |
+| `RESEND_API_KEY`       | API key from resend.com              | Yes      |
+| `RESEND_FROM_EMAIL`    | Verified sender email                | Yes      |
+| `BLOB_READ_WRITE_TOKEN`| Vercel Blob storage token            | Yes      |
 
 ### 4. Deploy
 
@@ -195,7 +198,29 @@ MIT License
 4. Push to the branch
 5. Open a Pull Request
 
-## Contact
+## Features
 
-- Email: lrima@cmaisonneuve.qc.ca
-- Address: College de Maisonneuve, 3800 rue Sherbrooke Est, Montreal (Quebec) H1X 2A2, Canada
+### Contact Form
+
+The contact form uses [Resend](https://resend.com) to send emails. To configure:
+
+1. Create an account at [resend.com](https://resend.com)
+2. Add your domain in Resend Dashboard → Domains
+3. Add the DNS records to your domain provider (Cloudflare, etc.)
+4. Create an API key in Resend Dashboard → API Keys
+5. Set environment variables:
+   ```env
+   RESEND_API_KEY=re_xxxxxxxxxxxxx
+   RESEND_FROM_EMAIL=LRIMa <contact@yourdomain.com>
+   ```
+
+### Image Optimization
+
+Images from Vercel Blob storage are automatically optimized via Next.js Image Optimization. The `next.config.mjs` includes remote patterns for `*.public.blob.vercel-storage.com`.
+
+### Vercel Blob Storage
+
+Media uploads are stored in Vercel Blob. To configure:
+
+1. In Vercel Dashboard → Storage → Create Database → Blob
+2. Copy the `BLOB_READ_WRITE_TOKEN` to your environment variables

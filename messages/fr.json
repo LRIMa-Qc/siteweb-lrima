@@ -9,7 +9,8 @@
     "news": "Actualités",
     "publications": "Publications",
     "members": "Équipe",
-    "contact": "Contact"
+    "contact": "Contact",
+    "inHouse": "Chercheurs en résidence"
   },
   "home": {
     "title": "Laboratoire de Recherche Informatique Maisonneuve",
@@ -145,6 +146,9 @@
     "bio": "Biographie",
     "memberSince": "Membre depuis {year}",
     "noMembers": "Aucun membre trouvé."
+  },
+  "inHouse": {
+    "title": "Nos chercheurs en résidence"
   },
   "common": {
     "labName": "Laboratoire de Recherche Informatique Maisonneuve",

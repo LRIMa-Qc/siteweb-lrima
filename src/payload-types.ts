@@ -196,6 +196,7 @@ export interface News {
     [k: string]: unknown;
   };
   image?: (string | null) | Media;
+  articleGalleryImages?: (string | Media)[] | null;
   author?: string | null;
   category?: string | null;
   tags?:
@@ -218,8 +219,6 @@ export interface Member {
   name: string;
   slug: string;
   role: string;
-  email?: string | null;
-  phone?: string | null;
   bio?: {
     root: {
       type: string;
@@ -247,6 +246,7 @@ export interface Member {
   github?: string | null;
   googleScholar?: string | null;
   isDirector?: boolean | null;
+  isHouseResearcher?: boolean | null;
   status: 'active' | 'alumni' | 'collaborator';
   joinYear?: number | null;
   updatedAt: string;
@@ -424,6 +424,7 @@ export interface NewsSelect<T extends boolean = true> {
   summary?: T;
   content?: T;
   image?: T;
+  articleGalleryImages?: T;
   author?: T;
   category?: T;
   tags?:
@@ -445,8 +446,6 @@ export interface MembersSelect<T extends boolean = true> {
   name?: T;
   slug?: T;
   role?: T;
-  email?: T;
-  phone?: T;
   bio?: T;
   image?: T;
   researchInterests?:
@@ -460,6 +459,7 @@ export interface MembersSelect<T extends boolean = true> {
   github?: T;
   googleScholar?: T;
   isDirector?: T;
+  isHouseResearcher?: T;
   status?: T;
   joinYear?: T;
   updatedAt?: T;

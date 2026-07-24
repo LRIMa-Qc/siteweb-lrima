@@ -2,12 +2,12 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Member } from '@/types'
 
-interface MemberCardProps {
+interface InHouseCardProps {
   member: Member
   locale?: string
 }
 
-export const MemberCard: React.FC<MemberCardProps> = ({ member, locale = 'fr' }) => {
+export const InHouseCard: React.FC<InHouseCardProps> = ({ member, locale = 'fr' }) => {
   const href = `/${locale}/membres/${member.slug}`
 
   return (
@@ -16,7 +16,7 @@ export const MemberCard: React.FC<MemberCardProps> = ({ member, locale = 'fr' })
         <div className="flex flex-col items-center text-center">
           <div className="w-32 h-32 rounded-full mb-6 flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary-500 to-primary-600 ring-4 ring-white shadow-md group-hover:scale-105 transition-transform duration-300 relative">
             {member.imageUrl ? (
-              <Image src={member.imageUrl} alt={member.name} fill className="object-cover" sizes="128px" />
+              <Image src={member.imageUrl} alt={member.name} fill className="object-cover" />
             ) : (
               <span className="text-4xl font-bold text-white">{member.name.charAt(0)}</span>
             )}

@@ -156,6 +156,7 @@ function GalleryCard({ image, width, height }: GalleryCardProps) {
         alt={image.alt}
         fill
         className="object-cover transition-transform duration-500 group-hover:scale-110"
+        sizes="(max-width: 768px) 320px, 400px"
       />
       <div
         className="absolute inset-0 bg-slate-900/0 group-hover:bg-slate-900/10 transition-colors"

@@ -5,6 +5,7 @@ export interface Member {
   name: string
   role: string
   isDirector?: boolean
+  isHouseResearcher?: boolean
   email?: string
   phone?: string
   bio: any // Lexical rich text structure
@@ -47,6 +48,7 @@ export interface News {
   summary?: string
   content: any // Lexical rich text structure
   imageUrl?: string
+  articleGalleryImages?: string[]
   author?: string
   category?: string
   tags?: string[]

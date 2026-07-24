@@ -126,7 +126,7 @@ export function HorizontalScrollSection({
 
           {/* Image 1 */}
           <div className="flex-shrink-0 w-[80vw] lg:w-[40vw] h-[70vh] rounded-3xl overflow-hidden relative">
-            <Image src={img1} alt={img1Alt} fill className="object-cover" />
+            <Image src={img1} alt={img1Alt} fill className="object-cover" sizes="(max-width: 1024px) 80vw, 40vw" />
           </div>
 
           {/* Stats card */}
@@ -145,7 +145,7 @@ export function HorizontalScrollSection({
 
           {/* Image 2 */}
           <div className="flex-shrink-0 w-[80vw] lg:w-[45vw] h-[70vh] rounded-3xl overflow-hidden relative">
-            <Image src={img2} alt={img2Alt} fill className="object-cover" unoptimized />
+            <Image src={img2} alt={img2Alt} fill className="object-cover" sizes="(max-width: 1024px) 80vw, 45vw" />
           </div>
 
           {/* Quote card */}
@@ -160,7 +160,7 @@ export function HorizontalScrollSection({
 
           {/* Image 3 */}
           <div className="flex-shrink-0 w-[80vw] lg:w-[40vw] h-[70vh] rounded-3xl overflow-hidden relative mr-16">
-            <Image src={img3} alt={img3Alt} fill className="object-cover" />
+            <Image src={img3} alt={img3Alt} fill className="object-cover" sizes="(max-width: 1024px) 80vw, 40vw" />
           </div>
         </div>
       </div>
