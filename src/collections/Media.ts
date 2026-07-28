@@ -12,5 +12,13 @@ export const Media: CollectionConfig = {
       required: true,
     },
   ],
-  upload: true,
+  upload: {
+  imageSizes: [
+    {
+      name: 'free_crop_version',
+      width: 1200,
+      // This unlocks the aspect ratio in the Image Editor for this specific size.
+    },
+  ],
+  }
 }
