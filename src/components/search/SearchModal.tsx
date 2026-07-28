@@ -235,7 +235,7 @@ export function SearchModal({ isOpen, onClose, locale }: SearchModalProps) {
                     {results.publications.map((pub) => (
                       <li key={pub.id}>
                         <Link
-                          href={`/${locale}/publications`} // Publications usually listed on index, ideally anchor or detail page if exists
+                          href={`/${locale}/publications/${pub.slug}`}
                           onClick={onClose}
                           className="block p-3 rounded-xl hover:bg-slate-50 transition-colors group"
                         >
