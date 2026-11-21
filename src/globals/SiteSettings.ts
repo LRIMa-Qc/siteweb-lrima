@@ -1,4 +1,5 @@
 import type { GlobalConfig } from 'payload'
+import { revalidatePaths } from '@/lib/revalidate'
 
 /**
  * Site Settings Global
@@ -18,6 +19,13 @@ export const SiteSettings: GlobalConfig = {
     livePreview: {
       url: `${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/fr/preview`,
     },
+  },
+  hooks: {
+    afterChange: [
+      () => {
+        revalidatePaths(['/', '/membres', '/nouvelles', '/publications', '/contact', '/InHouse'])
+      },
+    ],
   },
   fields: [
     // =========================================================================

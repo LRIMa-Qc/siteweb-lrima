@@ -9,12 +9,22 @@ import {
   GitHubIcon,
   BookIcon,
 } from '@/components/ui'
-import { getMemberBySlug } from '@/lib/payload'
+import { getMemberBySlug, getMembers } from '@/lib/payload'
 import Image from 'next/image'
 import { RichText } from '@payloadcms/richtext-lexical/react'
 
 interface MemberDetailPageProps {
   params: Promise<{ slug: string; locale: string }>
+}
+
+export async function generateStaticParams() {
+  try {
+    const members = await getMembers()
+    return members.map((member) => ({ slug: member.slug }))
+  } catch (error) {
+    console.error('Error generating static params for members:', error)
+    return []
+  }
 }
 
 export default async function MemberDetailPage({ params }: MemberDetailPageProps) {

@@ -13,7 +13,7 @@ let cachedPayload: Awaited<ReturnType<typeof getPayload>> | null = null
  *
  * @returns Promise resolving to the Payload client
  */
-async function getPayloadClient() {
+export async function getPayloadClient() {
   if (cachedPayload) {
     return cachedPayload
   }

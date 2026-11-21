@@ -33,3 +33,19 @@ export default function middleware(request: NextRequest) {
 
   return NextResponse.next()
 }
+
+export const config = {
+  matcher: [
+    /*
+     * Match all request paths except for the ones starting with:
+     * - _next/static (static files)
+     * - _next/image (image optimization files)
+     * - favicon.ico (favicon file)
+     * - api (API routes)
+     * - admin (Payload admin)
+     * - static files with extensions (e.g. .svg, .png, .jpg, .jpeg, .gif, .webp, .ico, etc.)
+     */
+    '/((?!_next/static|_next/image|api|admin|favicon\\.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp|ico|css|js|map|txt|xml)$).*)',
+  ],
+}
+

@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation'
 import * as m from '@/paraglide/messages'
 import { Container, Button } from '@/components/ui'
-import { getNewsBySlug } from '@/lib/payload'
+import { getNewsBySlug, getNews } from '@/lib/payload'
 import Link from 'next/link'
 import Image from 'next/image'
 import { RichText } from '@payloadcms/richtext-lexical/react'
@@ -10,6 +10,16 @@ import { ArticleGalleryLightbox } from '@/components/templates/ArticleGalleryLig
 
 interface NewsDetailPageProps {
   params: Promise<{ slug: string; locale: string }>
+}
+
+export async function generateStaticParams() {
+  try {
+    const news = await getNews({ limit: 100 })
+    return news.map((item) => ({ slug: item.slug }))
+  } catch (error) {
+    console.error('Error generating static params for news:', error)
+    return []
+  }
 }
 
 export default async function NewsDetailPage({ params }: NewsDetailPageProps) {

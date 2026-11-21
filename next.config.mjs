@@ -5,6 +5,8 @@ const nextConfig = {
   // Enable standalone output for Docker and Vercel deployment
   output: 'standalone',
   images: {
+    formats: ['image/avif', 'image/webp'],
+    minimumCacheTTL: 2678400,
     remotePatterns: [
       {
         protocol: 'https',
@@ -12,6 +14,15 @@ const nextConfig = {
         port: '',
       },
     ],
+  },
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/fr',
+        permanent: false,
+      },
+    ]
   },
   webpack: (config, { isServer }) => {
     config.resolve.extensionAlias = {

@@ -2,7 +2,7 @@ import React, { cache } from 'react'
 import * as m from '@/paraglide/messages'
 import { assertIsLocale, baseLocale, getLocale, overwriteGetLocale } from '@/paraglide/runtime'
 
-export const revalidate = 300 // Revalidate every 5 minutes as a fallback
+export const revalidate = 86400
 import './globals.css'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'

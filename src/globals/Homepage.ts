@@ -1,4 +1,5 @@
 import type { GlobalConfig } from 'payload'
+import { revalidatePaths } from '@/lib/revalidate'
 
 /**
  * Homepage Global
@@ -19,6 +20,13 @@ export const Homepage: GlobalConfig = {
     livePreview: {
       url: `${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/fr/preview`,
     },
+  },
+  hooks: {
+    afterChange: [
+      () => {
+        revalidatePaths(['/'])
+      },
+    ],
   },
   fields: [
     // =========================================================================

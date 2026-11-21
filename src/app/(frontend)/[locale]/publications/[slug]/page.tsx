@@ -1,11 +1,21 @@
 import { notFound } from 'next/navigation'
 import { Container, Button } from '@/components/ui'
-import { getPublicationBySlug } from '@/lib/payload'
+import { getPublicationBySlug, getPublications } from '@/lib/payload'
 import Link from 'next/link'
 import * as m from '@/paraglide/messages'
 
 interface PublicationDetailPageProps {
   params: Promise<{ slug: string; locale: string }>
+}
+
+export async function generateStaticParams() {
+  try {
+    const publications = await getPublications({ limit: 100 })
+    return publications.map((item) => ({ slug: item.slug }))
+  } catch (error) {
+    console.error('Error generating static params for publications:', error)
+    return []
+  }
 }
 
 export default async function PublicationDetailPage({ params }: PublicationDetailPageProps) {
